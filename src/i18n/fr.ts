@@ -61,7 +61,7 @@ const MONTHS = [
 export function formatDay(date: string): string {
   const [y, m, d] = date.split('-').map(Number)
   const weekday = new Date(Date.UTC(y, m - 1, d, 12)).getUTCDay()
-  return `${WEEKDAYS[(weekday + 6) % 7]} ${d} ${MONTHS[m - 1]}`
+  return `${WEEKDAYS[(weekday + 6) % 7]} ${d === 1 ? '1er' : d} ${MONTHS[m - 1]}`
 }
 
 /** `Lundi 6 octobre`, at the start of a sentence or a title. */

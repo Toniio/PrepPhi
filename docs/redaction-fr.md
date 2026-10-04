@@ -1,6 +1,6 @@
 # Guide de rédaction de PrepPhi
 
-Ce guide fixe la façon d'écrire tous les textes de PrepPhi : interface, fiches d'exercice, messages, noms accessibles et réponses du coach. Il reprend les règles de la fondation *Voice and tone* du design system DSAIReadable (v0.1.3) et les adapte au français, au tutoiement et au ton du coach décidé lors du cadrage.
+Ce guide fixe la façon d'écrire tous les textes de PrepPhi : interface, fiches d'exercice, messages, noms accessibles et réponses du coach. Il reprend les règles de la fondation *Voice and tone* du design system DSAIReadable (v0.2.0) et les adapte au français, au tutoiement et au ton du coach décidé lors du cadrage.
 
 Sources : `specs/foundations/voice-and-tone.md` et `content.md` du DS (servis par l'outil MCP `dsaireadable_get_ux_writing_rules`), `data/rules.json` (`coach.tone`), `CLAUDE.md`.
 

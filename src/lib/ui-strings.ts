@@ -1,3 +1,18 @@
+/**
+ * Every default string a component renders without being asked to.
+ *
+ * These are not copy. They are the accessible names of controls that have no
+ * visible label - the dialog's close button, the carousel's arrows, the
+ * password toggle - plus the two landmark names screen readers announce. A
+ * component that invents its own wording gives an agent nothing to find and a
+ * translator nothing to replace.
+ *
+ * The defaults are English. Any other locale is supplied by the caller through
+ * the override prop each component exposes; nothing here reads a locale, and
+ * nothing here is reactive. A string that names something only the caller
+ * knows is a function of it, so that each language can put the name where its
+ * grammar wants it.
+ */
 export const UI_STRINGS = Object.freeze({
   breadcrumb: Object.freeze({
     /** Name of the <nav> landmark. */

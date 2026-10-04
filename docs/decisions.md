@@ -2,6 +2,10 @@
 
 Le 4 octobre 2026, Anthony a demandé d'enchaîner les tâches de `CLAUDE.md` sans le consulter, en prenant l'option recommandée à chaque question. Ce fichier liste ces choix pour qu'il les relise. Aucun ne modifie une échelle ni un seuil validé : ceux qui y touchent sont marqués **à valider**.
 
+## Design system
+
+- **Passage à v0.2.0.** CLAUDE.md fixait v0.1.3. À l'installation des composants, la CLI shadcn a servi v0.2.0 : le suffixe `#v0.1.3` n'a pas été appliqué, et la base `design-system` se lit toujours sur `main`. Le plugin et son serveur MCP sont aussi en v0.2.0. Le projet est donc aligné en entier sur v0.2.0 (base, helpers, conventions, composants). CLAUDE.md est mis à jour.
+
 ## Catalogue (tâches 2 et 3)
 
 - 7 exercices exclus à la revue des GIF, puis 25 autres à la relecture complète : matériel absent (barres parallèles, banc décliné, machines, anneaux, tapis de course), doublons du nordic curl, mouvements dangereux sur une barre de porte. Liste et raisons : `data/catalog-overrides.json`. Catalogue final : 280 exercices.

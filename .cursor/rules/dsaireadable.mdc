@@ -12,14 +12,14 @@ These rules apply to any interface written with them.
 ## Components
 
 - **Install** a component with its full address and the release of this file:
-  `npx shadcn add Toniio/DSAIReadable/<item>#v0.1.3`. A bare name (`npx shadcn add button`)
+  `npx shadcn add Toniio/DSAIReadable/<item>#v0.2.0`. A bare name (`npx shadcn add button`)
   installs shadcn/ui's component, not the design system's, and overwrites it.
   The release is the one these rules and the spec links below were written
   for: move all three to the same tag when you update.
 - **Find** a component with the shadcn MCP server, registry
   `Toniio/DSAIReadable`, or with `npx shadcn search Toniio/DSAIReadable -q <word>`.
 - **Read the spec before using it**:
-  `https://github.com/Toniio/DSAIReadable/blob/v0.1.3/specs/components/<Component>.md`
+  `https://github.com/Toniio/DSAIReadable/blob/v0.2.0/specs/components/<Component>.md`
   (props, variants, states, accessibility). Invent no prop: what is not in the
   spec does not exist.
 - **Do not edit** the installed files to change how they look: go through their

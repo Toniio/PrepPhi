@@ -52,13 +52,13 @@ Toute modification d'une échelle ou d'un seuil passe par l'accord d'Anthony.
 - Polices du DS, embarquées via `@fontsource-variable` : JetBrains Mono pour toute l'interface (`font-mono`), Geist pour `font-sans` (touches `Kbd`). Ne pas les modifier. Icônes : `@phosphor-icons/react` uniquement.
 - Le code (identifiants, commentaires) est en anglais, les textes d'interface en français.
 
-## Design system DSAIReadable (v0.1.3)
+## Design system DSAIReadable (v0.2.0)
 
 Installation, dans cet ordre :
 
 ```bash
-npx shadcn add Toniio/DSAIReadable/design-system#v0.1.3   # tokens, verrouillage Tailwind, helpers
-npx shadcn add Toniio/DSAIReadable/conventions#v0.1.3     # règles pour les agents
+npx shadcn add Toniio/DSAIReadable/design-system#v0.2.0   # tokens, verrouillage Tailwind, helpers
+npx shadcn add Toniio/DSAIReadable/conventions#v0.2.0     # règles pour les agents
 claude plugin marketplace add Toniio/DSAIReadable
 claude plugin install dsaireadable@dsaireadable           # skills + serveur MCP
 ```

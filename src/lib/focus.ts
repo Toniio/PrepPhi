@@ -1,3 +1,23 @@
+/**
+ * Focus ring presets.
+ *
+ * Every focusable element in the design system draws the same ring. Before
+ * this file there were sixteen distinct patterns across twenty-one components,
+ * and two of them drew nothing at all: `ring-focus` was never a real Tailwind
+ * utility — `--ring-*` is not a v4 theme namespace for widths — so the class
+ * emitted no CSS and the elements using it had no visible focus indicator.
+ *
+ * The width comes from `--space-focus-ring-width`, the token the system
+ * already declared. `ring-(length:…)` is the v4 form that reads a custom
+ * property as a length; `ring-1`, `ring-2` and `ring-3` are raw pixel widths
+ * and are forbidden by the repository's first rule.
+ */
+
+/**
+ * Ring thickness alone. Use directly only when the element supplies its own
+ * ring color — Sidebar does, through `ring-sidebar-ring`. Everywhere else
+ * prefer FOCUS_RING, which carries the color too.
+ */
 export const FOCUS_RING_WIDTH =
   "focus-visible:ring-(length:--space-focus-ring-width)"
 

@@ -49,7 +49,9 @@ export type PlanInput = {
   wallWhileTravelling?: boolean
 }
 
-function plannedExercise(state: LadderState, context: Context, input: PlanInput): PlannedExercise | null {
+type ExerciseInput = Pick<PlanInput, 'states' | 'deload' | 'available'>
+
+function plannedExercise(state: LadderState, context: Context, input: ExerciseInput): PlannedExercise | null {
   const ladder = getLadder(state.ladderId)
   if (!state.unlocked || state.paused || !ladder.contexts.includes(context)) return null
 
@@ -57,9 +59,7 @@ function plannedExercise(state: LadderState, context: Context, input: PlanInput)
   let step = getStep(state.ladderId, state.level)
   let targets = state.targets
   if (!input.available(step.exercise, context)) {
-    const fallback = ladder.steps
-      .filter((s) => s.level < state.level && input.available(s.exercise, context))
-      .at(-1)
+    const fallback = ladder.steps.filter((s) => s.level < state.level && input.available(s.exercise, context)).at(-1)
     if (!fallback) return null
     step = fallback
     targets = topTargets(fallback)
@@ -81,7 +81,7 @@ function plannedExercise(state: LadderState, context: Context, input: PlanInput)
   }
 }
 
-function exercisesFor(ladderIds: string[], context: Context, input: PlanInput): PlannedExercise[] {
+function exercisesFor(ladderIds: string[], context: Context, input: ExerciseInput): PlannedExercise[] {
   return ladderIds
     .map((id) => input.states[id])
     .filter((state): state is LadderState => state !== undefined)
@@ -113,8 +113,26 @@ export function roomCircuit(): Sequence {
   }
 }
 
-function session(base: Omit<PlannedSession, 'id' | 'status' | 'sequences'> & { sequences?: Sequence[] }): PlannedSession {
+function session(
+  base: Omit<PlannedSession, 'id' | 'status' | 'sequences'> & { sequences?: Sequence[] },
+): PlannedSession {
   return { ...base, id: `${base.date}-${base.kind}`, status: 'planned', sequences: base.sequences ?? [] }
+}
+
+type NomadInput = Pick<PlanInput, 'states' | 'deload' | 'available' | 'wallWhileTravelling'>
+
+/** The 20-30 min travel version: push, front chain, isometric core, no pulling. */
+export function nomadSession(date: IsoDate, input: NomadInput): PlannedSession {
+  const ladders = input.wallWhileTravelling ? [...EVERY_SESSION, ...NOMAD] : NOMAD
+  return session({
+    date,
+    kind: 'nomad',
+    context: 'travel',
+    title: 'Séance nomade',
+    durationMin: RULES.travel.nomadMinutes[1],
+    exercises: exercisesFor(ladders, 'travel', input),
+    sequences: [roomCircuit()],
+  })
 }
 
 /** All ways to pick `count` days with no two consecutive, best spread first. */
@@ -126,8 +144,12 @@ export function spreadDays(days: IsoDate[], count: number): IsoDate[] {
   let bestScore = -1
   const pick = (start: number, chosen: IsoDate[]) => {
     if (chosen.length === count) {
-      const gaps = chosen.slice(1).map((d, i) => index(d) - index(chosen[i]))
-      const score = gaps.length ? Math.min(...gaps) * 10 + gaps.reduce((a, b) => a + b, 0) : 1
+      // The week repeats: Sunday then the next Monday are consecutive too.
+      const gaps = chosen.map(
+        (d, i) => (i === chosen.length - 1 ? index(chosen[0]) + 7 : index(chosen[i + 1])) - index(d),
+      )
+      if (count > 1 && Math.min(...gaps) < 2) return
+      const score = count > 1 ? Math.min(...gaps) * 10 - Math.max(...gaps) : 1
       if (score > bestScore) [best, bestScore] = [[...chosen], score]
       return
     }
@@ -156,18 +178,7 @@ export function planWeek(input: PlanInput): WeekPlan {
   let turn = weekNumber % 2
   for (const date of calisthenicsDays) {
     if (travel(date)) {
-      const ladders = input.wallWhileTravelling ? [...EVERY_SESSION, ...NOMAD] : NOMAD
-      sessions.push(
-        session({
-          date,
-          kind: 'nomad',
-          context: 'travel',
-          title: 'Séance nomade',
-          durationMin: RULES.travel.nomadMinutes[1],
-          exercises: exercisesFor(ladders, 'travel', input),
-          sequences: [roomCircuit()],
-        }),
-      )
+      sessions.push(nomadSession(date, input))
       continue
     }
     const template = turn % 2 === 0 ? SESSION_A : SESSION_B

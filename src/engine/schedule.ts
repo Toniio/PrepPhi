@@ -7,7 +7,9 @@ import type { IsoDate, PlannedSession, WeekPlan } from './types'
 const STRENGTH = new Set(['calisthenics', 'nomad', 'park'])
 
 function busy(plan: WeekPlan, day: IsoDate, except: string): PlannedSession[] {
-  return plan.sessions.filter((s) => s.id !== except && s.date === day && s.status !== 'missed' && s.status !== 'abandoned')
+  return plan.sessions.filter(
+    (s) => s.id !== except && s.date === day && s.status !== 'missed' && s.status !== 'abandoned',
+  )
 }
 
 export type MissedOutcome = { type: 'moved'; to: IsoDate; nomad: boolean } | { type: 'abandoned' }
@@ -44,9 +46,7 @@ export function rescheduleMissed(
     const travel = isTravelDay(day, trips)
     if (travel && missed.kind === 'elliptical') continue
     const moved: PlannedSession =
-      travel && strength
-        ? nomadVersion(missed, day)
-        : { ...missed, id: `${day}-${missed.kind}`, date: day }
+      travel && strength ? nomadVersion(missed, day) : { ...missed, id: `${day}-${missed.kind}`, date: day }
     const sessions = [...mark('missed'), { ...moved, status: 'planned' as const, movedFrom: missed.date }].sort(
       (a, b) => a.date.localeCompare(b.date) || a.kind.localeCompare(b.kind),
     )

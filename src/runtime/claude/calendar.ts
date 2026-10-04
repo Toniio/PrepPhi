@@ -35,10 +35,7 @@ export const GOOGLE_CALENDAR: CalendarBindings = {
   create: null,
 }
 
-export function createClaudeCalendar(
-  mcp: Mcp | null,
-  bindings: CalendarBindings = GOOGLE_CALENDAR,
-): CalendarClient {
+export function createClaudeCalendar(mcp: Mcp | null, bindings: CalendarBindings = GOOGLE_CALENDAR): CalendarClient {
   const { list, create } = bindings
   const ready = mcp !== null && list !== null && create !== null
 

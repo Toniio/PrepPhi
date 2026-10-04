@@ -120,7 +120,12 @@ describe('regression', () => {
   })
 
   it('counts too-hard sessions as regress sessions', () => {
-    expect(run(pullUp(), [[[4, 4, 4], 'too-hard'], [[4, 4, 4], 'too-hard']]).state.level).toBe(3)
+    expect(
+      run(pullUp(), [
+        [[4, 4, 4], 'too-hard'],
+        [[4, 4, 4], 'too-hard'],
+      ]).state.level,
+    ).toBe(3)
   })
 
   it('needs both sessions in a row', () => {

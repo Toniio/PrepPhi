@@ -189,7 +189,9 @@ describe('planner', () => {
 
   it('never puts calisthenics on consecutive days', () => {
     const days = spreadDays(weekDates(W41), 3)
-    expect(days).toEqual(['2026-10-05', '2026-10-08', '2026-10-11'])
+    expect(days).toEqual(['2026-10-05', '2026-10-07', '2026-10-09'])
+    // Sunday and the next Monday are consecutive: never both.
+    expect(spreadDays(['2026-10-05', '2026-10-08', '2026-10-11'], 3)).toEqual(['2026-10-05', '2026-10-08'])
     expect(spreadDays(['2026-10-05', '2026-10-06', '2026-10-07'], 3)).toEqual(['2026-10-05', '2026-10-07'])
   })
 
@@ -212,10 +214,12 @@ describe('planner', () => {
   it('turns travel days into nomad sessions without pulling', () => {
     const plan = planWeek(input({ trips: [{ from: '2026-10-07', to: '2026-10-09' }] }))
     const nomad = plan.sessions.find((s) => s.kind === 'nomad')!
-    expect(nomad.date).toBe('2026-10-08')
+    expect(nomad.date).toBe('2026-10-07')
     expect(nomad.exercises.map((e) => e.ladderId)).toEqual(['push', 'legs-front', 'core-isometric'])
     expect(nomad.sequences[0].label).toBe('Circuit en chambre')
-    expect(plan.sessions.filter((s) => s.kind === 'elliptical').every((s) => s.date < '2026-10-07' || s.date > '2026-10-09')).toBe(true)
+    expect(
+      plan.sessions.filter((s) => s.kind === 'elliptical').every((s) => s.date < '2026-10-07' || s.date > '2026-10-09'),
+    ).toBe(true)
   })
 
   it('falls back to a doable lower step in travel, at the top of its range', () => {
@@ -274,21 +278,27 @@ describe('missed sessions and regularity', () => {
   })
 
   it('slides a missed session to the next free day, never next to another calisthenics day', () => {
-    // Calisthenics on Mon 5, Thu 8, Sun 11. Missing Monday, on Monday.
+    // Calisthenics on Mon 5, Wed 7, Fri 9. Missing Monday, on Monday: Tuesday to Saturday touch another session.
     const { plan: next, outcome } = rescheduleMissed(plan, '2026-10-05-calisthenics', '2026-10-05', [], nomad)
-    expect(outcome).toEqual({ type: 'moved', to: '2026-10-06', nomad: false })
+    expect(outcome).toEqual({ type: 'moved', to: '2026-10-11', nomad: false })
     expect(next.sessions.find((s) => s.id === '2026-10-05-calisthenics')?.status).toBe('missed')
-    expect(next.sessions.find((s) => s.id === '2026-10-06-calisthenics')?.movedFrom).toBe('2026-10-05')
+    expect(next.sessions.find((s) => s.id === '2026-10-11-calisthenics')?.movedFrom).toBe('2026-10-05')
   })
 
   it('abandons it when no slot is left before Sunday', () => {
-    const { outcome } = rescheduleMissed(plan, '2026-10-11-calisthenics', '2026-10-11', [], nomad)
+    const { outcome } = rescheduleMissed(plan, '2026-10-09-calisthenics', '2026-10-12', [], nomad)
     expect(outcome).toEqual({ type: 'abandoned' })
   })
 
   it('moves it to a travel day only as the nomad version', () => {
-    const { outcome } = rescheduleMissed(plan, '2026-10-05-calisthenics', '2026-10-05', [{ from: '2026-10-06', to: '2026-10-06' }], nomad)
-    expect(outcome).toEqual({ type: 'moved', to: '2026-10-06', nomad: true })
+    const { outcome } = rescheduleMissed(
+      plan,
+      '2026-10-05-calisthenics',
+      '2026-10-05',
+      [{ from: '2026-10-11', to: '2026-10-11' }],
+      nomad,
+    )
+    expect(outcome).toEqual({ type: 'moved', to: '2026-10-11', nomad: true })
   })
 
   it('counts done / planned, a moved session once and the park session only when done', () => {

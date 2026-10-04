@@ -12,6 +12,8 @@ export function prefersDark(root: HTMLElement, systemDark: boolean): boolean {
 /** Applies the theme now and on every change. Returns the stop function. */
 export function startThemeSync(
   root: HTMLElement = document.documentElement,
+  // The one place that reads the system preference: it only sets the .dark class.
+  // eslint-disable-next-line dsaireadable/no-raw-values
   media: MediaQueryList = window.matchMedia('(prefers-color-scheme: dark)'),
 ): () => void {
   const apply = () => root.classList.toggle('dark', prefersDark(root, media.matches))

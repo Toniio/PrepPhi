@@ -37,3 +37,15 @@ Le 4 octobre 2026, Anthony a demandé d'enchaîner les tâches de `CLAUDE.md` sa
 - **Même durée.** Pour la dérive de FC, deux séances d'elliptique ont la même durée à 2 minutes près.
 - **Déplacement.** Une étape impossible en chambre (le squat bulgare sans chaise, par exemple) est remplacée par l'étape inférieure faisable, en haut de sa fourchette.
 - **Circuit en chambre.** 4 tours de burpee, mountain climber et squat sauté, 30 s chacun, avec des repos de 15 s, plus 60 s en fin de tour.
+
+## Écrans (tâche 7)
+
+- **Navigation.** Une `Sidebar` (pattern « navigation » du DS), qui devient un `Sheet` sur mobile, avec 5 sections : Aujourd’hui, Semaine, Revue, Progression, Données. La section courante est dans l’URL (`#aujourdhui`…).
+- **Bilan.** Les répétitions sont pré-remplies avec les cibles. Marquer une série faite lance le minuteur de repos. La séance en cours est gardée dans le navigateur, pour survivre à un rechargement.
+- **Handstand libre.** Le temps cumulé et le nombre de tenues de 15 s ou plus se notent à part ; le moteur reçoit les tenues.
+- **Coach.** Le plan hebdomadaire part des règles ; le coach peut déplacer une séance, ajouter au plus 2 accessoires par séance et écrire une note. Chaque changement est vérifié avant d’entrer dans le plan, et les changements invalides sont écartés. Sans réponse du coach, le plan des règles est proposé tel quel.
+- **Semaine en revue.** Le dimanche, c’est la semaine en cours. Plus tard dans la semaine, c’est la précédente, tant que sa revue n’a pas planifié la suivante.
+- **Agenda.** Les séances sont créées à l’heure habituelle indiquée à l’onboarding (18 h 30 par défaut).
+- **Report d’une séance.** Il s’applique tout de suite, avec « Annuler » dans la notification.
+- **Composants candidats.** `Sequencer`, `SetCounter`, `ExerciseCard` et `LadderProgress` sont dans `src/components/candidates/`, chacun avec sa spec en 13 sections.
+- **Validation.** `npm run validate:ds` soumet tous les écrans à `dsaireadable_validate_code` et `dsaireadable_validate_screen` via le serveur MCP v0.2.0 : 0 erreur. ESLint utilise `@dsaireadable/eslint-plugin`.

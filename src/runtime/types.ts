@@ -26,13 +26,7 @@ export type CoachRequest = {
   devReply: () => string
 }
 
-export type CoachErrorCode =
-  | 'unavailable'
-  | 'not_granted'
-  | 'cancelled'
-  | 'rate_limited'
-  | 'invalid_json'
-  | 'failed'
+export type CoachErrorCode = 'unavailable' | 'not_granted' | 'cancelled' | 'rate_limited' | 'invalid_json' | 'failed'
 
 export class CoachError extends Error {
   readonly code: CoachErrorCode

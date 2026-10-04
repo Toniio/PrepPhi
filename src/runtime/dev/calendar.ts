@@ -17,7 +17,7 @@ function addDays(date: Date, days: number): Date {
 
 /** A two-day trip to Paris starting on the Tuesday of next week. */
 export function seedEvents(today = new Date()): CalendarEvent[] {
-  const daysToNextMonday = ((8 - today.getDay()) % 7) || 7
+  const daysToNextMonday = (8 - today.getDay()) % 7 || 7
   const tuesday = addDays(today, daysToNextMonday + 1)
   return [
     {

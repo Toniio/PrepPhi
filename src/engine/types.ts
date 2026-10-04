@@ -155,6 +155,20 @@ export type PlannedSession = {
   status: 'planned' | 'done' | 'missed' | 'abandoned'
   /** Where a missed session came from. */
   movedFrom?: IsoDate
+  /** The coach's one-line note for this session, from the weekly plan. */
+  coachNote?: string
+  /** Accessories the coach added from the pool (at most 2 per session). */
+  accessories?: Accessory[]
+  /** Created in Google Calendar through "Ajouter à mon agenda". */
+  inCalendar?: boolean
+}
+
+export type Accessory = {
+  exercise: string
+  nameFr: string
+  sets: number
+  target: number
+  unit: Unit
 }
 
 export type WeekPlan = {

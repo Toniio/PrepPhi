@@ -114,4 +114,5 @@ Une ligne par activité, colonnes `Activity Type`, `Date`, `Time`, `Avg HR`, `Ma
 - `videoUrl` des 19 fiches hors dataset : à choisir (liens de recherche YouTube provisoires).
 - Pictogrammes animés pour ces 19 étapes : plus tard, candidats pour le composant `Illustration`.
 - Maintien de l'écran allumé (Wake Lock) : à tester dans la page publiée.
+- Liaisons du connecteur Google Agenda (`src/runtime/claude/calendar.ts`, `GOOGLE_CALENDAR`) : noms d'outils, arguments et forme des résultats à relever sur un vrai appel depuis claude.ai. Tant qu'elles sont vides, l'agenda est indisponible dans la page publiée (il marche en développement avec l'agenda fictif).
 - Médias © Gym visual : garder la mention en pied de fiche.

@@ -1,0 +1,125 @@
+{
+  "$comment": "Source of truth: the doc 'PrepPhi — Échelles de progression et règles d'adaptation', validated on 2026-10-04. The rules compute proposals; the coach arbitrates (can delay a progression, never force one the rules did not allow). Every threshold change is proposed by the coach and applied only after Anthony's approval.",
+  "version": "1.0.0",
+  "validatedOn": "2026-10-04",
+
+  "week": { "starts": "monday", "reviewDay": "sunday", "reviewTime": "evening" },
+
+  "checkIn": {
+    "feelings": ["too-easy", "right", "too-hard"],
+    "painFlag": "optional per exercise",
+    "inputByFormat": {
+      "sets-reps": "reps pre-filled with the target; Anthony edits only deviations",
+      "reps-in-time": "reps achieved within the time block",
+      "isometric": "held, or the actual duration if released early"
+    },
+    "callsCoach": false
+  },
+
+  "progression": {
+    "model": "double-progression",
+    "nextStep": {
+      "when": "top of range on every set AND feeling in [right, too-easy]",
+      "consecutiveSessions": 2,
+      "then": "propose next step, start at bottom of its range"
+    },
+    "withinStep": {
+      "when": "targets met AND feeling != too-hard",
+      "then": "+1 rep (or +5 s) on the weakest set next session"
+    },
+    "hold": {
+      "when": "bottom of range held, targets missed",
+      "then": "same targets"
+    },
+    "regress": {
+      "when": "bottom of range missed OR feeling == too-hard",
+      "consecutiveSessions": 2,
+      "then": "back to previous step, at top of its range"
+    },
+    "calibration": {
+      "when": "too-easy on the first session of a step",
+      "then": "jump to top of range"
+    },
+    "onboardingPlacement": "each ladder starts at the step whose bottom of range Anthony holds cleanly in the test session"
+  },
+
+  "deload": {
+    "schedule": "signal-triggered only, never calendar",
+    "proposedAt": "weekly review, Anthony validates",
+    "triggersAnyOf": [
+      { "id": "too-hard-count", "rule": "too-hard on >= 3 exercises in the week, all families" },
+      { "id": "double-regress", "rule": "regress triggered on >= 2 families in the same week" },
+      { "id": "rpe-elliptical", "rule": "RPE >= 7 on a usual endurance session, 2 sessions in a row" },
+      { "id": "hr-drift", "rule": "average HR >= 8 bpm above the 4-week average at equal duration and resistance" }
+    ],
+    "content": "same exercises and steps, 2 sets instead of 3, elliptical in low zone only, no progression",
+    "exit": "back to the normal plan the next week if no trigger persists"
+  },
+
+  "pain": {
+    "onFlag": "freeze progression for the exercise's family; next session the exercise drops one step",
+    "atReview": "coach proposes a less demanding variant for the joint, or a one-week pause of the family",
+    "recurring": {
+      "when": "same family flagged 2 weeks in a row",
+      "then": "coach recommends seeing a health professional (doctor or physiotherapist); family stays paused until Anthony reactivates it"
+    },
+    "never": "diagnose",
+    "exerciseSheetReminder": "stop the exercise on sharp pain during the movement"
+  },
+
+  "missedSession": {
+    "slideTo": "next free day of the same week",
+    "neverConsecutiveCalisthenicsDays": true,
+    "onTravelDay": "allowed only as the nomad version",
+    "ifNoSlotBeforeSunday": "abandoned, flagged at review, no effect on steps"
+  },
+
+  "travel": {
+    "detection": {
+      "googleCalendar": "all-day event whose title contains 'Paris' (one or more consecutive days) -> proposal to confirm, at the Sunday review or when opening Today",
+      "declaredAtReview": true,
+      "todayToggle": "Je suis en déplacement",
+      "autoSwitch": false
+    },
+    "nomadSession": {
+      "durationMin": [20, 30],
+      "families": ["push", "legs-front", "core-isometric", "handstand (only if a free wall)"],
+      "noPull": true,
+      "cardio": ["brisk walk or jog outdoors", "room circuit: ds:1160 burpee, ds:0630 mountain climber, ds:0514 jump squat"]
+    },
+    "countsForRegularity": true,
+    "untrainedFamily": { "freezeUpToDays": 10, "beyond": "coach proposes a re-entry week at the previous step" },
+    "planning": "demanding sessions (pull, handstand push-up) go on home days around a trip"
+  },
+
+  "parkSession": {
+    "purpose": "muscle-up ladder (priority 2)",
+    "optional": true,
+    "countsForRegularity": "only if done",
+    "missed": "never counted as a missed session"
+  },
+
+  "regularity": { "metric": "sessions done / sessions planned in the week, nomad and park sessions included" },
+
+  "elliptical": {
+    "baseline": "5 exported sessions (2026-07-21 to 2026-09-14): 20-40 min, average HR 121-136 bpm",
+    "zones": "computed at onboarding from resting HR and max HR (known or estimated); endurance session in low zone, RPE 3-4/10",
+    "duration": { "step": "+5 min per week", "when": "RPE <= 5 AND average HR in target zone", "until": 45 },
+    "resistance": { "step": "+1 level at constant duration", "when": "same criteria, after duration reached 45 min" },
+    "intervals": {
+      "start": "after 3 stable weeks at 40-45 min",
+      "frequency": "one session in two",
+      "example": "6 x (1 min hard / 2 min easy) via the sequencer",
+      "progression": "+1 repetition per week up to 10"
+    },
+    "fitnessIndicator": "average HR at equal duration and resistance: lower = progress",
+    "importedFrom": "Garmin Connect activities CSV, weekly, filtered on Activity Type 'Elliptical'; resistance and RPE entered manually"
+  },
+
+  "coach": {
+    "tone": "factual and sober, tutoiement, congratulates only when a step is passed",
+    "context": "last 4 weeks in detail + cumulative summary generated and stored at each review",
+    "catalogSent": "ladders + an accessory pool per muscle group, never the whole catalog",
+    "modelTier": { "weeklyPlan": "complex", "conversation": "default", "checkIn": "none (rules only)" }
+  }
+}

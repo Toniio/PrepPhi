@@ -1,0 +1,394 @@
+{
+  "$comment": "Exercises referenced by data/ladders.json that exercises-dataset lacks. No animated media: French sheet + video. videoSearchUrl is a stopgap (YouTube search); fill videoUrl with a chosen tutorial. Pictograms are planned for later (candidate for the DS Illustration component).",
+  "version": "1.0.0",
+  "exercises": [
+    {
+      "id": "hd:dead-hang",
+      "nameFr": "Suspension passive",
+      "ladder": "pull-vertical",
+      "equipment": [
+        "bar"
+      ],
+      "contexts": [
+        "home"
+      ],
+      "stepsFr": [
+        "Saisis la barre en pronation, mains un peu plus larges que les épaules, pouces autour de la barre.",
+        "Décolle les pieds sans à-coup et laisse les bras tendus.",
+        "Relâche les épaules et respire normalement pendant toute la durée.",
+        "Repose les pieds avant que ta prise ne lâche."
+      ],
+      "cueFr": "Corps immobile, sans balancement.",
+      "mistakeFr": "Lâcher la barre brusquement en fin de série.",
+      "videoSearchUrl": "https://www.youtube.com/results?search_query=dead+hang+tutorial",
+      "videoUrl": null
+    },
+    {
+      "id": "hd:negative-pull-up",
+      "nameFr": "Traction négative",
+      "ladder": "pull-vertical",
+      "equipment": [
+        "bar",
+        "chair"
+      ],
+      "contexts": [
+        "home"
+      ],
+      "stepsFr": [
+        "Monte le menton au-dessus de la barre en t'aidant d'un saut ou d'une chaise.",
+        "Descends lentement, en 5 secondes, jusqu'aux bras tendus.",
+        "Garde les épaules engagées jusqu'en bas.",
+        "Repose les pieds, remonte en position haute et recommence."
+      ],
+      "cueFr": "Une descente régulière du début à la fin.",
+      "mistakeFr": "Accélérer et se laisser tomber sur la fin de la descente.",
+      "videoSearchUrl": "https://www.youtube.com/results?search_query=negative+pull+up+tutorial",
+      "videoUrl": null
+    },
+    {
+      "id": "hd:elevated-inverted-row",
+      "nameFr": "Rangée inversée pieds surélevés",
+      "ladder": "pull-horizontal",
+      "equipment": [
+        "table",
+        "chair"
+      ],
+      "contexts": [
+        "home"
+      ],
+      "stepsFr": [
+        "Allonge-toi sous la table et saisis son bord, pieds posés sur une chaise à hauteur de la table.",
+        "Gaine ton corps en ligne droite des talons aux épaules.",
+        "Tire la poitrine vers le bord de la table, coudes vers l'arrière.",
+        "Redescends bras tendus sous contrôle."
+      ],
+      "cueFr": "Le bassin reste aligné avec les épaules.",
+      "mistakeFr": "Laisser le bassin s'affaisser. Vérifie d'abord que la table ne bascule pas.",
+      "videoSearchUrl": "https://www.youtube.com/results?search_query=feet+elevated+inverted+row+tutorial",
+      "videoUrl": null
+    },
+    {
+      "id": "hd:bodyweight-squat",
+      "nameFr": "Squat au poids du corps",
+      "ladder": "legs-front",
+      "equipment": [
+        "none"
+      ],
+      "contexts": [
+        "home",
+        "travel"
+      ],
+      "stepsFr": [
+        "Pieds largeur d'épaules, pointes légèrement ouvertes.",
+        "Descends en poussant les hanches en arrière et en fléchissant les genoux, jusqu'aux cuisses au moins parallèles au sol.",
+        "Garde le dos droit et les talons au sol.",
+        "Remonte en poussant dans le sol."
+      ],
+      "cueFr": "Les genoux suivent l'axe des pieds.",
+      "mistakeFr": "Décoller les talons ou laisser les genoux rentrer vers l'intérieur.",
+      "videoSearchUrl": "https://www.youtube.com/results?search_query=bodyweight+squat+proper+form",
+      "videoUrl": null
+    },
+    {
+      "id": "hd:bulgarian-split-squat",
+      "nameFr": "Squat bulgare",
+      "ladder": "legs-front",
+      "equipment": [
+        "chair"
+      ],
+      "contexts": [
+        "home"
+      ],
+      "stepsFr": [
+        "Dos à une chaise, pose le dessus du pied arrière sur l'assise.",
+        "Place le pied avant assez loin pour que le genou reste au-dessus de la cheville en bas du mouvement.",
+        "Descends verticalement jusqu'à ce que le genou arrière frôle le sol.",
+        "Remonte en poussant sur le talon avant."
+      ],
+      "cueFr": "Buste droit, poids sur la jambe avant.",
+      "mistakeFr": "Pousser avec la jambe arrière.",
+      "videoSearchUrl": "https://www.youtube.com/results?search_query=bulgarian+split+squat+bodyweight+tutorial",
+      "videoUrl": null
+    },
+    {
+      "id": "hd:sliding-leg-curl",
+      "nameFr": "Leg curl glissé à la serviette, deux jambes",
+      "ladder": "legs-posterior",
+      "equipment": [
+        "towel"
+      ],
+      "contexts": [
+        "home"
+      ],
+      "stepsFr": [
+        "Allongé sur le dos sur un sol lisse, pose les talons sur une serviette.",
+        "Monte le bassin en pont fessier.",
+        "Fais glisser les talons loin de toi jusqu'aux jambes presque tendues, bassin toujours haut.",
+        "Ramène les talons vers les fesses en gardant le bassin levé."
+      ],
+      "cueFr": "Le bassin reste haut pendant tout le mouvement.",
+      "mistakeFr": "Laisser le bassin retomber quand les jambes s'allongent.",
+      "videoSearchUrl": "https://www.youtube.com/results?search_query=towel+sliding+leg+curl+hamstring",
+      "videoUrl": null
+    },
+    {
+      "id": "hd:single-leg-sliding-leg-curl",
+      "nameFr": "Leg curl glissé à la serviette, une jambe",
+      "ladder": "legs-posterior",
+      "equipment": [
+        "towel"
+      ],
+      "contexts": [
+        "home"
+      ],
+      "stepsFr": [
+        "Même départ que le leg curl glissé, un seul talon sur la serviette, l'autre jambe levée.",
+        "Monte le bassin en pont sur la jambe d'appui.",
+        "Fais glisser le talon loin de toi, bassin haut et de niveau.",
+        "Ramène le talon vers la fesse."
+      ],
+      "cueFr": "Le bassin ne bascule pas du côté de la jambe levée.",
+      "mistakeFr": "Raccourcir l'amplitude pour compenser : mieux vaut moins de répétitions complètes.",
+      "videoSearchUrl": "https://www.youtube.com/results?search_query=single+leg+sliding+leg+curl",
+      "videoUrl": null
+    },
+    {
+      "id": "hd:hanging-knee-raise",
+      "nameFr": "Relevé de genoux suspendu",
+      "ladder": "core-hanging",
+      "equipment": [
+        "bar"
+      ],
+      "contexts": [
+        "home"
+      ],
+      "stepsFr": [
+        "Suspends-toi bras tendus, épaules engagées.",
+        "Monte les genoux vers la poitrine en enroulant le bassin.",
+        "Marque un temps en haut.",
+        "Redescends lentement, sans balancer."
+      ],
+      "cueFr": "L'enroulement du bassin, pas seulement la flexion des hanches.",
+      "mistakeFr": "Prendre de l'élan. Sur ta barre de porte, garde les genoux devant toi pour éviter l'encadrement.",
+      "videoSearchUrl": "https://www.youtube.com/results?search_query=hanging+knee+raise+tutorial",
+      "videoUrl": null
+    },
+    {
+      "id": "hd:plank",
+      "nameFr": "Gainage ventral (planche)",
+      "ladder": "core-isometric",
+      "equipment": [
+        "none"
+      ],
+      "contexts": [
+        "home",
+        "travel"
+      ],
+      "stepsFr": [
+        "Avant-bras au sol, coudes sous les épaules, jambes tendues sur la pointe des pieds.",
+        "Aligne la tête, le dos et les talons.",
+        "Serre les fessiers et les abdos.",
+        "Respire calmement pendant toute la tenue."
+      ],
+      "cueFr": "Une ligne droite des épaules aux talons.",
+      "mistakeFr": "Creuser le bas du dos ou lever les fesses.",
+      "videoSearchUrl": "https://www.youtube.com/results?search_query=plank+exercise+proper+form",
+      "videoUrl": null
+    },
+    {
+      "id": "hd:tuck-hollow-body",
+      "nameFr": "Hollow body groupé",
+      "ladder": "core-isometric",
+      "equipment": [
+        "none"
+      ],
+      "contexts": [
+        "home",
+        "travel"
+      ],
+      "stepsFr": [
+        "Allongé sur le dos, plaque le bas du dos au sol.",
+        "Ramène les genoux vers la poitrine et décolle les épaules du sol.",
+        "Tends les bras vers les genoux.",
+        "Tiens la position en gardant le bas du dos plaqué."
+      ],
+      "cueFr": "Le bas du dos ne quitte jamais le sol.",
+      "mistakeFr": "Continuer quand le dos se décolle : arrête la série à ce moment-là.",
+      "videoSearchUrl": "https://www.youtube.com/results?search_query=tuck+hollow+body+hold+tutorial",
+      "videoUrl": null
+    },
+    {
+      "id": "hd:hollow-body",
+      "nameFr": "Hollow body",
+      "ladder": "core-isometric",
+      "equipment": [
+        "none"
+      ],
+      "contexts": [
+        "home",
+        "travel"
+      ],
+      "stepsFr": [
+        "Allongé sur le dos, plaque le bas du dos au sol.",
+        "Décolle les épaules et tends les bras au-dessus de la tête.",
+        "Tends les jambes et décolle-les légèrement du sol : ton corps forme une banane.",
+        "Tiens la position en gardant le bas du dos plaqué."
+      ],
+      "cueFr": "Plus les bras et les jambes sont bas, plus c'est dur : ajuste pour garder le dos au sol.",
+      "mistakeFr": "Cambrer le bas du dos.",
+      "videoSearchUrl": "https://www.youtube.com/results?search_query=hollow+body+hold+tutorial",
+      "videoUrl": null
+    },
+    {
+      "id": "hd:chest-to-bar-pull-up",
+      "nameFr": "Traction poitrine à la barre",
+      "ladder": "muscle-up",
+      "equipment": [
+        "park-bar"
+      ],
+      "contexts": [
+        "park"
+      ],
+      "stepsFr": [
+        "Suspends-toi en pronation, mains largeur d'épaules.",
+        "Tire jusqu'à ce que le haut de ta poitrine touche la barre.",
+        "Garde les coudes vers le bas et l'arrière.",
+        "Redescends bras tendus sous contrôle."
+      ],
+      "cueFr": "La poitrine vient à la barre, pas seulement le menton.",
+      "mistakeFr": "Casser la nuque vers l'arrière pour gagner de la hauteur.",
+      "videoSearchUrl": "https://www.youtube.com/results?search_query=chest+to+bar+pull+up+tutorial",
+      "videoUrl": null
+    },
+    {
+      "id": "hd:explosive-pull-up",
+      "nameFr": "Traction explosive, hanches vers la barre",
+      "ladder": "muscle-up",
+      "equipment": [
+        "park-bar"
+      ],
+      "contexts": [
+        "park"
+      ],
+      "stepsFr": [
+        "Suspends-toi en pronation, corps gainé.",
+        "Tire le plus vite possible, en visant la barre au niveau du bas de la poitrine.",
+        "Laisse les hanches monter vers la barre en fin de traction.",
+        "Redescends sous contrôle avant la répétition suivante."
+      ],
+      "cueFr": "La vitesse de la traction, pas le nombre de répétitions.",
+      "mistakeFr": "Enchaîner sans contrôle de la descente.",
+      "videoSearchUrl": "https://www.youtube.com/results?search_query=explosive+pull+up+muscle+up+progression",
+      "videoUrl": null
+    },
+    {
+      "id": "hd:muscle-up-negative",
+      "nameFr": "Négatif de muscle-up",
+      "ladder": "muscle-up",
+      "equipment": [
+        "park-bar",
+        "low-bar"
+      ],
+      "contexts": [
+        "park"
+      ],
+      "stepsFr": [
+        "Monte au-dessus de la barre, par un saut ou un appui, bras tendus en appui.",
+        "Descends lentement en dips jusqu'à la transition.",
+        "Passe la transition en gardant la barre près du corps.",
+        "Continue la descente en traction jusqu'aux bras tendus."
+      ],
+      "cueFr": "Lent et contrôlé, surtout dans la transition.",
+      "mistakeFr": "Laisser la barre s'éloigner du corps.",
+      "videoSearchUrl": "https://www.youtube.com/results?search_query=muscle+up+negative+tutorial",
+      "videoUrl": null
+    },
+    {
+      "id": "hd:wall-walk",
+      "nameFr": "Montée au mur (wall walk)",
+      "ladder": "handstand-balance",
+      "equipment": [
+        "wall"
+      ],
+      "contexts": [
+        "home",
+        "travel"
+      ],
+      "stepsFr": [
+        "Mets-toi en position de pompe, pieds contre le mur.",
+        "Monte les pieds le long du mur pendant que tes mains reculent vers lui.",
+        "Va jusqu'à la hauteur où tu restes contrôlé, idéalement le ventre près du mur.",
+        "Redescends dans l'ordre inverse."
+      ],
+      "cueFr": "Corps gainé, sans cambrure.",
+      "mistakeFr": "Monter trop vite. Dégage l'espace autour de toi avant de commencer.",
+      "videoSearchUrl": "https://www.youtube.com/results?search_query=wall+walk+handstand+tutorial",
+      "videoUrl": null
+    },
+    {
+      "id": "hd:chest-to-wall-handstand",
+      "nameFr": "Équilibre ventre face au mur",
+      "ladder": "handstand-balance",
+      "equipment": [
+        "wall"
+      ],
+      "contexts": [
+        "home",
+        "travel"
+      ],
+      "stepsFr": [
+        "Après une montée au mur, place les mains à 10–20 cm du mur.",
+        "Bras tendus, pousse les épaules vers les oreilles.",
+        "Aligne poignets, épaules, hanches et chevilles.",
+        "Tiens la position, puis redescends en marchant ou par une roue latérale."
+      ],
+      "cueFr": "Le corps forme une ligne, les côtes rentrées.",
+      "mistakeFr": "Cambrer le dos en laissant le ventre partir vers le mur.",
+      "videoSearchUrl": "https://www.youtube.com/results?search_query=chest+to+wall+handstand+tutorial",
+      "videoUrl": null
+    },
+    {
+      "id": "hd:pike-push-up",
+      "nameFr": "Pike push-up",
+      "ladder": "handstand-strength",
+      "equipment": [
+        "none"
+      ],
+      "contexts": [
+        "home",
+        "travel"
+      ],
+      "stepsFr": [
+        "Mets-toi en V inversé, hanches hautes, mains largeur d'épaules.",
+        "Fléchis les coudes pour amener le sommet du crâne devant tes mains : tête et mains forment un triangle.",
+        "Pousse pour revenir bras tendus.",
+        "Garde les hanches hautes tout du long."
+      ],
+      "cueFr": "Coudes vers l'arrière, à environ 45° du corps.",
+      "mistakeFr": "Laisser les hanches descendre : l'exercice devient une pompe.",
+      "videoSearchUrl": "https://www.youtube.com/results?search_query=pike+push+up+tutorial",
+      "videoUrl": null
+    },
+    {
+      "id": "hd:elevated-pike-push-up",
+      "nameFr": "Pike push-up pieds surélevés",
+      "ladder": "handstand-strength",
+      "equipment": [
+        "chair"
+      ],
+      "contexts": [
+        "home"
+      ],
+      "stepsFr": [
+        "Pose les pieds sur une chaise et les mains au sol, hanches au-dessus des épaules.",
+        "Fléchis les coudes pour amener le sommet du crâne devant tes mains.",
+        "Pousse pour revenir bras tendus.",
+        "Garde le buste le plus vertical possible."
+      ],
+      "cueFr": "Plus le buste est vertical, plus tu te rapproches du handstand push-up.",
+      "mistakeFr": "Écarter les coudes vers l'extérieur.",
+      "videoSearchUrl": "https://www.youtube.com/results?search_query=elevated+pike+push+up+tutorial",
+      "videoUrl": null
+    }
+  ]
+}

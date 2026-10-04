@@ -1,0 +1,168 @@
+{
+  "$comment": "Source of truth: the doc 'PrepPhi — Échelles de progression et règles d'adaptation', validated by Anthony on 2026-10-04. Any change is proposed by the coach and applied only after his approval. 'ds:NNNN' = exercises-dataset id (has media); 'hd:slug' = hors dataset (French sheet + video link, see docs/hors-dataset.md). range = [low, high] of the double progression; unit 'reps' or 's'.",
+  "version": "1.0.0",
+  "validatedOn": "2026-10-04",
+  "ladders": [
+    {
+      "id": "pull-vertical",
+      "family": "pull",
+      "nameFr": "Tirage vertical",
+      "contexts": ["home"],
+      "entry": null,
+      "notes": "Steps 5-6 depend on the doorway bar's length (asked at onboarding). From step 4, ds:1326 (supination) and ds:0651 (neutral grip) can rotate in as accessories.",
+      "steps": [
+        { "level": 1, "exercise": "hd:dead-hang", "nameFr": "Suspension passive", "sets": 3, "range": [20, 45], "unit": "s" },
+        { "level": 2, "exercise": "ds:0688", "nameFr": "Tirage scapulaire", "sets": 3, "range": [6, 12], "unit": "reps" },
+        { "level": 3, "exercise": "hd:negative-pull-up", "nameFr": "Traction négative (descente en 5 s)", "sets": 3, "range": [3, 6], "unit": "reps" },
+        { "level": 4, "exercise": "ds:0652", "nameFr": "Traction pronation", "sets": 3, "range": [3, 8], "unit": "reps" },
+        { "level": 5, "exercise": "ds:1429", "nameFr": "Traction prise large", "sets": 3, "range": [5, 8], "unit": "reps" },
+        { "level": 6, "exercise": "ds:3293", "nameFr": "Traction archer", "sets": 3, "range": [3, 6], "unit": "reps", "perSide": true }
+      ]
+    },
+    {
+      "id": "pull-horizontal",
+      "family": "pull",
+      "nameFr": "Tirage horizontal",
+      "contexts": ["home"],
+      "entry": null,
+      "notes": "Under a sturdy table. Test that it does not tip on the first session.",
+      "steps": [
+        { "level": 1, "exercise": "ds:2300", "nameFr": "Rangée inversée genoux fléchis", "sets": 3, "range": [8, 15], "unit": "reps" },
+        { "level": 2, "exercise": "ds:0499", "nameFr": "Rangée inversée jambes tendues", "sets": 3, "range": [8, 15], "unit": "reps" },
+        { "level": 3, "exercise": "hd:elevated-inverted-row", "nameFr": "Rangée inversée pieds surélevés", "sets": 3, "range": [6, 12], "unit": "reps" }
+      ]
+    },
+    {
+      "id": "push",
+      "family": "push",
+      "nameFr": "Poussée",
+      "contexts": ["home", "travel"],
+      "entry": null,
+      "notes": "Step 6 opens the handstand strength track. Accessory: ds:1399 (floor dips, hands behind).",
+      "steps": [
+        { "level": 1, "exercise": "ds:0659", "nameFr": "Pompe au mur", "sets": 3, "range": [10, 20], "unit": "reps" },
+        { "level": 2, "exercise": "ds:0493", "nameFr": "Pompe inclinée", "sets": 3, "range": [8, 15], "unit": "reps" },
+        { "level": 3, "exercise": "ds:3211", "nameFr": "Pompe à genoux", "sets": 3, "range": [8, 15], "unit": "reps" },
+        { "level": 4, "exercise": "ds:0662", "nameFr": "Pompe", "sets": 3, "range": [8, 15], "unit": "reps" },
+        { "level": 5, "exercise": "ds:0283", "nameFr": "Pompe diamant", "sets": 3, "range": [6, 12], "unit": "reps" },
+        { "level": 6, "exercise": "ds:0279", "nameFr": "Pompe déclinée", "sets": 3, "range": [6, 12], "unit": "reps" },
+        { "level": 7, "exercise": "ds:3294", "nameFr": "Pompe archer", "sets": 3, "range": [4, 8], "unit": "reps", "perSide": true }
+      ]
+    },
+    {
+      "id": "legs-front",
+      "family": "legs",
+      "nameFr": "Jambes, chaîne avant",
+      "contexts": ["home", "travel"],
+      "entry": null,
+      "notes": "Step 4 needs a chair (home only).",
+      "steps": [
+        { "level": 1, "exercise": "hd:bodyweight-squat", "nameFr": "Squat au poids du corps", "sets": 3, "range": [10, 20], "unit": "reps" },
+        { "level": 2, "exercise": "ds:3470", "nameFr": "Fente avant", "sets": 3, "range": [8, 12], "unit": "reps", "perSide": true },
+        { "level": 3, "exercise": "ds:2368", "nameFr": "Split squat", "sets": 3, "range": [8, 12], "unit": "reps", "perSide": true },
+        { "level": 4, "exercise": "hd:bulgarian-split-squat", "nameFr": "Squat bulgare, pied arrière sur une chaise", "sets": 3, "range": [8, 12], "unit": "reps", "perSide": true },
+        { "level": 5, "exercise": "ds:1476", "nameFr": "Squat sur une jambe assisté", "sets": 3, "range": [4, 8], "unit": "reps", "perSide": true, "verifyMedia": true },
+        { "level": 6, "exercise": "ds:1759", "nameFr": "Pistol squat", "sets": 3, "range": [3, 8], "unit": "reps", "perSide": true }
+      ]
+    },
+    {
+      "id": "legs-posterior",
+      "family": "legs",
+      "nameFr": "Jambes, chaîne postérieure",
+      "contexts": ["home", "travel"],
+      "entry": null,
+      "notes": "Steps 3-4 need a towel on a smooth floor, step 5 a heavy piece of furniture: home only. Accessories: ds:1373, ds:1387 (calves), ds:0489 (floor hyperextension).",
+      "steps": [
+        { "level": 1, "exercise": "ds:3013", "nameFr": "Pont fessier", "sets": 3, "range": [12, 20], "unit": "reps" },
+        { "level": 2, "exercise": "ds:3645", "nameFr": "Pont fessier sur une jambe", "sets": 3, "range": [8, 15], "unit": "reps", "perSide": true },
+        { "level": 3, "exercise": "hd:sliding-leg-curl", "nameFr": "Leg curl glissé à la serviette, deux jambes", "sets": 3, "range": [8, 12], "unit": "reps" },
+        { "level": 4, "exercise": "hd:single-leg-sliding-leg-curl", "nameFr": "Leg curl glissé à la serviette, une jambe", "sets": 3, "range": [6, 10], "unit": "reps", "perSide": true },
+        { "level": 5, "exercise": "ds:0696", "nameFr": "Leg curl inversé au sol, pieds calés sous un meuble lourd", "sets": 3, "range": [3, 6], "unit": "reps", "verifyMedia": true }
+      ]
+    },
+    {
+      "id": "core-hanging",
+      "family": "core",
+      "nameFr": "Gainage suspendu",
+      "contexts": ["home"],
+      "entry": null,
+      "steps": [
+        { "level": 1, "exercise": "ds:0872", "nameFr": "Relevé de bassin au sol", "sets": 3, "range": [8, 15], "unit": "reps" },
+        { "level": 2, "exercise": "hd:hanging-knee-raise", "nameFr": "Relevé de genoux suspendu", "sets": 3, "range": [8, 12], "unit": "reps" },
+        { "level": 3, "exercise": "ds:0472", "nameFr": "Relevé de jambes suspendu", "sets": 3, "range": [6, 12], "unit": "reps" },
+        { "level": 4, "exercise": "ds:0475", "nameFr": "Relevé de jambes tendues", "sets": 3, "range": [5, 10], "unit": "reps" },
+        { "level": 5, "exercise": "ds:3419", "nameFr": "L-sit au sol", "sets": 3, "range": [10, 20], "unit": "s" }
+      ]
+    },
+    {
+      "id": "core-isometric",
+      "family": "core",
+      "nameFr": "Gainage isométrique",
+      "contexts": ["home", "travel"],
+      "entry": null,
+      "notes": "Hollow body is a prerequisite shared by both skills. Accessory: ds:3544 (inclined side plank).",
+      "steps": [
+        { "level": 1, "exercise": "hd:plank", "nameFr": "Gainage ventral (planche)", "sets": 3, "range": [30, 60], "unit": "s" },
+        { "level": 2, "exercise": "hd:tuck-hollow-body", "nameFr": "Hollow body groupé", "sets": 3, "range": [20, 40], "unit": "s" },
+        { "level": 3, "exercise": "hd:hollow-body", "nameFr": "Hollow body", "sets": 3, "range": [20, 40], "unit": "s" }
+      ]
+    },
+    {
+      "id": "handstand-balance",
+      "family": "skill",
+      "skill": "handstand",
+      "priority": 1,
+      "nameFr": "Handstand, équilibre",
+      "contexts": ["home", "travel"],
+      "entry": [
+        { "ladder": "core-isometric", "level": 1, "atTopOfRange": true },
+        { "ladder": "core-isometric", "level": 3, "minValue": 20 }
+      ],
+      "notes": "Against a free wall. In travel only if the room has one.",
+      "steps": [
+        { "level": 1, "exercise": "hd:wall-walk", "nameFr": "Montée au mur (wall walk)", "sets": 3, "range": [2, 5], "unit": "reps" },
+        { "level": 2, "exercise": "hd:chest-to-wall-handstand", "nameFr": "Équilibre ventre face au mur", "sets": 3, "range": [20, 60], "unit": "s" },
+        { "level": 3, "exercise": "ds:3302", "nameFr": "Handstand libre", "format": "cumulative", "range": [30, 90], "unit": "s", "pass": { "sets": 3, "hold": 15, "unit": "s" } }
+      ]
+    },
+    {
+      "id": "handstand-strength",
+      "family": "skill",
+      "skill": "handstand",
+      "priority": 1,
+      "nameFr": "Handstand push-up, force",
+      "contexts": ["home", "travel"],
+      "entry": [
+        { "ladder": "push", "level": 6, "minValue": 6 }
+      ],
+      "notes": "Steps 1-2 also work in travel. Steps 3-4 need the free wall at home.",
+      "steps": [
+        { "level": 1, "exercise": "hd:pike-push-up", "nameFr": "Pike push-up", "sets": 3, "range": [6, 12], "unit": "reps" },
+        { "level": 2, "exercise": "hd:elevated-pike-push-up", "nameFr": "Pike push-up pieds surélevés", "sets": 3, "range": [5, 10], "unit": "reps" },
+        { "level": 3, "exercise": "ds:0471", "nameFr": "Handstand push-up au mur, amplitude réduite (coussin sous la tête)", "sets": 3, "range": [3, 6], "unit": "reps" },
+        { "level": 4, "exercise": "ds:0471", "nameFr": "Handstand push-up au mur, amplitude complète", "sets": 3, "range": [3, 8], "unit": "reps" }
+      ]
+    },
+    {
+      "id": "muscle-up",
+      "family": "skill",
+      "skill": "muscle-up",
+      "priority": 2,
+      "nameFr": "Muscle-up, sur barre de parc",
+      "contexts": ["park"],
+      "entry": [
+        { "ladder": "pull-vertical", "level": 4, "atTopOfRange": true },
+        { "ladder": "core-isometric", "level": 3, "atTopOfRange": true }
+      ],
+      "notes": "Doorway bar at home: the whole ladder runs on a park bar. Steps 3-4 need a hip-height bar or a step to get above the bar. Park sessions are optional (see rules.json).",
+      "steps": [
+        { "level": 1, "exercise": "hd:chest-to-bar-pull-up", "nameFr": "Traction poitrine à la barre", "sets": 3, "range": [3, 6], "unit": "reps" },
+        { "level": 2, "exercise": "hd:explosive-pull-up", "nameFr": "Traction explosive, hanches vers la barre", "sets": 3, "range": [3, 5], "unit": "reps" },
+        { "level": 3, "exercise": "ds:2462", "nameFr": "Dips à la barre droite", "sets": 3, "range": [5, 10], "unit": "reps", "verifyMedia": true },
+        { "level": 4, "exercise": "hd:muscle-up-negative", "nameFr": "Négatif de muscle-up (départ au-dessus, descente lente)", "sets": 3, "range": [2, 4], "unit": "reps" },
+        { "level": 5, "exercise": "ds:0558", "nameFr": "Muscle-up avec élan", "sets": 3, "range": [1, 3], "unit": "reps" },
+        { "level": 6, "exercise": "ds:0631", "nameFr": "Muscle-up strict", "sets": 3, "range": [1, 5], "unit": "reps", "final": true }
+      ]
+    }
+  ]
+}

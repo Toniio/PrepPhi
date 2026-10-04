@@ -15,6 +15,7 @@ Ce fichier résume un cadrage complet mené le 4 octobre 2026. Les décisions ci
 | `data/catalog-overrides.json` | Corrections après revue des GIF : exclusions, matériel, consignes FR réécrites |
 | `scripts/build-catalog.py` | Génère `src/data/catalog.json` et `src/assets/exercises/*.webp` depuis exercises-dataset |
 | `data/names-fr.json` | Noms français des 280 exercices du catalogue |
+| `docs/decisions.md` | Choix faits en autonomie pendant la construction, dont deux à valider (plan type, zone d'elliptique) |
 | `docs/redaction-fr.md` | Guide de rédaction : voix, ton, lexique, verbes, libellés FR des composants du DS |
 
 Toute modification d'une échelle ou d'un seuil passe par l'accord d'Anthony.

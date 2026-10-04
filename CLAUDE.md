@@ -39,7 +39,7 @@ Toute modification d'une échelle ou d'un seuil passe par l'accord d'Anthony.
 - Niveau de modèle : `complex` pour le plan hebdo, `default` pour la conversation.
 
 **Données**
-- Catalogue fermé : 305 exercices (poids du corps, barre, mur, table, serviette, chaise, elliptique), médias en WebP animé qualité 40 (~8,2 Mo une fois intégrés). Les 19 étapes hors dataset viennent de `data/hd-exercises.json`. Pas de marche ni d'escalier à domicile.
+- Catalogue fermé : 280 exercices (poids du corps, barre, mur, table, serviette, chaise, elliptique), médias en WebP animé qualité 40 (~7,5 Mo une fois intégrés). Les 19 étapes hors dataset viennent de `data/hd-exercises.json`. Pas de marche ni d'escalier à domicile.
 - Import hebdomadaire du CSV « Activités » de Garmin Connect (elliptique, callisthénie, HIIT), plus saisie manuelle de la résistance et de l'effort perçu.
 - Export et import JSON complets, avec `schemaVersion`, pour une migration future.
 
@@ -100,7 +100,7 @@ Une ligne par activité, colonnes `Activity Type`, `Date`, `Time`, `Avg HR`, `Ma
 
 1. Initialiser le projet (Vite, React, TypeScript, Tailwind v4), installer le DS et le plugin, configurer le build en fichier unique et le contrôle de taille.
 2. Lancer `python scripts/build-catalog.py`. Vérifier sur leur GIF les exercices `1476`, `0696` et `2462`, et la liste « Needs a human look » de `scripts/catalog-report.md`.
-3. Écrire `data/names-fr.json` : un nom français court et usuel pour les 305 exercices. Relancer le script.
+3. Écrire `data/names-fr.json` : un nom français court et usuel pour les 280 exercices. Relancer le script. Fait le 2026-10-04 avec une relecture de chaque GIF : consignes réécrites et exclusions dans `data/catalog-overrides.json`.
 4. Rédiger `docs/redaction-fr.md` : un guide de rédaction français qui reprend les principes du DS (voix, longueur, verbes d'action) avec le tutoiement et le ton factuel du coach.
 5. Couche d'adaptation et script de thème.
 6. Moteur de règles en TypeScript pur, testé unitairement contre `data/rules.json` et `data/ladders.json`.

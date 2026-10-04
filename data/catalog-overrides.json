@@ -1,21 +1,327 @@
 {
-  "$comment": "Manual corrections applied by scripts/build-catalog.py after reviewing each GIF, validated by Anthony on 2026-10-04. 'exclude': dataset ids dropped from the catalog, with the reason. 'reviewed': ids checked by hand, never flagged needsReview again. 'exercises': per-id overrides of equipment (contexts are recomputed), stepsFr, cueFr, mistakeFr, and a noteFr shown when the animation differs from the home setup. The dataset's French steps sometimes describe another movement than the GIF: rewrite them here.",
-  "version": "1.0.0",
+  "$comment": "Manual corrections applied by scripts/build-catalog.py after reviewing each GIF, validated by Anthony on 2026-10-04; every GIF of the catalog reviewed the same day. 'exclude': dataset ids dropped from the catalog, with the reason. 'reviewed': ids checked by hand, never flagged needsReview again. 'exercises': per-id overrides of equipment (contexts are recomputed), stepsFr, cueFr, mistakeFr, and a noteFr shown when the animation differs from the home setup. The dataset's French steps sometimes describe another movement than the GIF: rewrite them here.",
+  "version": "1.1.0",
   "exclude": {
+    "0002": "45° side bend: the GIF shows a 45° hyperextension bench.",
+    "0020": "Balance board: needs a balance board.",
+    "0251": "Chest dip: needs parallel bars (dip station in the GIF).",
+    "0277": "Decline crunch: needs a decline bench with foot pads.",
+    "0282": "Decline sit-up: needs a decline bench with foot pads.",
     "0488": "Hyperextension on a bench: the legs must be anchored on a long bench.",
+    "0492": "Incline depth-jump push-up: needs two benches.",
+    "0494": "Incline reverse-grip push-up: needs a bar (Smith machine in the GIF).",
+    "0495": "Twisting sit-up: needs a decline bench with foot pads.",
     "0496": "Inverse leg curl: needs a machine with ankle pads.",
+    "0497": "Inverted row v. 2: the GIF shows an upside-down hang from a high bar, unsafe on a doorway bar.",
+    "0634": "Negative crunch: needs a decline bench with foot pads.",
+    "0672": "Reverse dip: the GIF is unclear and the steps describe parallel bars.",
+    "0684": "Run (equipment): needs a treadmill.",
+    "0697": "Same movement as ds:0696 (in the ladder), on a machine with ankle pads.",
     "0813": "Dips between two benches: needs two parallel supports.",
+    "0814": "Triceps dip: the GIF shows a dip station (parallel bars).",
+    "1275": "Drop push-up: needs two benches to drop between.",
     "1374": "Jump down from a bench onto one leg: unstable and risky from a chair.",
     "1490": "Calf raise on a staircase: no step at home.",
     "1753": "Dips between three benches: needs three supports.",
-    "2462": "Named 'on straight bar' but the GIF shows parallel bars, which Anthony does not have. Replaced in the muscle-up ladder by hd:straight-bar-dip."
+    "1766": "Duplicate of ds:0696 (in the ladder): the same Nordic curl with the feet under a bench.",
+    "2462": "Named 'on straight bar' but the GIF shows parallel bars, which Anthony does not have. Replaced in the muscle-up ladder by hd:straight-bar-dip.",
+    "2801": "Twisted leg raise: the GIF shows a captain's chair station.",
+    "2802": "Twisted leg raise: the GIF shows a captain's chair station.",
+    "3193": "Glute-ham raise: needs a GHD machine.",
+    "3287": "Elbow dips: needs parallel bars.",
+    "3288": "Korean dips: needs parallel bars.",
+    "3289": "Impossible dips: needs parallel bars.",
+    "3292": "Elevator: needs gymnastic rings.",
+    "3303": "Human flag: needs a vertical pole.",
+    "3318": "Swing 360: a full giant swing on a bar, impossible on a doorway bar and unsafe without spotting."
   },
   "reviewed": [
-    "0129", "0130", "0570", "0620", "0696", "0812", "1423", "1476", "1548", "2298", "3019", "3523", "3785"
+    "0001",
+    "0003",
+    "0006",
+    "0129",
+    "0130",
+    "0137",
+    "0138",
+    "0139",
+    "0140",
+    "0253",
+    "0257",
+    "0258",
+    "0259",
+    "0260",
+    "0262",
+    "0267",
+    "0274",
+    "0276",
+    "0279",
+    "0283",
+    "0284",
+    "0443",
+    "0456",
+    "0457",
+    "0459",
+    "0464",
+    "0466",
+    "0467",
+    "0469",
+    "0471",
+    "0472",
+    "0473",
+    "0474",
+    "0475",
+    "0476",
+    "0484",
+    "0489",
+    "0490",
+    "0491",
+    "0493",
+    "0499",
+    "0500",
+    "0501",
+    "0507",
+    "0508",
+    "0513",
+    "0514",
+    "0555",
+    "0558",
+    "0570",
+    "0613",
+    "0620",
+    "0624",
+    "0627",
+    "0628",
+    "0630",
+    "0631",
+    "0635",
+    "0638",
+    "0639",
+    "0642",
+    "0643",
+    "0651",
+    "0652",
+    "0658",
+    "0659",
+    "0661",
+    "0662",
+    "0664",
+    "0666",
+    "0668",
+    "0669",
+    "0670",
+    "0674",
+    "0678",
+    "0685",
+    "0687",
+    "0688",
+    "0689",
+    "0690",
+    "0691",
+    "0696",
+    "0699",
+    "0705",
+    "0710",
+    "0716",
+    "0717",
+    "0720",
+    "0721",
+    "0725",
+    "0730",
+    "0735",
+    "0778",
+    "0794",
+    "0795",
+    "0803",
+    "0812",
+    "0815",
+    "0816",
+    "0817",
+    "0858",
+    "0865",
+    "0870",
+    "0871",
+    "0872",
+    "1160",
+    "1167",
+    "1271",
+    "1273",
+    "1297",
+    "1306",
+    "1311",
+    "1326",
+    "1327",
+    "1346",
+    "1352",
+    "1355",
+    "1358",
+    "1362",
+    "1363",
+    "1364",
+    "1365",
+    "1366",
+    "1367",
+    "1368",
+    "1373",
+    "1377",
+    "1386",
+    "1387",
+    "1390",
+    "1397",
+    "1398",
+    "1399",
+    "1403",
+    "1405",
+    "1407",
+    "1418",
+    "1419",
+    "1421",
+    "1422",
+    "1423",
+    "1424",
+    "1427",
+    "1428",
+    "1429",
+    "1460",
+    "1466",
+    "1467",
+    "1468",
+    "1471",
+    "1472",
+    "1473",
+    "1476",
+    "1489",
+    "1494",
+    "1495",
+    "1511",
+    "1512",
+    "1548",
+    "1576",
+    "1585",
+    "1587",
+    "1604",
+    "1685",
+    "1686",
+    "1687",
+    "1688",
+    "1689",
+    "1759",
+    "1761",
+    "1763",
+    "1764",
+    "1769",
+    "1770",
+    "1771",
+    "1772",
+    "1773",
+    "1774",
+    "1775",
+    "2141",
+    "2271",
+    "2298",
+    "2300",
+    "2312",
+    "2329",
+    "2333",
+    "2355",
+    "2368",
+    "2398",
+    "2429",
+    "2466",
+    "2567",
+    "2571",
+    "3011",
+    "3012",
+    "3013",
+    "3016",
+    "3019",
+    "3021",
+    "3119",
+    "3132",
+    "3145",
+    "3147",
+    "3156",
+    "3158",
+    "3161",
+    "3162",
+    "3165",
+    "3166",
+    "3167",
+    "3168",
+    "3201",
+    "3202",
+    "3203",
+    "3204",
+    "3211",
+    "3212",
+    "3213",
+    "3214",
+    "3215",
+    "3216",
+    "3217",
+    "3218",
+    "3219",
+    "3220",
+    "3221",
+    "3222",
+    "3223",
+    "3224",
+    "3231",
+    "3239",
+    "3291",
+    "3293",
+    "3294",
+    "3295",
+    "3296",
+    "3297",
+    "3298",
+    "3299",
+    "3300",
+    "3301",
+    "3302",
+    "3304",
+    "3314",
+    "3315",
+    "3327",
+    "3360",
+    "3361",
+    "3418",
+    "3419",
+    "3420",
+    "3433",
+    "3470",
+    "3523",
+    "3533",
+    "3543",
+    "3544",
+    "3552",
+    "3561",
+    "3582",
+    "3636",
+    "3637",
+    "3638",
+    "3639",
+    "3640",
+    "3645",
+    "3655",
+    "3656",
+    "3662",
+    "3663",
+    "3665",
+    "3667",
+    "3669",
+    "3671",
+    "3672",
+    "3679",
+    "3698",
+    "3699",
+    "3769",
+    "3785"
   ],
   "exercises": {
     "0130": {
-      "equipment": ["none"],
+      "equipment": [
+        "none"
+      ],
       "noteFr": "L'animation montre l'exercice sur un banc : fais-le au sol, à quatre pattes.",
       "stepsFr": [
         "Place-toi à quatre pattes, mains sous les épaules, genoux sous les hanches.",
@@ -26,8 +332,147 @@
       "cueFr": "Dos plat, bassin immobile.",
       "mistakeFr": "Cambrer le dos pour monter la jambe plus haut."
     },
+    "0137": {
+      "stepsFr": [
+        "Place-toi en planche sur les avant-bras, corps aligné.",
+        "Pousse sur une main puis sur l'autre pour monter en planche bras tendus.",
+        "Redescends sur un avant-bras puis sur l'autre.",
+        "Alterne le bras qui part en premier à chaque répétition."
+      ]
+    },
+    "0139": {
+      "equipment": [
+        "table"
+      ],
+      "noteFr": "L'animation montre une barre guidée : fais-le sous une table solide.",
+      "stepsFr": [
+        "Allonge-toi sous la table et saisis son bord, paumes vers toi, mains serrées.",
+        "Gaine ton corps en ligne droite des talons aux épaules.",
+        "Tire la poitrine vers le bord de la table, coudes près du corps.",
+        "Redescends bras tendus sous contrôle."
+      ]
+    },
+    "0140": {
+      "stepsFr": [
+        "Suspends-toi à la barre, paumes vers toi, mains écartées à la largeur des épaules.",
+        "Gaine ta sangle abdominale et serre les omoplates.",
+        "Tire jusqu'à passer le menton au-dessus de la barre, coudes près du corps.",
+        "Redescends lentement jusqu'aux bras tendus."
+      ]
+    },
+    "0260": {
+      "stepsFr": [
+        "Allonge-toi sur le dos, jambes tendues, bras tendus au-dessus de la tête.",
+        "Ramène en même temps les genoux vers la poitrine et les bras vers les tibias.",
+        "Enroule-toi en boule, en équilibre sur les fessiers.",
+        "Redéplie-toi lentement sans reposer les pieds ni les bras."
+      ]
+    },
+    "0279": {
+      "noteFr": "Pose les pieds sur une chaise, ou sur le lit en déplacement."
+    },
+    "0284": {
+      "equipment": [
+        "table"
+      ],
+      "noteFr": "L'animation montre une cale sous les pieds : fais-le pieds à plat, mains sur la table.",
+      "stepsFr": [
+        "Pose les mains sur la table et recule les pieds jusqu'à avoir le buste à l'horizontale.",
+        "Garde les jambes tendues, pieds écartés à la largeur des hanches.",
+        "Monte sur la pointe des pieds le plus haut possible.",
+        "Redescends lentement les talons au sol."
+      ]
+    },
+    "0459": {
+      "noteFr": "L'animation montre un banc : fais-le à plat ventre au sol.",
+      "stepsFr": [
+        "Allonge-toi à plat ventre, front posé sur les mains.",
+        "Décolle les deux jambes tendues du sol en serrant les fessiers.",
+        "Monte et descends les jambes en alternance, par petits battements.",
+        "Garde le bassin au sol pendant toute la série."
+      ]
+    },
+    "0472": {
+      "stepsFr": [
+        "Suspends-toi à la barre en pronation, bras tendus, épaules engagées.",
+        "Monte les genoux pliés jusqu'à ce que les cuisses dépassent l'horizontale.",
+        "Marque un temps en haut, sans te balancer.",
+        "Redescends lentement jusqu'aux jambes tendues."
+      ]
+    },
+    "0476": {
+      "noteFr": "L'animation montre des sangles : suspends-toi directement à la barre, mains en pronation."
+    },
+    "0484": {
+      "stepsFr": [
+        "Allonge-toi sur le dos, bras le long du corps, genoux pliés au-dessus des hanches.",
+        "Enroule le bassin pour décoller les fessiers du sol, genoux vers la poitrine.",
+        "Marque un temps en haut, sans élan.",
+        "Redescends lentement le bassin au sol."
+      ]
+    },
+    "0489": {
+      "noteFr": "L'animation montre un banc à lombaires : fais-le à plat ventre au sol.",
+      "stepsFr": [
+        "Allonge-toi à plat ventre, mains sur les tempes, jambes tendues.",
+        "Décolle la poitrine du sol en serrant les fessiers, regard vers le sol.",
+        "Marque un temps en haut, sans forcer sur la nuque.",
+        "Redescends lentement."
+      ]
+    },
+    "0490": {
+      "equipment": [
+        "table"
+      ],
+      "noteFr": "L'animation montre une barre guidée : pose les mains sur le bord de la table.",
+      "stepsFr": [
+        "Pose les mains sur le bord de la table, écartées de la largeur des épaules.",
+        "Recule les pieds pour aligner le corps des talons à la tête.",
+        "Descends la poitrine vers la table, coudes serrés le long du corps.",
+        "Pousse pour tendre les bras."
+      ]
+    },
+    "0491": {
+      "noteFr": "L'animation montre un banc incliné : fais-le allongé au sol.",
+      "stepsFr": [
+        "Allonge-toi sur le dos, mains au sol le long du corps.",
+        "Monte les jambes tendues jusqu'à la verticale.",
+        "Pousse les pieds vers le plafond pour décoller le bassin du sol.",
+        "Repose le bassin puis redescends les jambes lentement."
+      ]
+    },
+    "0493": {
+      "noteFr": "Pose les mains sur une table, une chaise calée contre un mur ou le bord du lit."
+    },
+    "0499": {
+      "noteFr": "L'animation montre une barre guidée : fais-le sous une table solide."
+    },
+    "0500": {
+      "stepsFr": [
+        "Place-toi en position de pompe, mains bien plus écartées que les épaules.",
+        "Descends en déportant le poids du corps vers une main, l'autre bras presque tendu.",
+        "Glisse vers l'autre main en restant en bas, sans toucher le sol.",
+        "Remonte au centre, puis enchaîne en changeant de côté."
+      ]
+    },
+    "0555": {
+      "equipment": [
+        "wall"
+      ],
+      "stepsFr": [
+        "Dos au mur, descends jusqu'à avoir les cuisses à l'horizontale, genoux à 90°.",
+        "Tends une jambe devant toi, à hauteur de hanche.",
+        "Repose-la et tends l'autre jambe.",
+        "Alterne en gardant le dos plaqué au mur."
+      ]
+    },
+    "0558": {
+      "noteFr": "L'animation montre des anneaux : fais-le à la barre de parc."
+    },
     "0570": {
-      "equipment": ["none"],
+      "equipment": [
+        "none"
+      ],
       "noteFr": "L'animation montre l'exercice sur un banc : fais-le allongé au sol.",
       "stepsFr": [
         "Allonge-toi sur le dos, mains sous les fessiers.",
@@ -39,7 +484,9 @@
       "mistakeFr": "Reposer les pieds entre deux répétitions."
     },
     "0620": {
-      "equipment": ["none"],
+      "equipment": [
+        "none"
+      ],
       "noteFr": "L'animation montre l'exercice sur un banc : fais-le allongé au sol.",
       "stepsFr": [
         "Allonge-toi sur le dos, mains sous les fessiers.",
@@ -49,6 +496,47 @@
       ],
       "cueFr": "Bas du dos plaqué au sol.",
       "mistakeFr": "Cambrer le dos en fin de descente."
+    },
+    "0628": {
+      "stepsFr": [
+        "Debout, pieds écartés, genoux légèrement fléchis, mains sur les hanches.",
+        "Fais un grand pas en diagonale vers l'avant, en gardant les genoux fléchis.",
+        "Fais le pas suivant avec l'autre jambe, toujours écarté.",
+        "Avance ainsi sur quelques mètres, puis recule de la même façon."
+      ]
+    },
+    "0631": {
+      "noteFr": "L'animation montre des anneaux : fais-le à la barre de parc."
+    },
+    "0639": {
+      "equipment": [
+        "chair"
+      ]
+    },
+    "0689": {
+      "equipment": [
+        "chair"
+      ],
+      "noteFr": "L'animation montre un banc : assieds-toi au bord d'une chaise."
+    },
+    "0690": {
+      "equipment": [
+        "chair"
+      ],
+      "stepsFr": [
+        "Assieds-toi sur la chaise, dos droit, pieds à plat.",
+        "Lève un bras tendu au-dessus de la tête.",
+        "Incline le buste du côté opposé, sans décoller les fessiers.",
+        "Tiens 20 à 30 secondes, puis change de côté."
+      ]
+    },
+    "0691": {
+      "stepsFr": [
+        "Dos au mur, descends jusqu'à avoir les cuisses à l'horizontale.",
+        "Place les mains derrière la tête, coudes ouverts.",
+        "Incline le buste sur le côté, coude vers la hanche, sans décoller le dos du mur.",
+        "Reviens au centre et alterne les côtés."
+      ]
     },
     "0696": {
       "stepsFr": [
@@ -60,8 +548,38 @@
       "cueFr": "Hanches tendues pendant toute la descente.",
       "mistakeFr": "Plier les hanches pour raccourcir la descente. Vérifie d'abord que le meuble ne bouge pas."
     },
+    "0710": {
+      "stepsFr": [
+        "Allonge-toi sur le côté, appuyé sur l'avant-bras, jambes tendues l'une sur l'autre.",
+        "Lève la jambe du dessus tendue, pointe du pied vers l'avant.",
+        "Monte sans basculer le bassin en arrière.",
+        "Redescends lentement et enchaîne, puis change de côté."
+      ]
+    },
+    "0730": {
+      "equipment": [
+        "towel"
+      ],
+      "stepsFr": [
+        "Allonge-toi sur le dos, une serviette sous un talon, sur un sol lisse.",
+        "Garde l'autre jambe tendue au sol.",
+        "Fais glisser le talon vers les fessiers en pliant le genou.",
+        "Repousse-le lentement jusqu'à la jambe tendue, puis change de jambe."
+      ]
+    },
+    "0803": {
+      "stepsFr": [
+        "Allonge-toi à plat ventre, mains au sol sous les épaules.",
+        "Pousse de façon explosive pour décoller tout le corps du sol.",
+        "En l'air, tends les bras devant toi, corps gainé.",
+        "Ramène vite les mains sous les épaules et reçois-toi bras fléchis."
+      ]
+    },
     "0812": {
-      "equipment": ["chair", "table"],
+      "equipment": [
+        "chair",
+        "table"
+      ],
       "noteFr": "L'animation montre deux bancs : mains sur la chaise, talons sur la table.",
       "stepsFr": [
         "Cale la chaise contre un mur. Dos à elle, pose les mains sur le bord de l'assise, doigts vers l'avant.",
@@ -72,8 +590,149 @@
       "cueFr": "Épaules basses, loin des oreilles.",
       "mistakeFr": "Descendre trop bas et forcer sur l'avant des épaules."
     },
+    "0815": {
+      "stepsFr": [
+        "Assieds-toi au sol, genoux pliés, mains au sol derrière toi, doigts vers les pieds.",
+        "Décolle les fessiers du sol.",
+        "Plie les coudes pour descendre les fessiers vers le sol sans les poser.",
+        "Pousse sur les mains pour tendre les bras."
+      ]
+    },
+    "0816": {
+      "equipment": [
+        "table"
+      ],
+      "noteFr": "L'animation montre une barre guidée : pose les avant-bras sur le bord de la table.",
+      "stepsFr": [
+        "Pose les mains sur le bord de la table, bras tendus, et recule les pieds pour incliner le corps.",
+        "Plie les coudes pour amener le front vers tes mains, coudes vers le bas.",
+        "Garde le corps aligné, sans casser les hanches.",
+        "Pousse sur les mains pour tendre les bras."
+      ]
+    },
+    "0817": {
+      "stepsFr": [
+        "Debout, tends un bras devant toi à hauteur d'épaule.",
+        "Ramène-le en travers de la poitrine.",
+        "Avec l'autre main, appuie doucement sur le coude pour rapprocher le bras.",
+        "Tiens 15 à 30 secondes, puis change de bras."
+      ]
+    },
+    "0858": {
+      "equipment": [
+        "bar"
+      ],
+      "stepsFr": [
+        "Suspends-toi à la barre en pronation, bras tendus, épaules engagées.",
+        "Monte un genou vers la poitrine.",
+        "Redescends-le en montant l'autre, comme une course.",
+        "Enchaîne vite sans te balancer."
+      ]
+    },
+    "0865": {
+      "noteFr": "L'animation montre un banc : fais-le allongé au sol."
+    },
+    "0870": {
+      "stepsFr": [
+        "Place-toi en planche sur les avant-bras, corps aligné.",
+        "Monte les hanches vers le plafond en poussant sur les avant-bras.",
+        "Marque un temps en haut, jambes tendues.",
+        "Redescends en planche sans creuser le dos."
+      ]
+    },
+    "1271": {
+      "equipment": [
+        "towel"
+      ],
+      "noteFr": "L'animation montre un bâton : tiens une serviette tendue.",
+      "stepsFr": [
+        "Debout, tiens une serviette tendue devant toi, mains bien plus écartées que les épaules.",
+        "Monte la serviette au-dessus de la tête, bras tendus.",
+        "Continue derrière toi aussi loin que tes épaules le permettent, sans plier les bras.",
+        "Reviens devant toi par le même chemin."
+      ]
+    },
+    "1346": {
+      "stepsFr": [
+        "Place-toi à quatre pattes, mains un peu devant les épaules.",
+        "Recule les fessiers vers les talons en gardant les mains au sol.",
+        "Laisse la poitrine descendre vers le sol, bras tendus devant toi.",
+        "Tiens en respirant, puis reviens à quatre pattes."
+      ]
+    },
+    "1355": {
+      "stepsFr": [
+        "De profil au mur, pose l'avant-bras contre le mur au-dessus de ta tête.",
+        "Pousse le bassin dans la direction opposée au mur.",
+        "Laisse le buste s'incliner jusqu'à sentir l'étirement sur le côté du dos.",
+        "Tiens 20 à 30 secondes, puis change de côté."
+      ]
+    },
+    "1363": {
+      "stepsFr": [
+        "Assieds-toi au sol, jambes tendues et écartées à la largeur des hanches.",
+        "Tends les bras devant toi à hauteur d'épaules.",
+        "Enroule le dos vers l'avant, menton vers la poitrine, comme pour passer au-dessus d'un ballon.",
+        "Redéroule lentement jusqu'au dos droit."
+      ]
+    },
+    "1386": {
+      "equipment": [
+        "table"
+      ],
+      "noteFr": "L'animation montre un banc : pose les mains sur la table."
+    },
+    "1390": {
+      "stepsFr": [
+        "Assieds-toi au sol, jambes tendues devant toi.",
+        "Penche le buste en avant, dos long.",
+        "Attrape la pointe des pieds et tire-la doucement vers toi.",
+        "Tiens 20 à 30 secondes en respirant calmement."
+      ]
+    },
+    "1398": {
+      "equipment": [
+        "chair"
+      ],
+      "stepsFr": [
+        "Pose un talon sur l'assise de la chaise, jambe tendue.",
+        "Garde l'autre jambe droite, pied à plat au sol.",
+        "Penche le buste en avant, dos plat, et attrape la pointe du pied posé.",
+        "Tiens 20 à 30 secondes, puis change de jambe."
+      ]
+    },
+    "1405": {
+      "equipment": [
+        "table"
+      ],
+      "noteFr": "L'animation montre un banc : pose les mains sur le bord de la table.",
+      "stepsFr": [
+        "Debout face à la table, pose les mains sur le bord, bras tendus.",
+        "Recule les pieds et penche le buste jusqu'à ce que le dos soit à l'horizontale.",
+        "Laisse descendre la poitrine vers le sol, sans plier les bras.",
+        "Tiens la position en respirant calmement, puis remonte."
+      ]
+    },
+    "1418": {
+      "stepsFr": [
+        "Allonge-toi sur le dos, jambes tendues.",
+        "Ramène les deux genoux vers la poitrine.",
+        "Entoure-les avec les bras et serre doucement.",
+        "Tiens en respirant calmement, puis relâche les jambes."
+      ]
+    },
+    "1421": {
+      "stepsFr": [
+        "Place-toi en planche sur les mains, genoux au sol.",
+        "Pose un avant-bras puis l'autre au sol, coudes sous les épaules.",
+        "Remonte sur une main puis sur l'autre.",
+        "Alterne le bras qui part en premier."
+      ]
+    },
     "1423": {
-      "equipment": ["table"],
+      "equipment": [
+        "table"
+      ],
       "noteFr": "L'animation montre un banc : fais-le sur une table solide.",
       "stepsFr": [
         "Allonge-toi à plat ventre sur la table, hanches au bord, jambes dans le vide.",
@@ -84,8 +743,18 @@
       "cueFr": "Mouvement lent, sans élan.",
       "mistakeFr": "Monter les jambes au-dessus de l'horizontale en cambrant."
     },
+    "1427": {
+      "stepsFr": [
+        "Debout, mains sur les hanches, poids sur une jambe.",
+        "Écarte l'autre jambe tendue sur le côté, pointe du pied vers l'avant.",
+        "Monte sans pencher le buste.",
+        "Redescends lentement et enchaîne, puis change de jambe."
+      ]
+    },
     "1476": {
-      "equipment": ["chair"],
+      "equipment": [
+        "chair"
+      ],
       "noteFr": "L'animation montre une boîte : pose le pied arrière sur l'assise d'une chaise.",
       "stepsFr": [
         "Dos à une chaise, pose le dessus du pied arrière sur l'assise.",
@@ -95,6 +764,85 @@
       ],
       "cueFr": "Buste droit, poids sur la jambe avant.",
       "mistakeFr": "Pousser avec la jambe arrière."
+    },
+    "1489": {
+      "equipment": [
+        "chair"
+      ],
+      "noteFr": "L'animation montre un banc : tiens le dossier d'une chaise."
+    },
+    "1495": {
+      "equipment": [
+        "chair"
+      ],
+      "noteFr": "L'animation montre un banc : pose les mollets sur l'assise d'une chaise."
+    },
+    "1511": {
+      "stepsFr": [
+        "Allonge-toi sur le dos, jambes tendues.",
+        "Monte une jambe tendue et attrape-la derrière la cuisse ou le mollet.",
+        "Tire doucement la jambe vers toi, l'autre jambe reste au sol.",
+        "Tiens 20 à 30 secondes en respirant, puis change de jambe."
+      ]
+    },
+    "1585": {
+      "stepsFr": [
+        "Debout, avance un pied d'un demi-pas, talon au sol et pointe relevée.",
+        "Plie légèrement la jambe arrière.",
+        "Penche le buste en avant, dos plat, mains vers le pied avant.",
+        "Tiens 20 à 30 secondes, puis change de jambe."
+      ]
+    },
+    "1689": {
+      "stepsFr": [
+        "Debout, pieds écartés à la largeur des épaules, poings à hauteur de poitrine.",
+        "Pousse un bras devant toi en tirant l'autre coude vers l'arrière.",
+        "Inverse : le bras devant revient, l'autre part devant.",
+        "Enchaîne vite, buste droit, épaules basses."
+      ]
+    },
+    "1770": {
+      "equipment": [
+        "chair"
+      ],
+      "stepsFr": [
+        "Assieds-toi au bord de la chaise, buste droit.",
+        "Saisis l'arrière de ta cheville d'une main, coude posé contre l'intérieur de la cuisse.",
+        "Fléchis le bras pour monter la jambe, en résistant avec la jambe.",
+        "Redescends lentement et change de bras après la série."
+      ]
+    },
+    "1771": {
+      "stepsFr": [
+        "À genoux, pose les avant-bras au sol devant toi, coudes sous les épaules.",
+        "Gaine le ventre, le corps aligné des genoux à la tête.",
+        "Pousse sur les mains pour tendre les bras.",
+        "Redescends lentement sur les avant-bras."
+      ]
+    },
+    "1772": {
+      "noteFr": "L'animation montre un banc : fais-le allongé au sol.",
+      "stepsFr": [
+        "Allonge-toi sur le dos, jambes tendues, coudes pliés à côté du buste.",
+        "Appuie fort les coudes dans le sol.",
+        "Décolle le haut du dos du sol en serrant les omoplates.",
+        "Marque un temps en haut, puis redescends lentement."
+      ]
+    },
+    "1773": {
+      "noteFr": "L'animation montre un espalier : passe la serviette autour de la poignée d'une porte fermée qui s'ouvre de l'autre côté."
+    },
+    "1775": {
+      "equipment": [
+        "chair"
+      ],
+      "noteFr": "L'animation montre un banc : pose le pied du dessus sur l'assise d'une chaise.",
+      "stepsFr": [
+        "Allonge-toi sur le côté, avant-bras au sol, pied du dessus posé sur l'assise de la chaise.",
+        "Monte les hanches pour aligner le corps.",
+        "Lève la jambe du dessous jusqu'à toucher l'assise.",
+        "Redescends-la sans poser les hanches, puis change de côté."
+      ]
     },
     "2298": {
       "noteFr": "L'animation montre une barre guidée : fais-le sous une table solide, pieds sur une chaise.",
@@ -107,6 +855,49 @@
       "cueFr": "Le bassin reste aligné avec les épaules.",
       "mistakeFr": "Laisser le bassin s'affaisser. Vérifie d'abord que la table ne bascule pas."
     },
+    "2300": {
+      "noteFr": "L'animation montre une barre guidée : fais-le sous une table solide."
+    },
+    "2333": {
+      "noteFr": "L'animation montre des sangles : suspends-toi directement à la barre, mains en pronation."
+    },
+    "2355": {
+      "noteFr": "L'animation montre des sangles : suspends-toi directement à la barre, mains en pronation."
+    },
+    "2567": {
+      "equipment": [
+        "chair"
+      ],
+      "stepsFr": [
+        "Assieds-toi au bord de la chaise, pieds à plat.",
+        "Pose la cheville droite sur le genou gauche.",
+        "Penche le buste en avant, dos plat, jusqu'à sentir l'étirement dans la fesse droite.",
+        "Tiens 20 à 30 secondes, puis change de côté."
+      ]
+    },
+    "3011": {
+      "equipment": [
+        "table"
+      ],
+      "noteFr": "L'animation montre un banc : pose les mains sur le bord de la table.",
+      "stepsFr": [
+        "Pose les mains sur le bord de la table, bras tendus, corps aligné.",
+        "Sans plier les coudes, laisse la poitrine descendre en rapprochant les omoplates.",
+        "Pousse dans les mains pour écarter les omoplates et arrondir légèrement le haut du dos.",
+        "Enchaîne lentement, les bras restent tendus."
+      ]
+    },
+    "3012": {
+      "equipment": [
+        "chair"
+      ],
+      "stepsFr": [
+        "Assieds-toi au bord de la chaise, mains sur l'assise de chaque côté des hanches.",
+        "Avance les fessiers juste devant l'assise, bras tendus.",
+        "Sans plier les coudes, laisse le corps descendre en montant les épaules vers les oreilles.",
+        "Pousse les épaules vers le bas pour remonter le corps."
+      ]
+    },
     "3019": {
       "stepsFr": [
         "Place la chaise sous la barre et pose un pied sur l'assise.",
@@ -116,6 +907,174 @@
       ],
       "cueFr": "La jambe aide, les bras travaillent.",
       "mistakeFr": "Pousser surtout avec la jambe."
+    },
+    "3132": {
+      "equipment": [
+        "chair"
+      ],
+      "noteFr": "L'animation montre un banc : tiens le dossier d'une chaise."
+    },
+    "3156": {
+      "noteFr": "L'animation montre un espalier : tiens le chambranle d'une porte.",
+      "stepsFr": [
+        "Face au chambranle d'une porte, saisis-le d'une main à hauteur de poitrine, pieds près du mur.",
+        "Penche-toi en arrière, bras tendu, corps gainé.",
+        "Tire la poitrine vers ta main, coude près du corps.",
+        "Redescends bras tendu sous contrôle, puis change de bras."
+      ]
+    },
+    "3158": {
+      "noteFr": "L'animation montre un espalier : tiens le chambranle d'une porte.",
+      "stepsFr": [
+        "Face au chambranle d'une porte, saisis-le à deux mains serrées, à hauteur de poitrine.",
+        "Avance les pieds sous tes mains et penche-toi en arrière, bras tendus.",
+        "Tire la poitrine vers tes mains, coudes près du corps.",
+        "Redescends bras tendus sous contrôle."
+      ]
+    },
+    "3161": {
+      "noteFr": "L'animation montre un espalier : passe la serviette autour de la poignée d'une porte fermée qui s'ouvre de l'autre côté.",
+      "stepsFr": [
+        "Passe la serviette autour de la poignée d'une porte fermée qui s'ouvre de l'autre côté, et tiens les deux bouts d'une main.",
+        "Avance les pieds et penche-toi en arrière, bras tendu.",
+        "Tire la poitrine vers ta main en serrant l'omoplate.",
+        "Redescends sous contrôle, puis change de bras."
+      ]
+    },
+    "3162": {
+      "noteFr": "L'animation montre un espalier : tiens le chambranle d'une porte.",
+      "stepsFr": [
+        "Face au chambranle d'une porte, saisis-le d'une main à hauteur de poitrine.",
+        "Avance les pieds et penche-toi en arrière, bras tendu, corps gainé.",
+        "Tire la poitrine vers ta main en serrant l'omoplate.",
+        "Redescends bras tendu sous contrôle, puis change de bras."
+      ]
+    },
+    "3165": {
+      "noteFr": "L'animation montre un espalier : passe la serviette autour de la poignée d'une porte fermée qui s'ouvre de l'autre côté.",
+      "stepsFr": [
+        "Passe la serviette autour de la poignée d'une porte fermée qui s'ouvre de l'autre côté, un bout dans chaque main.",
+        "Avance les pieds et penche-toi en arrière, bras tendus.",
+        "Tire la poitrine vers tes mains en serrant les omoplates.",
+        "Redescends bras tendus sous contrôle."
+      ]
+    },
+    "3166": {
+      "noteFr": "L'animation montre un espalier : tiens le chambranle d'une porte.",
+      "stepsFr": [
+        "Face au chambranle d'une porte, saisis-le à deux mains à hauteur de poitrine.",
+        "Avance les pieds et penche-toi en arrière, bras tendus, corps gainé.",
+        "Tire la poitrine vers tes mains en serrant les omoplates.",
+        "Redescends bras tendus sous contrôle."
+      ]
+    },
+    "3167": {
+      "noteFr": "L'animation montre un espalier : passe la serviette autour du pied d'une table solide."
+    },
+    "3168": {
+      "noteFr": "L'animation montre un espalier : tiens le chambranle d'une porte ou le pied d'une table solide."
+    },
+    "3204": {
+      "stepsFr": [
+        "Allonge-toi sur le dos, jambes tendues, bras tendus au-dessus de la tête.",
+        "Enroule le buste en amenant les bras vers l'avant.",
+        "Monte jusqu'à toucher la pointe de tes pieds.",
+        "Redescends lentement, vertèbre par vertèbre, jusqu'à poser les bras derrière la tête."
+      ]
+    },
+    "3211": {
+      "stepsFr": [
+        "Place-toi en planche sur les mains, genoux posés au sol, chevilles croisées.",
+        "Aligne les genoux, le bassin et les épaules.",
+        "Descends la poitrine vers le sol, coudes à 45° du corps.",
+        "Pousse pour tendre les bras."
+      ]
+    },
+    "3214": {
+      "stepsFr": [
+        "Debout, pieds écartés à la largeur des épaules, lève les bras au-dessus de la tête.",
+        "Penche-toi en avant, jambes tendues, et touche le sol ou tes orteils.",
+        "Remonte en décrivant un grand cercle avec les bras.",
+        "Reviens bras au-dessus de la tête et enchaîne."
+      ]
+    },
+    "3221": {
+      "stepsFr": [
+        "Debout, pieds écartés à la largeur des hanches, bras le long du corps.",
+        "Monte un genou à hauteur de hanche.",
+        "Repose le pied et monte l'autre genou.",
+        "Enchaîne à un rythme régulier, buste droit."
+      ]
+    },
+    "3224": {
+      "stepsFr": [
+        "Accroupis-toi, mains devant toi près du sol.",
+        "Saute le plus haut possible en écartant bras et jambes.",
+        "Ramène les jambes avant d'atterrir.",
+        "Reçois-toi genoux fléchis et redescends en position accroupie."
+      ]
+    },
+    "3239": {
+      "stepsFr": [
+        "Place-toi en planche sur les mains, genoux posés au sol.",
+        "Gaine le ventre, bassin aligné avec les épaules.",
+        "Touche l'épaule opposée avec une main, puis repose-la.",
+        "Alterne les mains sans balancer le bassin."
+      ]
+    },
+    "3291": {
+      "stepsFr": [
+        "Assieds-toi au sol, jambes tendues et écartées, mains au sol entre les cuisses.",
+        "Penche les épaules en avant au-dessus des mains et décolle les fessiers.",
+        "Monte les hanches au-dessus des épaules, jambes écartées et tendues.",
+        "Rejoins les jambes à la verticale en handstand, puis redescends en contrôle."
+      ]
+    },
+    "3298": {
+      "stepsFr": [
+        "Pose les mains au sol à la largeur des épaules, doigts vers l'avant ou légèrement vers l'extérieur.",
+        "Écarte largement les jambes, bras tendus.",
+        "Penche les épaules devant les mains jusqu'à décoller les pieds.",
+        "Tiens le corps à l'horizontale, puis repose les pieds en contrôle."
+      ]
+    },
+    "3301": {
+      "stepsFr": [
+        "Accroupis-toi, mains au sol à la largeur des épaules, doigts écartés.",
+        "Pose l'intérieur des genoux sur l'arrière des bras, coudes légèrement pliés.",
+        "Penche le buste en avant jusqu'à décoller les pieds du sol.",
+        "Tiens l'équilibre, puis repose les pieds en douceur."
+      ]
+    },
+    "3302": {
+      "stepsFr": [
+        "Debout, bras tendus au-dessus de la tête, avance une jambe.",
+        "Bascule en avant, pose les mains au sol à la largeur des épaules et lance la jambe arrière.",
+        "Rejoins les jambes au-dessus de toi, corps aligné, regard entre les mains.",
+        "Corrige l'équilibre avec les doigts, puis redescends une jambe après l'autre."
+      ]
+    },
+    "3304": {
+      "equipment": [
+        "park-bar"
+      ],
+      "noteFr": "L'animation montre des anneaux : fais-le à la barre de parc, pas à la barre de porte."
+    },
+    "3314": {
+      "stepsFr": [
+        "Pose les mains au sol bien plus écartées que les épaules, doigts vers l'extérieur.",
+        "Écarte largement les jambes.",
+        "Penche les épaules loin devant les mains et décolle les pieds, corps à l'horizontale juste au-dessus du sol.",
+        "Tiens la position gainée, puis repose les pieds."
+      ]
+    },
+    "3315": {
+      "stepsFr": [
+        "Pose les mains au sol bien plus écartées que les épaules, doigts vers l'extérieur.",
+        "Penche les épaules loin devant les mains, bras tendus.",
+        "Décolle les pieds pour amener le corps à l'horizontale, juste au-dessus du sol.",
+        "Tiens la position gainée, puis repose les pieds."
+      ]
     },
     "3523": {
       "noteFr": "L'animation montre un banc : pose les talons sur l'assise d'une chaise.",
@@ -127,6 +1086,62 @@
       ],
       "cueFr": "La poussée part des talons.",
       "mistakeFr": "Cambrer le bas du dos en haut du mouvement."
+    },
+    "3533": {
+      "equipment": [
+        "chair"
+      ],
+      "noteFr": "L'animation montre un banc : pose le pied arrière sur l'assise d'une chaise.",
+      "stepsFr": [
+        "Dos à une chaise, pose le dessus du pied arrière sur l'assise.",
+        "Place le pied avant assez loin pour que le genou reste au-dessus de la cheville en bas du mouvement.",
+        "Descends verticalement jusqu'à ce que le genou arrière frôle le sol.",
+        "Remonte en poussant sur le talon avant."
+      ]
+    },
+    "3544": {
+      "equipment": [
+        "chair"
+      ],
+      "noteFr": "L'animation montre un banc : pose la main sur l'assise d'une chaise.",
+      "stepsFr": [
+        "Pose une main sur l'assise de la chaise, bras tendu sous l'épaule.",
+        "Tends les jambes, pieds superposés, corps de profil.",
+        "Monte les hanches pour aligner la tête, le bassin et les pieds.",
+        "Tiens la position, puis change de côté."
+      ]
+    },
+    "3637": {
+      "stepsFr": [
+        "Debout, bras pliés le long du corps.",
+        "Cours sur place en ramenant le talon vers les fessiers.",
+        "Lance ensuite le genou vers l'avant, comme pour dessiner un cercle avec le pied.",
+        "Enchaîne vite en balançant les bras."
+      ]
+    },
+    "3638": {
+      "stepsFr": [
+        "Debout, bras pliés le long du corps.",
+        "Monte un genou à hauteur de hanche en balançant le bras opposé.",
+        "Change de jambe en sautillant, comme une course sur place.",
+        "Garde un rythme rapide en restant sur l'avant des pieds."
+      ]
+    },
+    "3665": {
+      "stepsFr": [
+        "Place-toi en planche bras tendus, mains sous les épaules.",
+        "Lève un bras tendu devant toi et la jambe opposée derrière toi.",
+        "Tiens deux secondes sans tourner le bassin.",
+        "Repose-les et change de côté."
+      ]
+    },
+    "3667": {
+      "stepsFr": [
+        "Allonge-toi sur le côté, appuyé sur l'avant-bras.",
+        "Plie la jambe du dessus et pose le pied au sol devant la jambe du dessous.",
+        "Lève la jambe du dessous tendue le plus haut possible.",
+        "Redescends lentement et enchaîne, puis change de côté."
+      ]
     }
   }
 }

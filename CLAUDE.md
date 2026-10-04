@@ -46,7 +46,7 @@ Toute modification d'une échelle ou d'un seuil passe par l'accord d'Anthony.
 
 - Vite + React 19 + TypeScript + Tailwind CSS v4. Pas de Next.js.
 - Build en **un seul fichier HTML autonome** (`vite-plugin-singlefile`, assets intégrés). Plafond : 16 Mo. Ajoute un script qui échoue au-delà de 15 Mo.
-- Police Geist embarquée via `@fontsource-variable/geist`. Icônes : `@phosphor-icons/react` uniquement.
+- Polices du DS, embarquées via `@fontsource-variable` : JetBrains Mono pour toute l'interface (`font-mono`), Geist pour `font-sans` (touches `Kbd`). Ne pas les modifier. Icônes : `@phosphor-icons/react` uniquement.
 - Le code (identifiants, commentaires) est en anglais, les textes d'interface en français.
 
 ## Design system DSAIReadable (v0.1.3)

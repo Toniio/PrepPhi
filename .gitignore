@@ -4,3 +4,6 @@ dist/
 __pycache__/
 *.pyc
 .DS_Store
+*.local
+*.log
+node_modules/.tmp/

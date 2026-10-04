@@ -14,7 +14,8 @@ Ce fichier résume un cadrage complet mené le 4 octobre 2026. Les décisions ci
 | `data/hd-exercises.json` | Les 19 étapes absentes du dataset : fiche FR, lien vidéo |
 | `data/catalog-overrides.json` | Corrections après revue des GIF : exclusions, matériel, consignes FR réécrites |
 | `scripts/build-catalog.py` | Génère `src/data/catalog.json` et `src/assets/exercises/*.webp` depuis exercises-dataset |
-| `data/names-fr.json` | Noms français des exercices du catalogue (à créer, voir tâches) |
+| `data/names-fr.json` | Noms français des 280 exercices du catalogue |
+| `docs/redaction-fr.md` | Guide de rédaction : voix, ton, lexique, verbes, libellés FR des composants du DS |
 
 Toute modification d'une échelle ou d'un seuil passe par l'accord d'Anthony.
 

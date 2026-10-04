@@ -1,6 +1,6 @@
 # Étapes hors dataset
 
-18 étapes de tes échelles n'existent pas dans exercises-dataset. Elles n'ont pas d'animation : l'app affiche cette fiche et un lien vidéo.
+19 étapes de tes échelles n'existent pas dans exercises-dataset. Elles n'ont pas d'animation : l'app affiche cette fiche et un lien vidéo.
 La source de vérité est `data/hd-exercises.json` ; ce fichier en est la version lisible.
 
 **À faire** : remplacer chaque lien de recherche par un tutoriel choisi (`videoUrl`). Je n'ai pas pu vérifier des vidéos précises une à une, d'où ce lien provisoire.
@@ -57,18 +57,18 @@ La source de vérité est `data/hd-exercises.json` ; ce fichier en est la versio
 - **Erreur fréquente** : Décoller les talons ou laisser les genoux rentrer vers l'intérieur.
 - **Vidéo** : [rechercher un tutoriel](https://www.youtube.com/results?search_query=bodyweight+squat+proper+form)
 
-## Squat bulgare
+## Pistol squat assisté
 
-Échelle : `legs-front` · matériel : chair · contextes : home
+Échelle : `legs-front` · matériel : none · contextes : home, travel
 
-1. Dos à une chaise, pose le dessus du pied arrière sur l'assise.
-2. Place le pied avant assez loin pour que le genou reste au-dessus de la cheville en bas du mouvement.
-3. Descends verticalement jusqu'à ce que le genou arrière frôle le sol.
-4. Remonte en poussant sur le talon avant.
+1. Tiens-toi de profil à un chambranle de porte et saisis-le d'une main.
+2. Tends une jambe devant toi, talon décollé du sol.
+3. Descends sur l'autre jambe le plus bas possible, en t'aidant du bras juste assez.
+4. Remonte en poussant sur le talon d'appui, puis change de jambe.
 
-- **Point clé** : Buste droit, poids sur la jambe avant.
-- **Erreur fréquente** : Pousser avec la jambe arrière.
-- **Vidéo** : [rechercher un tutoriel](https://www.youtube.com/results?search_query=bulgarian+split+squat+bodyweight+tutorial)
+- **Point clé** : Le talon d'appui reste collé au sol.
+- **Erreur fréquente** : Tirer avec le bras au lieu de pousser avec la jambe.
+- **Vidéo** : [rechercher un tutoriel](https://www.youtube.com/results?search_query=assisted+pistol+squat+tutorial)
 
 ## Leg curl glissé à la serviette, deux jambes
 
@@ -173,6 +173,19 @@ La source de vérité est `data/hd-exercises.json` ; ce fichier en est la versio
 - **Point clé** : La vitesse de la traction, pas le nombre de répétitions.
 - **Erreur fréquente** : Enchaîner sans contrôle de la descente.
 - **Vidéo** : [rechercher un tutoriel](https://www.youtube.com/results?search_query=explosive+pull+up+muscle+up+progression)
+
+## Dips à la barre droite
+
+Échelle : `muscle-up` · matériel : park-bar, low-bar · contextes : park
+
+1. Monte au-dessus de la barre, bras tendus, barre contre le haut des cuisses.
+2. Penche le buste en avant, jambes légèrement devant la barre.
+3. Plie les coudes jusqu'à ce que la barre touche le haut du ventre.
+4. Pousse pour tendre les bras, sans reculer les épaules.
+
+- **Point clé** : Le buste reste penché au-dessus de la barre.
+- **Erreur fréquente** : Rester droit et basculer en arrière.
+- **Vidéo** : [rechercher un tutoriel](https://www.youtube.com/results?search_query=straight+bar+dip+tutorial)
 
 ## Négatif de muscle-up
 

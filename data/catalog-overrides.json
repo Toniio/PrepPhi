@@ -1,0 +1,132 @@
+{
+  "$comment": "Manual corrections applied by scripts/build-catalog.py after reviewing each GIF, validated by Anthony on 2026-10-04. 'exclude': dataset ids dropped from the catalog, with the reason. 'reviewed': ids checked by hand, never flagged needsReview again. 'exercises': per-id overrides of equipment (contexts are recomputed), stepsFr, cueFr, mistakeFr, and a noteFr shown when the animation differs from the home setup. The dataset's French steps sometimes describe another movement than the GIF: rewrite them here.",
+  "version": "1.0.0",
+  "exclude": {
+    "0488": "Hyperextension on a bench: the legs must be anchored on a long bench.",
+    "0496": "Inverse leg curl: needs a machine with ankle pads.",
+    "0813": "Dips between two benches: needs two parallel supports.",
+    "1374": "Jump down from a bench onto one leg: unstable and risky from a chair.",
+    "1490": "Calf raise on a staircase: no step at home.",
+    "1753": "Dips between three benches: needs three supports.",
+    "2462": "Named 'on straight bar' but the GIF shows parallel bars, which Anthony does not have. Replaced in the muscle-up ladder by hd:straight-bar-dip."
+  },
+  "reviewed": [
+    "0129", "0130", "0570", "0620", "0696", "0812", "1423", "1476", "1548", "2298", "3019", "3523", "3785"
+  ],
+  "exercises": {
+    "0130": {
+      "equipment": ["none"],
+      "noteFr": "L'animation montre l'exercice sur un banc : fais-le au sol, à quatre pattes.",
+      "stepsFr": [
+        "Place-toi à quatre pattes, mains sous les épaules, genoux sous les hanches.",
+        "Tends une jambe vers l'arrière jusqu'à l'horizontale.",
+        "Serre le fessier en haut, sans cambrer le bas du dos.",
+        "Ramène le genou sous la hanche et enchaîne, puis change de jambe."
+      ],
+      "cueFr": "Dos plat, bassin immobile.",
+      "mistakeFr": "Cambrer le dos pour monter la jambe plus haut."
+    },
+    "0570": {
+      "equipment": ["none"],
+      "noteFr": "L'animation montre l'exercice sur un banc : fais-le allongé au sol.",
+      "stepsFr": [
+        "Allonge-toi sur le dos, mains sous les fessiers.",
+        "Décolle les pieds du sol, jambes tendues.",
+        "Ramène les genoux vers la poitrine.",
+        "Tends les jambes sans reposer les pieds, puis recommence."
+      ],
+      "cueFr": "Bas du dos plaqué au sol.",
+      "mistakeFr": "Reposer les pieds entre deux répétitions."
+    },
+    "0620": {
+      "equipment": ["none"],
+      "noteFr": "L'animation montre l'exercice sur un banc : fais-le allongé au sol.",
+      "stepsFr": [
+        "Allonge-toi sur le dos, mains sous les fessiers.",
+        "Lève les jambes tendues et serrées jusqu'à la verticale.",
+        "Redescends lentement jusqu'à frôler le sol.",
+        "Remonte sans reposer les talons."
+      ],
+      "cueFr": "Bas du dos plaqué au sol.",
+      "mistakeFr": "Cambrer le dos en fin de descente."
+    },
+    "0696": {
+      "stepsFr": [
+        "À genoux sur une serviette pliée, cale tes talons sous un meuble lourd.",
+        "Gaine ton corps en ligne droite des genoux aux épaules.",
+        "Descends vers l'avant le plus lentement possible, en freinant avec l'arrière des cuisses.",
+        "Rattrape-toi avec les mains, pousse légèrement pour remonter et recommence."
+      ],
+      "cueFr": "Hanches tendues pendant toute la descente.",
+      "mistakeFr": "Plier les hanches pour raccourcir la descente. Vérifie d'abord que le meuble ne bouge pas."
+    },
+    "0812": {
+      "equipment": ["chair", "table"],
+      "noteFr": "L'animation montre deux bancs : mains sur la chaise, talons sur la table.",
+      "stepsFr": [
+        "Cale la chaise contre un mur. Dos à elle, pose les mains sur le bord de l'assise, doigts vers l'avant.",
+        "Pose les talons sur la table, jambes tendues.",
+        "Plie les coudes jusqu'à ce que les bras soient à l'horizontale, dos près de la chaise.",
+        "Pousse sur les paumes pour tendre les bras."
+      ],
+      "cueFr": "Épaules basses, loin des oreilles.",
+      "mistakeFr": "Descendre trop bas et forcer sur l'avant des épaules."
+    },
+    "1423": {
+      "equipment": ["table"],
+      "noteFr": "L'animation montre un banc : fais-le sur une table solide.",
+      "stepsFr": [
+        "Allonge-toi à plat ventre sur la table, hanches au bord, jambes dans le vide.",
+        "Tiens les côtés de la table pour rester stable.",
+        "Lève les jambes tendues jusqu'à l'horizontale en serrant les fessiers.",
+        "Redescends lentement et recommence."
+      ],
+      "cueFr": "Mouvement lent, sans élan.",
+      "mistakeFr": "Monter les jambes au-dessus de l'horizontale en cambrant."
+    },
+    "1476": {
+      "equipment": ["chair"],
+      "noteFr": "L'animation montre une boîte : pose le pied arrière sur l'assise d'une chaise.",
+      "stepsFr": [
+        "Dos à une chaise, pose le dessus du pied arrière sur l'assise.",
+        "Place le pied avant assez loin pour que le genou reste au-dessus de la cheville en bas du mouvement.",
+        "Descends verticalement jusqu'à ce que le genou arrière frôle le sol.",
+        "Remonte en poussant sur le talon avant."
+      ],
+      "cueFr": "Buste droit, poids sur la jambe avant.",
+      "mistakeFr": "Pousser avec la jambe arrière."
+    },
+    "2298": {
+      "noteFr": "L'animation montre une barre guidée : fais-le sous une table solide, pieds sur une chaise.",
+      "stepsFr": [
+        "Allonge-toi sous la table et saisis son bord, pieds posés sur une chaise à hauteur de la table.",
+        "Gaine ton corps en ligne droite des talons aux épaules.",
+        "Tire la poitrine vers le bord de la table, coudes vers l'arrière.",
+        "Redescends bras tendus sous contrôle."
+      ],
+      "cueFr": "Le bassin reste aligné avec les épaules.",
+      "mistakeFr": "Laisser le bassin s'affaisser. Vérifie d'abord que la table ne bascule pas."
+    },
+    "3019": {
+      "stepsFr": [
+        "Place la chaise sous la barre et pose un pied sur l'assise.",
+        "Saisis la barre en pronation, mains un peu plus larges que les épaules.",
+        "Tire le menton au-dessus de la barre, en t'aidant de la jambe juste assez.",
+        "Redescends lentement jusqu'aux bras tendus."
+      ],
+      "cueFr": "La jambe aide, les bras travaillent.",
+      "mistakeFr": "Pousser surtout avec la jambe."
+    },
+    "3523": {
+      "noteFr": "L'animation montre un banc : pose les talons sur l'assise d'une chaise.",
+      "stepsFr": [
+        "Allonge-toi sur le dos, talons posés sur l'assise de la chaise, genoux pliés.",
+        "Pousse sur les talons pour monter les hanches jusqu'à l'alignement genoux-épaules.",
+        "Serre les fessiers une seconde en haut.",
+        "Redescends lentement sans poser les fessiers, puis recommence."
+      ],
+      "cueFr": "La poussée part des talons.",
+      "mistakeFr": "Cambrer le bas du dos en haut du mouvement."
+    }
+  }
+}

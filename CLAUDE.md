@@ -11,7 +11,8 @@ Ce fichier résume un cadrage complet mené le 4 octobre 2026. Les décisions ci
 | [Doc validé](https://claude.ai/code/artifact/40d11110-3e5e-4dfb-853f-543baee839c6) | Échelles et règles, version lisible, validée le 2026-10-04 |
 | `data/ladders.json` | Les 10 échelles de progression (double progression) |
 | `data/rules.json` | Règles d'adaptation, semaine allégée, douleur, séances ratées, déplacements, elliptique, config du coach |
-| `data/hd-exercises.json` | Les 18 étapes absentes du dataset : fiche FR, lien vidéo |
+| `data/hd-exercises.json` | Les 19 étapes absentes du dataset : fiche FR, lien vidéo |
+| `data/catalog-overrides.json` | Corrections après revue des GIF : exclusions, matériel, consignes FR réécrites |
 | `scripts/build-catalog.py` | Génère `src/data/catalog.json` et `src/assets/exercises/*.webp` depuis exercises-dataset |
 | `data/names-fr.json` | Noms français des exercices du catalogue (à créer, voir tâches) |
 
@@ -38,7 +39,7 @@ Toute modification d'une échelle ou d'un seuil passe par l'accord d'Anthony.
 - Niveau de modèle : `complex` pour le plan hebdo, `default` pour la conversation.
 
 **Données**
-- Catalogue fermé : 312 exercices (poids du corps, barre, mur, table, serviette, chaise, elliptique), médias en WebP animé qualité 40 (~8,3 Mo une fois intégrés). Les 18 étapes hors dataset viennent de `data/hd-exercises.json`.
+- Catalogue fermé : 305 exercices (poids du corps, barre, mur, table, serviette, chaise, elliptique), médias en WebP animé qualité 40 (~8,2 Mo une fois intégrés). Les 19 étapes hors dataset viennent de `data/hd-exercises.json`. Pas de marche ni d'escalier à domicile.
 - Import hebdomadaire du CSV « Activités » de Garmin Connect (elliptique, callisthénie, HIIT), plus saisie manuelle de la résistance et de l'effort perçu.
 - Export et import JSON complets, avec `schemaVersion`, pour une migration future.
 
@@ -99,7 +100,7 @@ Une ligne par activité, colonnes `Activity Type`, `Date`, `Time`, `Avg HR`, `Ma
 
 1. Initialiser le projet (Vite, React, TypeScript, Tailwind v4), installer le DS et le plugin, configurer le build en fichier unique et le contrôle de taille.
 2. Lancer `python scripts/build-catalog.py`. Vérifier sur leur GIF les exercices `1476`, `0696` et `2462`, et la liste « Needs a human look » de `scripts/catalog-report.md`.
-3. Écrire `data/names-fr.json` : un nom français court et usuel pour les 312 exercices. Relancer le script.
+3. Écrire `data/names-fr.json` : un nom français court et usuel pour les 305 exercices. Relancer le script.
 4. Rédiger `docs/redaction-fr.md` : un guide de rédaction français qui reprend les principes du DS (voix, longueur, verbes d'action) avec le tutoiement et le ton factuel du coach.
 5. Couche d'adaptation et script de thème.
 6. Moteur de règles en TypeScript pur, testé unitairement contre `data/rules.json` et `data/ladders.json`.
@@ -109,7 +110,7 @@ Une ligne par activité, colonnes `Activity Type`, `Date`, `Time`, `Avg HR`, `Ma
 
 ## Points ouverts
 
-- `videoUrl` des 18 fiches hors dataset : à choisir (liens de recherche YouTube provisoires).
-- Pictogrammes animés pour ces 18 étapes : plus tard, candidats pour le composant `Illustration`.
+- `videoUrl` des 19 fiches hors dataset : à choisir (liens de recherche YouTube provisoires).
+- Pictogrammes animés pour ces 19 étapes : plus tard, candidats pour le composant `Illustration`.
 - Maintien de l'écran allumé (Wake Lock) : à tester dans la page publiée.
 - Médias © Gym visual : garder la mention en pied de fiche.

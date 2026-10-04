@@ -1,6 +1,6 @@
 {
   "$comment": "Exercises referenced by data/ladders.json that exercises-dataset lacks. No animated media: French sheet + video. videoSearchUrl is a stopgap (YouTube search); fill videoUrl with a chosen tutorial. Pictograms are planned for later (candidate for the DS Illustration component).",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "exercises": [
     {
       "id": "hd:dead-hang",
@@ -90,24 +90,25 @@
       "videoUrl": null
     },
     {
-      "id": "hd:bulgarian-split-squat",
-      "nameFr": "Squat bulgare",
+      "id": "hd:assisted-pistol-squat",
+      "nameFr": "Pistol squat assisté",
       "ladder": "legs-front",
       "equipment": [
-        "chair"
+        "none"
       ],
       "contexts": [
-        "home"
+        "home",
+        "travel"
       ],
       "stepsFr": [
-        "Dos à une chaise, pose le dessus du pied arrière sur l'assise.",
-        "Place le pied avant assez loin pour que le genou reste au-dessus de la cheville en bas du mouvement.",
-        "Descends verticalement jusqu'à ce que le genou arrière frôle le sol.",
-        "Remonte en poussant sur le talon avant."
+        "Tiens-toi de profil à un chambranle de porte et saisis-le d'une main.",
+        "Tends une jambe devant toi, talon décollé du sol.",
+        "Descends sur l'autre jambe le plus bas possible, en t'aidant du bras juste assez.",
+        "Remonte en poussant sur le talon d'appui, puis change de jambe."
       ],
-      "cueFr": "Buste droit, poids sur la jambe avant.",
-      "mistakeFr": "Pousser avec la jambe arrière.",
-      "videoSearchUrl": "https://www.youtube.com/results?search_query=bulgarian+split+squat+bodyweight+tutorial",
+      "cueFr": "Le talon d'appui reste collé au sol.",
+      "mistakeFr": "Tirer avec le bras au lieu de pousser avec la jambe.",
+      "videoSearchUrl": "https://www.youtube.com/results?search_query=assisted+pistol+squat+tutorial",
       "videoUrl": null
     },
     {
@@ -279,6 +280,28 @@
       "cueFr": "La vitesse de la traction, pas le nombre de répétitions.",
       "mistakeFr": "Enchaîner sans contrôle de la descente.",
       "videoSearchUrl": "https://www.youtube.com/results?search_query=explosive+pull+up+muscle+up+progression",
+      "videoUrl": null
+    },
+    {
+      "id": "hd:straight-bar-dip",
+      "nameFr": "Dips à la barre droite",
+      "ladder": "muscle-up",
+      "equipment": [
+        "park-bar",
+        "low-bar"
+      ],
+      "contexts": [
+        "park"
+      ],
+      "stepsFr": [
+        "Monte au-dessus de la barre, bras tendus, barre contre le haut des cuisses.",
+        "Penche le buste en avant, jambes légèrement devant la barre.",
+        "Plie les coudes jusqu'à ce que la barre touche le haut du ventre.",
+        "Pousse pour tendre les bras, sans reculer les épaules."
+      ],
+      "cueFr": "Le buste reste penché au-dessus de la barre.",
+      "mistakeFr": "Rester droit et basculer en arrière.",
+      "videoSearchUrl": "https://www.youtube.com/results?search_query=straight+bar+dip+tutorial",
       "videoUrl": null
     },
     {

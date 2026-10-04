@@ -1,6 +1,6 @@
 {
   "$comment": "Source of truth: the doc 'PrepPhi — Échelles de progression et règles d'adaptation', validated by Anthony on 2026-10-04. Any change is proposed by the coach and applied only after his approval. 'ds:NNNN' = exercises-dataset id (has media); 'hd:slug' = hors dataset (French sheet + video link, see docs/hors-dataset.md). range = [low, high] of the double progression; unit 'reps' or 's'.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "validatedOn": "2026-10-04",
   "ladders": [
     {
@@ -55,13 +55,13 @@
       "nameFr": "Jambes, chaîne avant",
       "contexts": ["home", "travel"],
       "entry": null,
-      "notes": "Step 4 needs a chair (home only).",
+      "notes": "Step 4 needs a chair (home only). Step 5 holds a door frame or any solid support.",
       "steps": [
         { "level": 1, "exercise": "hd:bodyweight-squat", "nameFr": "Squat au poids du corps", "sets": 3, "range": [10, 20], "unit": "reps" },
         { "level": 2, "exercise": "ds:3470", "nameFr": "Fente avant", "sets": 3, "range": [8, 12], "unit": "reps", "perSide": true },
         { "level": 3, "exercise": "ds:2368", "nameFr": "Split squat", "sets": 3, "range": [8, 12], "unit": "reps", "perSide": true },
-        { "level": 4, "exercise": "hd:bulgarian-split-squat", "nameFr": "Squat bulgare, pied arrière sur une chaise", "sets": 3, "range": [8, 12], "unit": "reps", "perSide": true },
-        { "level": 5, "exercise": "ds:1476", "nameFr": "Squat sur une jambe assisté", "sets": 3, "range": [4, 8], "unit": "reps", "perSide": true, "verifyMedia": true },
+        { "level": 4, "exercise": "ds:1476", "nameFr": "Squat bulgare, pied arrière sur une chaise", "sets": 3, "range": [8, 12], "unit": "reps", "perSide": true },
+        { "level": 5, "exercise": "hd:assisted-pistol-squat", "nameFr": "Pistol squat assisté, une main au chambranle", "sets": 3, "range": [4, 8], "unit": "reps", "perSide": true },
         { "level": 6, "exercise": "ds:1759", "nameFr": "Pistol squat", "sets": 3, "range": [3, 8], "unit": "reps", "perSide": true }
       ]
     },
@@ -77,7 +77,7 @@
         { "level": 2, "exercise": "ds:3645", "nameFr": "Pont fessier sur une jambe", "sets": 3, "range": [8, 15], "unit": "reps", "perSide": true },
         { "level": 3, "exercise": "hd:sliding-leg-curl", "nameFr": "Leg curl glissé à la serviette, deux jambes", "sets": 3, "range": [8, 12], "unit": "reps" },
         { "level": 4, "exercise": "hd:single-leg-sliding-leg-curl", "nameFr": "Leg curl glissé à la serviette, une jambe", "sets": 3, "range": [6, 10], "unit": "reps", "perSide": true },
-        { "level": 5, "exercise": "ds:0696", "nameFr": "Leg curl inversé au sol, pieds calés sous un meuble lourd", "sets": 3, "range": [3, 6], "unit": "reps", "verifyMedia": true }
+        { "level": 5, "exercise": "ds:0696", "nameFr": "Leg curl inversé au sol, pieds calés sous un meuble lourd", "sets": 3, "range": [3, 6], "unit": "reps" }
       ]
     },
     {
@@ -158,7 +158,7 @@
       "steps": [
         { "level": 1, "exercise": "hd:chest-to-bar-pull-up", "nameFr": "Traction poitrine à la barre", "sets": 3, "range": [3, 6], "unit": "reps" },
         { "level": 2, "exercise": "hd:explosive-pull-up", "nameFr": "Traction explosive, hanches vers la barre", "sets": 3, "range": [3, 5], "unit": "reps" },
-        { "level": 3, "exercise": "ds:2462", "nameFr": "Dips à la barre droite", "sets": 3, "range": [5, 10], "unit": "reps", "verifyMedia": true },
+        { "level": 3, "exercise": "hd:straight-bar-dip", "nameFr": "Dips à la barre droite", "sets": 3, "range": [5, 10], "unit": "reps" },
         { "level": 4, "exercise": "hd:muscle-up-negative", "nameFr": "Négatif de muscle-up (départ au-dessus, descente lente)", "sets": 3, "range": [2, 4], "unit": "reps" },
         { "level": 5, "exercise": "ds:0558", "nameFr": "Muscle-up avec élan", "sets": 3, "range": [1, 3], "unit": "reps" },
         { "level": 6, "exercise": "ds:0631", "nameFr": "Muscle-up strict", "sets": 3, "range": [1, 5], "unit": "reps", "final": true }

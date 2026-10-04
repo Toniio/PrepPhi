@@ -13,8 +13,13 @@ Usage:
     # or let the script clone the dataset into .cache/:
     python scripts/build-catalog.py
 
+Inputs besides the dataset:
+    data/ladders.json                ladder steps (verifyMedia flags)
+    data/catalog-overrides.json      exclusions and corrections after the GIF review
+    data/names-fr.json               French names
+
 Outputs:
-    src/data/catalog.json            exercise metadata (French steps, tags, contexts)
+    src/data/catalog.json           exercise metadata (French steps, tags, contexts)
     src/assets/exercises/<id>.webp   animated media, one per exercise
     scripts/catalog-report.md        counts and items needing a human look
 """
@@ -75,13 +80,22 @@ LADDER_IDS = {
     "3013", "3645", "0696", "1373", "1387", "0489",  # legs, posterior chain
     "0872", "0472", "0475", "3419", "3544",  # core
     "3302", "0471",  # handstand
-    "2462", "0558", "0631",  # muscle-up (park)
+    "0558", "0631",  # muscle-up (park)
     "1160", "0630", "0514",  # travel cardio circuit
     "2141",  # elliptical
 }
 
-# Matches to double-check on the GIF before the first build (see ladders.json).
-REVIEW_IDS = {"1476", "0696", "2462"}
+# Ladder steps flagged "verifyMedia": double-check their GIF before trusting them.
+LADDERS = ROOT / "data" / "ladders.json"
+REVIEW_IDS = {
+    step["exercise"].removeprefix("ds:")
+    for ladder in json.loads(LADDERS.read_text(encoding="utf-8"))["ladders"]
+    for step in ladder["steps"]
+    if step.get("verifyMedia")
+}
+
+# Manual corrections after reviewing the GIFs: exclusions, equipment, French steps.
+OVERRIDES = json.loads((ROOT / "data" / "catalog-overrides.json").read_text(encoding="utf-8"))
 
 
 def ensure_dataset(path: Path | None) -> Path:
@@ -143,7 +157,8 @@ def main() -> int:
     records = json.loads((ds / "data" / "exercises.json").read_text(encoding="utf-8"))
 
     names_fr = json.loads(NAMES_FR.read_text(encoding="utf-8")) if NAMES_FR.exists() else {}
-    kept, excluded, review = [], [], []
+    manual_exclude, reviewed = OVERRIDES["exclude"], set(OVERRIDES["reviewed"])
+    kept, excluded, excluded_manual, review = [], [], [], []
     for r in records:
         rid, name, eq = r["id"], r["name"], r["equipment"]
         forced = rid in LADDER_IDS
@@ -151,12 +166,16 @@ def main() -> int:
             if eq == "body weight":
                 excluded.append(f"{rid} {name}")
             continue
-        tags = tags_for(name, eq)
+        if rid in manual_exclude:
+            excluded_manual.append(f"{rid} {name}: {manual_exclude[rid]}")
+            continue
+        override = OVERRIDES["exercises"].get(rid, {})
+        tags = override.get("equipment") or tags_for(name, eq)
         ctx = contexts_for(tags)
         if not ctx:
             excluded.append(f"{rid} {name} (tags: {', '.join(tags)})")
             continue
-        steps = (r.get("instruction_steps") or {}).get("fr") or []
+        steps = override.get("stepsFr") or (r.get("instruction_steps") or {}).get("fr") or []
         item = {
             "id": f"ds:{rid}",
             "sourceId": rid,
@@ -172,13 +191,21 @@ def main() -> int:
             "attribution": ATTRIBUTION,
             "inLadder": forced,
         }
-        if rid in REVIEW_IDS or (set(tags) & {"chair"} and not forced):
+        for key in ("cueFr", "mistakeFr", "noteFr"):
+            if key in override:
+                item[key] = override[key]
+        if rid not in reviewed and (rid in REVIEW_IDS or (set(tags) & {"chair"} and not forced)):
             item["needsReview"] = True
             review.append(f"{rid} {name} (tags: {', '.join(tags)})")
         kept.append((item, ds / r["gif_url"]))
 
     OUT_MEDIA.mkdir(parents=True, exist_ok=True)
     OUT_JSON.parent.mkdir(parents=True, exist_ok=True)
+    # Drop the media of exercises no longer in the catalog (excluded since the last run).
+    kept_ids = {item["sourceId"] for item, _ in kept}
+    for stale in OUT_MEDIA.glob("*.webp"):
+        if stale.stem not in kept_ids:
+            stale.unlink()
     total_media = 0
     if not args.no_media:
         for i, (item, gif) in enumerate(kept, 1):
@@ -202,9 +229,10 @@ def main() -> int:
         f"- Exercises kept: {len(kept)}",
         f"- Available at home: {by_ctx['home']} · travel: {by_ctx['travel']} · park: {by_ctx['park']}",
         f"- Media total: {total_media / 1e6:.1f} MB raw, ~{total_media * 4 / 3 / 1e6:.1f} MB inlined (limit 16 MB)",
-        f"- Excluded body-weight entries: {len(excluded)}",
+        f"- Excluded body-weight entries: {len(excluded)} by the filters, {len(excluded_manual)} after review",
         f"- French names missing: {sum(1 for it, _ in kept if not it['nameFr'])}", "",
         "## Needs a human look", "", *[f"- {x}" for x in review], "",
+        "## Excluded after review (data/catalog-overrides.json)", "", *[f"- {x}" for x in excluded_manual], "",
         "## Excluded body-weight entries", "", *[f"- {x}" for x in excluded], "",
     ]
     OUT_REPORT.write_text("\n".join(lines), encoding="utf-8")

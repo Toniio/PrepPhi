@@ -15,6 +15,7 @@ Ce fichier résume un cadrage complet mené le 4 octobre 2026. Les décisions ci
 | `data/catalog-overrides.json` | Corrections après revue des GIF : exclusions, matériel, consignes FR réécrites |
 | `scripts/build-catalog.py` | Génère `src/data/catalog.json` et `src/assets/exercises/*.webp` depuis exercises-dataset |
 | `data/names-fr.json` | Noms français des 280 exercices du catalogue |
+| `docs/publication.md` | Publication depuis claude.ai : connecteur Google Agenda, build, capacités, vérifications |
 | `docs/decisions.md` | Choix faits en autonomie pendant la construction, dont deux à valider (plan type, zone d'elliptique) |
 | `docs/redaction-fr.md` | Guide de rédaction : voix, ton, lexique, verbes, libellés FR des composants du DS |
 
@@ -100,6 +101,8 @@ Une ligne par activité, colonnes `Activity Type`, `Date`, `Time`, `Avg HR`, `Ma
 
 ## Tâches, dans l'ordre
 
+État au 5 octobre 2026 : les tâches 1 à 8 sont faites, le build de la tâche 9 aussi (8,8 Mo). Reste la publication depuis claude.ai, décrite pas à pas dans `docs/publication.md`. Les choix faits sans Anthony sont listés dans `docs/decisions.md`.
+
 1. Initialiser le projet (Vite, React, TypeScript, Tailwind v4), installer le DS et le plugin, configurer le build en fichier unique et le contrôle de taille.
 2. Lancer `python scripts/build-catalog.py`. Vérifier sur leur GIF les exercices `1476`, `0696` et `2462`, et la liste « Needs a human look » de `scripts/catalog-report.md`.
 3. Écrire `data/names-fr.json` : un nom français court et usuel pour les 280 exercices. Relancer le script. Fait le 2026-10-04 avec une relecture de chaque GIF : consignes réécrites et exclusions dans `data/catalog-overrides.json`.
@@ -117,3 +120,5 @@ Une ligne par activité, colonnes `Activity Type`, `Date`, `Time`, `Avg HR`, `Ma
 - Maintien de l'écran allumé (Wake Lock) : à tester dans la page publiée.
 - Liaisons du connecteur Google Agenda (`src/runtime/claude/calendar.ts`, `GOOGLE_CALENDAR`) : noms d'outils, arguments et forme des résultats à relever sur un vrai appel depuis claude.ai. Tant qu'elles sont vides, l'agenda est indisponible dans la page publiée (il marche en développement avec l'agenda fictif).
 - Médias © Gym visual : garder la mention en pied de fiche.
+- Doc validé à mettre à jour avec les changements d'échelles du 4 octobre (connecteur Claude Docs, depuis claude.ai) : voir `docs/publication.md`.
+- À valider par Anthony : le plan type (séances A et B, 3 + 2 par semaine) et la zone basse de l'elliptique (60 à 70 % de la FC de réserve), dans `docs/decisions.md`.

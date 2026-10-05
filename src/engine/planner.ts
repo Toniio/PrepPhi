@@ -49,9 +49,14 @@ export type PlanInput = {
   wallWhileTravelling?: boolean
 }
 
-type ExerciseInput = Pick<PlanInput, 'states' | 'deload' | 'available'>
+export type ExerciseInput = Pick<PlanInput, 'states' | 'deload' | 'available'>
 
-function plannedExercise(state: LadderState, context: Context, input: ExerciseInput): PlannedExercise | null {
+/**
+ * What a ladder asks in `context`, from its state: null when the ladder is
+ * locked, paused, or has no step doable there. Also used to refresh the
+ * sessions already planned after a check-in moved the ladder.
+ */
+export function plannedExercise(state: LadderState, context: Context, input: ExerciseInput): PlannedExercise | null {
   const ladder = getLadder(state.ladderId)
   if (!state.unlocked || state.paused || !ladder.contexts.includes(context)) return null
 

@@ -51,7 +51,7 @@ const blockVariants = cva('font-heading text-4xl font-semibold tabular-nums trac
   defaultVariants: { kind: 'work' },
 })
 
-// -- Sound, voice and screen ------------------------------------------------------
+// -- Sound and screen ------------------------------------------------------
 
 function beep(context: AudioContext | null, high: boolean) {
   if (!context) return
@@ -62,14 +62,6 @@ function beep(context: AudioContext | null, high: boolean) {
   oscillator.connect(gain).connect(context.destination)
   oscillator.start()
   oscillator.stop(context.currentTime + (high ? 0.35 : 0.15))
-}
-
-function say(text: string) {
-  if (typeof window === 'undefined' || !('speechSynthesis' in window)) return
-  window.speechSynthesis.cancel()
-  const utterance = new SpeechSynthesisUtterance(text)
-  utterance.lang = 'fr-FR'
-  window.speechSynthesis.speak(utterance)
 }
 
 /** Keeps the screen on while running, where the page allows it. */
@@ -118,28 +110,18 @@ export function Sequencer({ sequence, autoStart = false, onComplete, labels = SE
   }, [sound, onComplete])
 
   /** Moves to `next`, then plays what it crossed: side effects stay out of the state updates. */
-  const commit = useCallback(
-    (next: SequencerState, events: SequencerEvent[]) => {
-      stateRef.current = next
-      setState(next)
-      for (const event of events) {
-        if (soundRef.current) {
-          if (event.type === 'countdown') beep(audio.current, false)
-          if (event.type === 'block-start') {
-            beep(audio.current, true)
-            const block = sequence.blocks[event.block]
-            say(`${block.label}, ${block.seconds} secondes`)
-          }
-          if (event.type === 'finished') {
-            beep(audio.current, true)
-            say(labels.finished)
-          }
-        }
-        if (event.type === 'finished') completeRef.current?.()
+  const commit = useCallback((next: SequencerState, events: SequencerEvent[]) => {
+    stateRef.current = next
+    setState(next)
+    for (const event of events) {
+      if (soundRef.current) {
+        if (event.type === 'countdown') beep(audio.current, false)
+        if (event.type === 'block-start') beep(audio.current, true)
+        if (event.type === 'finished') beep(audio.current, true)
       }
-    },
-    [sequence, labels.finished],
-  )
+      if (event.type === 'finished') completeRef.current?.()
+    }
+  }, [])
 
   useEffect(() => {
     if (!state.running) return
@@ -163,11 +145,6 @@ export function Sequencer({ sequence, autoStart = false, onComplete, labels = SE
   const toggle = () => {
     ensureAudio()
     const current = stateRef.current
-    const fresh = current.remainingMs === sequence.blocks[current.block].seconds * 1000
-    if (!current.running && fresh && sound) {
-      const block = sequence.blocks[current.block]
-      say(`${block.label}, ${block.seconds} secondes`)
-    }
     commit({ ...current, running: !current.running }, [])
   }
 

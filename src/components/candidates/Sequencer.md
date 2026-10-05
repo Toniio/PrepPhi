@@ -12,18 +12,18 @@
 
 ## Role
 
-A timer that runs a list of timed work and rest blocks over several rounds, with a beep, a spoken announcement and the screen kept on. `RestTimer` is its one-block form, the rest between two sets.
+A timer that runs a list of timed work and rest blocks over several rounds, with a beep and the screen kept on. `RestTimer` is its one-block form, the rest between two sets.
 
 ## Usage
 
 - The rest timer between two sets, started when a set is marked done
 - A circuit of several exercises repeated in rounds (the travel room circuit)
 - Elliptical intervals: 6 × (1 min hard / 2 min easy)
-- Any session where the hands are busy and the eyes are elsewhere: the voice says what comes next
+- Any session where the hands are busy and the eyes are elsewhere: the beep marks each change of block
 
 ## Constraints
 
-- **MUST** — give every block a `label` in the interface language: the voice reads it
+- **MUST** — give every block a `label` in the interface language: it is the only thing that names the next block
 - **MUST** — start sound only after a user gesture (`Démarrer`, or the set marked done that opens `RestTimer`): browsers block audio before it
 - **MUST NOT** — run more than one `Sequencer` at a time on a screen
 - **MUST** — keep the remaining time readable at arm's length: the clock is `text-4xl`, the largest step of the type scale
@@ -35,7 +35,7 @@ A timer that runs a list of timed work and rest blocks over several rounds, with
 - `Progress` (`@/components/ui/progress`) — progress through the whole sequence
 - `@phosphor-icons/react` — `PlayIcon`, `PauseIcon`, `SkipForwardIcon`, `SpeakerHighIcon`, `SpeakerSlashIcon`
 - `class-variance-authority` — the clock variant (`work`, `rest`)
-- Browser APIs, used when present: Web Audio (beep), Web Speech `speechSynthesis` (voice, `fr-FR`), Screen Wake Lock (screen on)
+- Browser APIs, used when present: Web Audio (beep), Screen Wake Lock (screen on)
 - `sequencer-machine.ts` — the pure state machine (`tick`, `skip`), tested on its own
 
 ## Anatomy
@@ -89,9 +89,9 @@ The clock has one `cva` axis, `kind`, taken from the current block: `work` (`tex
 | State      | Description                                                               |
 | ---------- | ------------------------------------------------------------------------- |
 | `paused`   | Before the start or after `Mettre en pause`; the button reads `Démarrer` or `Reprendre`, `secondary` so the screen's primary action stays the only primary |
-| `running`  | The clock counts down; a short beep on each of the last 3 seconds, a long beep and the next block's label spoken at each change; the screen stays on |
-| `finished` | `Terminé` is shown and spoken; start and skip disappear                   |
-| `muted`    | The sound button is pressed (`aria-pressed`): no beep, no voice           |
+| `running`  | The clock counts down; a short beep on each of the last 3 seconds, a long beep at each change; the screen stays on |
+| `finished` | `Terminé` is shown after a long beep; start and skip disappear                   |
+| `muted`    | The sound button is pressed (`aria-pressed`): no beep           |
 
 ## Accessibility
 
@@ -104,7 +104,6 @@ The clock has one `cva` axis, `kind`, taken from the current block: `work` (`tex
 **Pitfalls**:
 
 - The clock is `aria-live="off"`: announcing every second would flood a screen reader. The block label is the live region.
-- The voice is in French (`fr-FR`); a device without a French voice reads with its default voice.
 - Wake Lock is refused in some framed pages: the timer still runs, only the screen may dim.
 
 ## Code example

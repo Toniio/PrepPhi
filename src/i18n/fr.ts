@@ -22,6 +22,12 @@ export const DS = {
     scrollToEnd: 'Aller au dernier message',
     scrollToStart: 'Aller au premier message',
   },
+  theme: {
+    label: 'Apparence',
+    system: 'Système',
+    light: 'Clair',
+    dark: 'Sombre',
+  },
   close: 'Fermer',
   spinner: 'Chargement',
 } as const

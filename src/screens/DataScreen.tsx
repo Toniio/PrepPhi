@@ -10,9 +10,11 @@ import { SCHEMA_VERSION } from '@/model/schema'
 import { useRuntime } from '@/runtime/context'
 import { Page } from '@/shell/Page'
 import { Backup } from './data/Backup'
+import { DemoData } from './data/DemoData'
 import { EffortEntries } from './data/EffortEntries'
 import { GarminImport } from './data/GarminImport'
 import { ProfileForm } from './data/ProfileForm'
+import { RedoOnboarding } from './data/RedoOnboarding'
 
 const STATUS = {
   pending: { label: 'En attente', variant: 'secondary' },
@@ -59,7 +61,7 @@ function Proposals() {
   )
 }
 
-export function DataScreen() {
+export function DataScreen({ onRedoOnboarding }: { onRedoOnboarding: () => void }) {
   const { kind } = useRuntime()
   return (
     <Page title="Données">
@@ -87,8 +89,18 @@ export function DataScreen() {
       </section>
 
       <section className="flex flex-col gap-3">
+        <Heading level={2}>Onboarding</Heading>
+        <RedoOnboarding onStart={onRedoOnboarding} />
+      </section>
+
+      <section className="flex flex-col gap-3">
         <Heading level={2}>Propositions du coach</Heading>
         <Proposals />
+      </section>
+
+      <section className="flex flex-col gap-3">
+        <Heading level={2}>Démo</Heading>
+        <DemoData />
       </section>
 
       <section className="flex flex-col gap-2 text-xs text-muted-foreground">

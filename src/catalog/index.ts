@@ -86,6 +86,11 @@ export function isAvailable(exerciseId: string, context: Context): boolean {
   return info.contexts.includes(context)
 }
 
+/** Demo data shows only exercises with an animated media: the hors-dataset sheets have none. */
+export function isAvailableWithAnimation(exerciseId: string, context: Context): boolean {
+  return BY_ID.get(exerciseId)?.mediaUrl != null && isAvailable(exerciseId, context)
+}
+
 /**
  * Accessories the coach may add, grouped by muscle group (target), home
  * exercises only. The coach gets this pool and the ladders, never the whole

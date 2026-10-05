@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { placeLadders, type Profile } from '@/engine'
 import { createDevStore } from '@/runtime/dev/store'
-import { completeOnboarding, logElliptical } from './actions'
+import { checkIn, completeOnboarding, logElliptical, redoOnboarding } from './actions'
 import { exportJson, ImportError, loadData, parseImport, saveChanges } from './repository'
 import { emptyData, SCHEMA_VERSION } from './schema'
 
@@ -68,7 +68,11 @@ describe('JSON export and import', () => {
     const data = onboarded()
     const text = exportJson(data, new Date('2026-10-05T20:00:00Z'))
     const file = JSON.parse(text)
-    expect(file).toMatchObject({ app: 'prepphi', schemaVersion: SCHEMA_VERSION, exportedAt: '2026-10-05T20:00:00.000Z' })
+    expect(file).toMatchObject({
+      app: 'prepphi',
+      schemaVersion: SCHEMA_VERSION,
+      exportedAt: '2026-10-05T20:00:00.000Z',
+    })
     expect(parseImport(text)).toEqual(data)
   })
 
@@ -86,5 +90,70 @@ describe('JSON export and import', () => {
     expect(data.profile).toBeNull()
     expect(data.cardioLog).toEqual([])
     expect(Object.keys(data.ladderState)).toHaveLength(10)
+  })
+})
+
+describe('redoOnboarding', () => {
+  const today = '2026-10-07'
+
+  /** An onboarded app with one strength session done on Monday. */
+  function withHistory() {
+    const data = onboarded()
+    const week = data.weeks['2026-W41']
+    const session = week.plan.sessions.find((s) => s.kind === 'calisthenics')!
+    const results = session.exercises.map((e) => ({
+      ladderId: e.ladderId,
+      level: e.level,
+      values: e.targets,
+      feeling: 'right' as const,
+      pain: false,
+    }))
+    return checkIn(data, { weekId: '2026-W41', sessionId: session.id, date: session.date, results }).data
+  }
+
+  it('replaces the profile, keeps its creation date and the history', () => {
+    const before = withHistory()
+    const next = redoOnboarding(before, {
+      profile: { ...profile, createdAt: today, calisthenicsPerWeek: 2, ellipticalPerWeek: 4 },
+      tested: {},
+      today,
+    })
+    expect(next.profile?.calisthenicsPerWeek).toBe(2)
+    expect(next.profile?.ellipticalPerWeek).toBe(4)
+    expect(next.profile?.createdAt).toBe('2026-10-05')
+    expect(next.weeks['2026-W41'].logs).toEqual(before.weeks['2026-W41'].logs)
+    expect(next.weeks['2026-W41'].plan.sessions.filter((s) => s.status === 'done')).toHaveLength(1)
+  })
+
+  it('moves only the ladders the new test placed', () => {
+    const before = withHistory()
+    const next = redoOnboarding(before, {
+      profile,
+      tested: { push: { 1: 20, 2: 15, 3: 15, 4: 12 } },
+      today,
+    })
+    expect(next.ladderState.push.level).toBe(4)
+    for (const id of Object.keys(before.ladderState).filter((id) => id !== 'push')) {
+      expect(next.ladderState[id], id).toEqual(before.ladderState[id])
+    }
+  })
+
+  it('plans the rest of the week again from the new answers, without touching what is done', () => {
+    const before = withHistory()
+    const next = redoOnboarding(before, { profile: { ...profile, ellipticalPerWeek: 0 }, tested: {}, today })
+    const sessions = next.weeks['2026-W41'].plan.sessions
+    expect(sessions.some((s) => s.kind === 'elliptical' && s.date >= today)).toBe(false)
+    expect(sessions.filter((s) => s.status === 'done')).toHaveLength(1)
+    expect(sessions.filter((s) => s.date >= today).every((s) => s.status === 'planned')).toBe(true)
+  })
+
+  it('keeps the demo flag and the elliptical progress, within the new resistance range', () => {
+    const demo = { ...withHistory(), profile: { ...profile, demo: true } }
+    const next = redoOnboarding(
+      { ...demo, elliptical: { durationMin: 40, resistance: 9, stableWeeks: 1, intervalReps: null } },
+      { profile: { ...profile, ellipticalResistance: { min: 1, max: 6 } }, tested: {}, today },
+    )
+    expect(next.profile?.demo).toBe(true)
+    expect(next.elliptical).toEqual({ durationMin: 40, resistance: 6, stableWeeks: 1, intervalReps: null })
   })
 })

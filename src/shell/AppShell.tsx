@@ -10,6 +10,7 @@ import type { ReactNode } from 'react'
 import {
   Sidebar,
   SidebarContent,
+  SidebarFooter,
   SidebarGroup,
   SidebarGroupContent,
   SidebarHeader,
@@ -21,8 +22,11 @@ import {
   SidebarTrigger,
   useSidebar,
 } from '@/components/ui/sidebar'
+import { Badge } from '@/components/ui/badge'
 import { DS, SECTIONS } from '@/i18n/fr'
+import { useAppData } from '@/model/context'
 import type { Section } from './sections'
+import { ThemeSwitch } from './ThemeSwitch'
 
 const ITEMS: { section: Section; icon: Icon }[] = [
   { section: 'today', icon: CalendarCheckIcon },
@@ -64,11 +68,16 @@ type Props = {
 
 /** The shell of every page (pattern "navigation"): sections in a Sidebar, a Sheet on mobile. */
 export function AppShell({ section, onNavigate, children }: Props) {
+  const { data } = useAppData()
+  const demo = data.profile?.demo === true
   return (
     <SidebarProvider>
       <Sidebar mobileTitle={DS.sidebar.mobileTitle} mobileDescription={DS.sidebar.mobileDescription}>
         <SidebarHeader>
-          <span className="px-2 pt-2 font-heading text-sm font-semibold">PrepPhi</span>
+          <div className="flex items-center gap-2 px-2 pt-2">
+            <span className="font-heading text-sm font-semibold">PrepPhi</span>
+            {demo && <Badge variant="secondary">Démo</Badge>}
+          </div>
         </SidebarHeader>
         <SidebarContent>
           <SidebarGroup>
@@ -79,11 +88,15 @@ export function AppShell({ section, onNavigate, children }: Props) {
             </SidebarGroupContent>
           </SidebarGroup>
         </SidebarContent>
+        <SidebarFooter>
+          <ThemeSwitch />
+        </SidebarFooter>
       </Sidebar>
       <SidebarInset className="bg-background text-foreground">
         <div className="flex items-center gap-2 px-page py-4 md:hidden">
           <SidebarTrigger toggleLabel={DS.sidebar.toggle} />
           <span className="font-heading text-sm font-semibold">PrepPhi</span>
+          {demo && <Badge variant="secondary">Démo</Badge>}
         </div>
         {children}
       </SidebarInset>

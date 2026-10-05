@@ -7,7 +7,14 @@ import { createDevCalendar, seedEvents } from './dev/calendar'
 import { createDevCoach } from './dev/coach'
 import { createDevStore } from './dev/store'
 import { assertKey } from './keys'
-import { prefersDark, startThemeSync } from './theme'
+import {
+  getThemePreference,
+  prefersDark,
+  readPreference,
+  resolveDark,
+  setThemePreference,
+  startThemeSync,
+} from './theme'
 import { CoachError, type CoachRequest } from './types'
 
 function memoryStorage() {
@@ -205,6 +212,69 @@ describe('theme', () => {
     root.setAttribute('data-theme', 'dark')
     await new Promise((r) => setTimeout(r, 0))
     expect(root.classList.contains('dark')).toBe(true)
+    stop()
+  })
+})
+
+describe('theme preference', () => {
+  const html = (theme?: string) => {
+    const root = document.createElement('html')
+    if (theme) root.setAttribute('data-theme', theme)
+    return root
+  }
+
+  it('lets the reader override the viewer and the system', () => {
+    expect(resolveDark(html('dark'), false, 'light')).toBe(false)
+    expect(resolveDark(html('light'), true, 'dark')).toBe(true)
+    // System: the viewer's theme, then the system's.
+    expect(resolveDark(html('light'), true, 'system')).toBe(false)
+    expect(resolveDark(html(), true, 'system')).toBe(true)
+  })
+
+  it('reads a stored choice, and falls back to system when it is missing, unknown or unreadable', () => {
+    const storage = memoryStorage()
+    expect(readPreference(storage)).toBe('system')
+    storage.setItem('prepphi:theme', 'dark')
+    expect(readPreference(storage)).toBe('dark')
+    storage.setItem('prepphi:theme', 'sepia')
+    expect(readPreference(storage)).toBe('system')
+    expect(readPreference(null)).toBe('system')
+    const blocked = {
+      getItem: () => {
+        throw new Error('blocked')
+      },
+      setItem: () => {
+        throw new Error('blocked')
+      },
+    }
+    expect(readPreference(blocked)).toBe('system')
+  })
+
+  it('applies the choice at once, stores it, and survives blocked storage', () => {
+    const root = html()
+    const media = { matches: false, addEventListener: vi.fn(), removeEventListener: vi.fn() }
+    const storage = memoryStorage()
+    const stop = startThemeSync(root, media as unknown as MediaQueryList)
+
+    setThemePreference('dark', storage)
+    expect(root.classList.contains('dark')).toBe(true)
+    expect(storage.getItem('prepphi:theme')).toBe('dark')
+
+    setThemePreference('light', storage)
+    expect(root.classList.contains('dark')).toBe(false)
+
+    const blocked = {
+      getItem: () => null,
+      setItem: () => {
+        throw new Error('blocked')
+      },
+    }
+    setThemePreference('dark', blocked)
+    expect(getThemePreference()).toBe('dark')
+    expect(root.classList.contains('dark')).toBe(true)
+
+    setThemePreference('system', storage)
+    expect(root.classList.contains('dark')).toBe(false)
     stop()
   })
 })

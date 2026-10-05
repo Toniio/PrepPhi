@@ -1,4 +1,4 @@
-import { isAvailable } from '@/catalog'
+import { isAvailable, isAvailableWithAnimation } from '@/catalog'
 import {
   acceptStepUp,
   applyResult,
@@ -38,6 +38,11 @@ import type { AppData, ChatTurn, ReviewRecord, WeekDoc } from './schema'
 // Pure reducers: each returns a new AppData, replacing only the documents it
 // changes (saveChanges writes those).
 
+/** Fictional demo data only plans exercises with an animation. */
+function availabilityOf(data: AppData) {
+  return data.profile?.demo ? isAvailableWithAnimation : isAvailable
+}
+
 function planInput(data: AppData, weekId: WeekId, trips: Trip[], deload: boolean) {
   const profile = data.profile!
   return {
@@ -48,7 +53,7 @@ function planInput(data: AppData, weekId: WeekId, trips: Trip[], deload: boolean
     deload,
     elliptical: data.elliptical ?? initialElliptical(profile),
     hrZone: lowZone(profile),
-    available: isAvailable,
+    available: availabilityOf(data),
     wallWhileTravelling: false,
   }
 }
@@ -100,6 +105,49 @@ export function completeOnboarding(
   const weekId = weekOf(input.today)
   const plan = fromToday(planWeek(planInput(next, weekId, [], false)), input.today)
   return withWeek(next, { plan, logs: [], events: [] })
+}
+
+/**
+ * The onboarding done again, over existing data. The history stays (past
+ * weeks, check-ins, cardio, reviews, proposals); the answers replace the
+ * profile, and only the ladders the new test session placed change level: a
+ * ladder left blank keeps its step, its targets and its streaks. The rest of
+ * the current week is planned again from today, what is done stays.
+ */
+export function redoOnboarding(
+  data: AppData,
+  input: { profile: Profile; tested: Record<string, Record<number, number>>; today: IsoDate },
+): AppData {
+  const placed = placeLadders(input.tested)
+  const merged = { ...data.ladderState }
+  for (const id of Object.keys(input.tested)) merged[id] = placed[id]
+  // The new placement may open a skill; none closes again.
+  const ladderState = unlockLadders(merged).states
+  // The profile keeps its creation date and, in the demo, its flag.
+  const profile: Profile = {
+    ...input.profile,
+    createdAt: data.profile?.createdAt ?? input.profile.createdAt,
+    ...(data.profile?.demo ? { demo: true } : {}),
+  }
+  // The elliptical progress stays, within the resistance range given again.
+  const current = data.elliptical ?? initialElliptical(profile)
+  const { min, max } = profile.ellipticalResistance
+  const elliptical = { ...current, resistance: Math.min(max, Math.max(min, current.resistance)) }
+  const next: AppData = { ...data, profile, ladderState, elliptical }
+
+  const weekId = weekOf(input.today)
+  const week = next.weeks[weekId]
+  const trips = week?.plan.trips.filter((t) => t.confirmed) ?? []
+  const replanned = planWeek(planInput(next, weekId, trips, week?.plan.deload ?? false))
+  const kept = week ? week.plan.sessions.filter((s) => s.date < input.today || s.status !== 'planned') : []
+  const fresh = replanned.sessions.filter(
+    (s) => s.date >= input.today && !kept.some((k) => k.date === s.date && k.kind === s.kind),
+  )
+  const plan: WeekPlan = {
+    ...(week?.plan ?? replanned),
+    sessions: [...kept, ...fresh].sort((a, b) => a.date.localeCompare(b.date) || a.kind.localeCompare(b.kind)),
+  }
+  return withWeek(next, { plan, logs: week?.logs ?? [], events: week?.events ?? [] })
 }
 
 /** The current week always has a plan: the rule-based one when no review planned it. */
@@ -192,7 +240,7 @@ export function missSession(
   const week = data.weeks[input.weekId]
   const trips = week.plan.trips.filter((t) => t.confirmed)
   const { plan, outcome } = rescheduleMissed(week.plan, input.sessionId, input.today, trips, (_, date) =>
-    nomadSession(date, { states: data.ladderState, deload: week.plan.deload, available: isAvailable }),
+    nomadSession(date, { states: data.ladderState, deload: week.plan.deload, available: availabilityOf(data) }),
   )
   return { data: withWeek(data, { ...week, plan }), outcome }
 }
@@ -212,7 +260,9 @@ export function setTravelToday(data: AppData, input: { weekId: WeekId; date: Iso
 
   let todays: PlannedSession[]
   if (input.on) {
-    todays = [nomadSession(input.date, { states: data.ladderState, deload: week.plan.deload, available: isAvailable })]
+    todays = [
+      nomadSession(input.date, { states: data.ladderState, deload: week.plan.deload, available: availabilityOf(data) }),
+    ]
   } else {
     const confirmed = trips.filter((t) => t.confirmed)
     const replanned = planWeek(planInput(data, input.weekId, confirmed, week.plan.deload))

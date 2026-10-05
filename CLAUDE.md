@@ -33,7 +33,7 @@ Toute modification d'une échelle ou d'un seuil passe par l'accord d'Anthony.
 - Semaine du lundi au dimanche, revue le dimanche soir.
 - Onboarding : questionnaire (`Questionnaire` du DS), puis séance test qui place chaque échelle. Il demande aussi la longueur de la barre, la FC de repos et max, et la plage de résistance de l'elliptique.
 - Check-in sans IA : répétitions pré-remplies, ressenti en 3 états (`ToggleGroup`), signalement de douleur optionnel. Saisie selon le format : séries, répétitions dans un temps, isométrie.
-- Minuteur de repos entre les séries, et séquenceur de blocs travail/repos sur plusieurs tours (circuits, fractionné elliptique), avec bip, annonce vocale en français (Web Speech) et maintien de l'écran allumé si la page l'autorise.
+- Minuteur de repos entre les séries, et séquenceur de blocs travail/repos sur plusieurs tours (circuits, fractionné elliptique), avec bip (pas de synthèse vocale) et maintien de l'écran allumé si la page l'autorise.
 - Rappels : bouton « Ajouter à mon agenda » qui crée les séances dans Google Agenda, sur validation explicite.
 
 **Coach**
@@ -45,6 +45,7 @@ Toute modification d'une échelle ou d'un seuil passe par l'accord d'Anthony.
 - Catalogue fermé : 280 exercices (poids du corps, barre, mur, table, serviette, chaise, elliptique), médias en WebP animé qualité 40 (~7,5 Mo une fois intégrés). Les 19 étapes hors dataset viennent de `data/hd-exercises.json`. Pas de marche ni d'escalier à domicile.
 - Import hebdomadaire du CSV « Activités » de Garmin Connect (elliptique, callisthénie, HIIT), plus saisie manuelle de la résistance et de l'effort perçu.
 - Export et import JSON complets, avec `schemaVersion`, pour une migration future.
+- Démo : `src/demo/` génère trois semaines fictives avec le vrai moteur de règles ; le profil porte `demo: true`, et le planificateur ne choisit alors que des exercices animés. Bouton dans Données (et sur l'onboarding vide). « Refaire l'onboarding » (Données) garde l'historique et ne replace que les échelles retestées.
 
 ## Stack et build
 
@@ -82,7 +83,7 @@ La page publiée n'a accès ni à `fetch("https://api.anthropic.com/...")`, ni �
 | Export JSON | `downloads` |
 
 - **Couche d'adaptation** (`src/runtime/`) : interfaces `CoachClient`, `Store`, `CalendarClient`, `Downloader`. Une implémentation claude.ai, et une implémentation de développement (faux coach scripté, `localStorage`, agenda fictif, téléchargement navigateur). Tous les écrans doivent fonctionner en développement.
-- **Thème** : un script pose ou retire `.dark` sur `<html>` d'après l'attribut `data-theme` du visualiseur, sinon `prefers-color-scheme`. JS uniquement, aucun CSS conditionnel.
+- **Thème** : un script pose ou retire `.dark` sur `<html>` d'après l'attribut `data-theme` du visualiseur, sinon `prefers-color-scheme`. JS uniquement, aucun CSS conditionnel. Le pied de la sidebar laisse choisir Système (ce comportement), Clair ou Sombre ; le choix reste dans `localStorage` (`prepphi:theme`), hors des données exportées.
 - **Mobile** : balise viewport avec `viewport-fit=cover` et marges `env(safe-area-inset-*)`.
 - **Publication** : Anthony publie `dist/index.html` depuis le chat claude.ai, où Claude clone ce dépôt public. Les formats d'appel du connecteur Google Agenda y seront observés sur un vrai appel avant la première publication.
 
@@ -101,7 +102,7 @@ Une ligne par activité, colonnes `Activity Type`, `Date`, `Time`, `Avg HR`, `Ma
 
 ## Tâches, dans l'ordre
 
-État au 5 octobre 2026 : les tâches 1 à 8 sont faites, le build de la tâche 9 aussi (8,8 Mo). Reste la publication depuis claude.ai, décrite pas à pas dans `docs/publication.md`. Les choix faits sans Anthony sont listés dans `docs/decisions.md`.
+État au 5 octobre 2026 : les tâches 1 à 8 sont faites, le build de la tâche 9 aussi (8,8 Mo). Reste la publication depuis claude.ai, décrite pas à pas dans `docs/publication.md`. Ajouts du 5 octobre : jeu de données de démo, onboarding refait avec les anciennes réponses en référence, thème Système / Clair / Sombre, séances par semaine de 0 à 7. Les choix faits sans Anthony sont listés dans `docs/decisions.md`.
 
 1. Initialiser le projet (Vite, React, TypeScript, Tailwind v4), installer le DS et le plugin, configurer le build en fichier unique et le contrôle de taille.
 2. Lancer `python scripts/build-catalog.py`. Vérifier sur leur GIF les exercices `1476`, `0696` et `2462`, et la liste « Needs a human look » de `scripts/catalog-report.md`.
@@ -122,3 +123,4 @@ Une ligne par activité, colonnes `Activity Type`, `Date`, `Time`, `Avg HR`, `Ma
 - Médias © Gym visual : garder la mention en pied de fiche.
 - Doc validé à mettre à jour avec les changements d'échelles du 4 octobre (connecteur Claude Docs, depuis claude.ai) : voir `docs/publication.md`.
 - À valider par Anthony : le plan type (séances A et B, 3 + 2 par semaine) et la zone basse de l'elliptique (60 à 70 % de la FC de réserve), dans `docs/decisions.md`.
+- À valider par Anthony : le plafond de 3 séances de callisthénie par semaine (jamais deux jours de suite), alors que les questions proposent 0 à 7, dans `docs/decisions.md`.

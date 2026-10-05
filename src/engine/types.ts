@@ -195,4 +195,6 @@ export type Profile = {
   ellipticalResistance: { min: number; max: number }
   freeWallAtHome: boolean
   preferredTime: string
+  /** Fictional demo data (src/demo): the planner then keeps to exercises with an animation. */
+  demo?: boolean
 }

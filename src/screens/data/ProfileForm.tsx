@@ -11,6 +11,7 @@ import type { Profile } from '@/engine'
 import { WEEKDAYS } from '@/i18n/fr'
 import { updateProfile } from '@/model/actions'
 import { useAppData } from '@/model/context'
+import { CALISTHENICS_HINT, SESSION_COUNTS } from '@/screens/onboarding/sessionCounts'
 
 type Draft = {
   availableDays: string[]
@@ -107,25 +108,26 @@ export function ProfileForm() {
         <RadioGroup
           value={draft.calisthenicsPerWeek}
           onValueChange={(calisthenicsPerWeek) => set({ calisthenicsPerWeek })}
-          className="flex gap-4"
+          className="flex flex-wrap gap-x-4 gap-y-2"
         >
-          {['2', '3', '4'].map((n) => (
-            <Field key={n} orientation="horizontal">
+          {SESSION_COUNTS.map((n) => (
+            <Field key={n} orientation="horizontal" className="w-auto">
               <RadioGroupItem value={n} id={`cal-${n}`} />
               <FieldLabel htmlFor={`cal-${n}`}>{n}</FieldLabel>
             </Field>
           ))}
         </RadioGroup>
+        <FieldDescription>{CALISTHENICS_HINT}</FieldDescription>
       </FieldSet>
       <FieldSet>
         <FieldLegend variant="label">Séances d’elliptique par semaine</FieldLegend>
         <RadioGroup
           value={draft.ellipticalPerWeek}
           onValueChange={(ellipticalPerWeek) => set({ ellipticalPerWeek })}
-          className="flex gap-4"
+          className="flex flex-wrap gap-x-4 gap-y-2"
         >
-          {['0', '1', '2', '3'].map((n) => (
-            <Field key={n} orientation="horizontal">
+          {SESSION_COUNTS.map((n) => (
+            <Field key={n} orientation="horizontal" className="w-auto">
               <RadioGroupItem value={n} id={`ell-${n}`} />
               <FieldLabel htmlFor={`ell-${n}`}>{n}</FieldLabel>
             </Field>

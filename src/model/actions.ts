@@ -10,6 +10,7 @@ import {
   nextWeek,
   nomadSession,
   placeLadders,
+  plannedExercise,
   planWeek,
   reenter,
   rescheduleMissed,
@@ -24,6 +25,7 @@ import {
   type IsoDate,
   type LadderState,
   type MissedOutcome,
+  type PlannedExercise,
   type PlannedSession,
   type Profile,
   type ProgressionEvent,
@@ -54,6 +56,28 @@ function planInput(data: AppData, weekId: WeekId, trips: Trip[], deload: boolean
 /** Sessions of a fresh plan that fall before `today` are dropped. */
 function fromToday(plan: WeekPlan, today: IsoDate): WeekPlan {
   return { ...plan, sessions: plan.sessions.filter((s) => s.date >= today) }
+}
+
+/**
+ * Planned sessions freeze their targets when the week is planned; a check-in
+ * then moves the ladders. Brings the exercises of the sessions still `planned`
+ * back in line with `data.ladderState`, with the planner's own rules (fallback
+ * step, deload sets). Done, missed and abandoned sessions are history. An
+ * exercise its ladder no longer plans (paused, no step doable there) is kept.
+ */
+function refreshPlanned(data: AppData, plan: WeekPlan): WeekPlan {
+  const input = planInput(data, plan.weekId, plan.trips, plan.deload)
+  const refresh = (context: PlannedSession['context']) => (exercise: PlannedExercise) => {
+    const state = data.ladderState[exercise.ladderId]
+    const fresh = state && plannedExercise(state, context, input)
+    return fresh ? { ...exercise, ...fresh } : exercise
+  }
+  return {
+    ...plan,
+    sessions: plan.sessions.map((s) =>
+      s.status === 'planned' ? { ...s, exercises: s.exercises.map(refresh(s.context)) } : s,
+    ),
+  }
 }
 
 function withWeek(data: AppData, week: WeekDoc): AppData {
@@ -88,7 +112,10 @@ export function ensureWeek(data: AppData, today: IsoDate): AppData {
 
 // -- Check-in --------------------------------------------------------------------
 
-/** Records a strength session: applies every result to its ladder, unlocks skills. */
+/**
+ * Records a strength session: applies every result to its ladder, unlocks
+ * skills, and refreshes the exercises of the week's sessions still planned.
+ */
 export function checkIn(
   data: AppData,
   input: { weekId: WeekId; sessionId: string; date: IsoDate; results: ExerciseResult[] },
@@ -109,12 +136,13 @@ export function checkIn(
   const unlock = unlockLadders(states)
   states = unlock.states
 
+  const updated: AppData = { ...data, ladderState: states }
   const next: WeekDoc = {
-    plan: updateSession(week.plan, session.id, { status: 'done' }),
+    plan: refreshPlanned(updated, updateSession(week.plan, session.id, { status: 'done' })),
     logs: [...week.logs, { sessionId: session.id, date: input.date, kind: session.kind, results: input.results }],
     events: [...week.events, ...events.map((event) => ({ date: input.date, event }))],
   }
-  return { data: withWeek({ ...data, ladderState: states }, next), events, unlocked: unlock.unlocked }
+  return { data: withWeek(updated, next), events, unlocked: unlock.unlocked }
 }
 
 /** Records an elliptical session by hand; a Garmin import later fills the heart rate. */

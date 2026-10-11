@@ -217,6 +217,19 @@ describe('upgradeData: data stored before the bar left home', () => {
     expect(a.exercises.every((e) => isAvailable(e.exercise, 'home'))).toBe(true)
   })
 
+  it('drops the accessories the catalog no longer holds', () => {
+    const data = onboarded()
+    const a = sessionOn(data, WEDNESDAY)
+    const accessories = [
+      { exercise: 'ds:0489', nameFr: 'Extension lombaire', sets: 2, target: 12, unit: 'reps' as const },
+      { exercise: 'ds:1352', nameFr: 'Extension du dos allongé', sets: 2, target: 12, unit: 'reps' as const },
+    ]
+    const sessions = data.weeks[WEEK].plan.sessions.map((s) => (s.id === a.id ? { ...s, accessories } : s))
+    const stored = { ...data, weeks: { [WEEK]: { ...data.weeks[WEEK], plan: { ...data.weeks[WEEK].plan, sessions } } } }
+    const next = upgradeData(stored, MONDAY)
+    expect(sessionOn(next, WEDNESDAY).accessories?.map((x) => x.exercise)).toEqual(['ds:1352'])
+  })
+
   it('leaves up-to-date data as it is', () => {
     const data = onboarded()
     expect(upgradeData(data, MONDAY)).toBe(data)

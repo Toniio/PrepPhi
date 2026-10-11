@@ -1,7 +1,7 @@
 {
   "source": "https://github.com/hasaneyldrm/exercises-dataset.git",
   "webpQuality": 40,
-  "count": 280,
+  "count": 203,
   "exercises": [
     {
       "id": "ds:0001",
@@ -24,6 +24,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -52,6 +53,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -81,6 +83,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -109,6 +112,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -136,6 +140,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -166,6 +171,7 @@
       "equipment": [
         "bar"
       ],
+      "datasetEquipment": "body weight",
       "contexts": [
         "park"
       ],
@@ -196,6 +202,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -203,62 +210,6 @@
       "media": "exercises/3294.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
       "inLadder": true
-    },
-    {
-      "id": "ds:2355",
-      "sourceId": "2355",
-      "nameEn": "arm slingers hanging bent knee legs",
-      "nameFr": "Relevé de genoux suspendu",
-      "stepsFr": [
-        "Suspends-toi à une barre de traction, les bras complètement étendus et les genoux fléchis à un angle de 90 degrés.",
-        "Gaine ta sangle abdominale et lève tes genoux vers ta poitrine, en les amenant aussi près que possible de tes coudes.",
-        "Abaisse lentement tes jambes vers la position de départ.",
-        "Répète le nombre de répétitions souhaité."
-      ],
-      "bodyPart": "waist",
-      "target": "abs",
-      "secondaryMuscles": [
-        "shoulders",
-        "back"
-      ],
-      "equipment": [
-        "bar"
-      ],
-      "contexts": [
-        "park"
-      ],
-      "media": "exercises/2355.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false,
-      "noteFr": "L'animation montre des sangles : suspends-toi directement à la barre, mains en pronation."
-    },
-    {
-      "id": "ds:2333",
-      "sourceId": "2333",
-      "nameEn": "arm slingers hanging straight legs",
-      "nameFr": "Relevé de jambes tendues suspendu",
-      "stepsFr": [
-        "Suspends-toi à une barre de traction, les bras complètement étendus et les jambes tendues vers le bas.",
-        "Gaine ta sangle abdominale et lève tes jambes devant toi jusqu'à ce qu'elles soient parallèles au sol.",
-        "Maintiens un moment en haut, puis abaisse lentement tes jambes jusqu'à la position de départ.",
-        "Répète le nombre de répétitions souhaité."
-      ],
-      "bodyPart": "waist",
-      "target": "abs",
-      "secondaryMuscles": [
-        "shoulders",
-        "back"
-      ],
-      "equipment": [
-        "bar"
-      ],
-      "contexts": [
-        "park"
-      ],
-      "media": "exercises/2333.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false,
-      "noteFr": "L'animation montre des sangles : suspends-toi directement à la barre, mains en pronation."
     },
     {
       "id": "ds:3214",
@@ -281,6 +232,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -309,6 +261,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -340,6 +293,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -372,6 +326,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -379,64 +334,6 @@
       "media": "exercises/3672.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
       "inLadder": false
-    },
-    {
-      "id": "ds:3297",
-      "sourceId": "3297",
-      "nameEn": "back lever",
-      "nameFr": "Back lever",
-      "stepsFr": [
-        "Commence suspendu à une barre de traction en prise pronation, les mains légèrement plus écartées que la largeur des épaules.",
-        "Gaine ta sangle abdominale et tire tes omoplates vers le bas et l'arrière.",
-        "Fléchis les genoux et ramène-les vers ta poitrine.",
-        "Soulève lentement tes jambes, en les gardant tendues, jusqu'à ce que ton corps soit parallèle au sol.",
-        "Maintiens cette position pendant quelques secondes, puis abaisse lentement tes jambes jusqu'à la position de départ.",
-        "Répète le nombre de répétitions souhaité."
-      ],
-      "bodyPart": "back",
-      "target": "upper back",
-      "secondaryMuscles": [
-        "biceps",
-        "forearms",
-        "core"
-      ],
-      "equipment": [
-        "bar"
-      ],
-      "contexts": [
-        "park"
-      ],
-      "media": "exercises/3297.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false
-    },
-    {
-      "id": "ds:1405",
-      "sourceId": "1405",
-      "nameEn": "back pec stretch",
-      "nameFr": "Étirement du dos, mains sur la table",
-      "stepsFr": [
-        "Debout face à la table, pose les mains sur le bord, bras tendus.",
-        "Recule les pieds et penche le buste jusqu'à ce que le dos soit à l'horizontale.",
-        "Laisse descendre la poitrine vers le sol, sans plier les bras.",
-        "Tiens la position en respirant calmement, puis remonte."
-      ],
-      "bodyPart": "back",
-      "target": "lats",
-      "secondaryMuscles": [
-        "shoulders",
-        "chest"
-      ],
-      "equipment": [
-        "table"
-      ],
-      "contexts": [
-        "home"
-      ],
-      "media": "exercises/1405.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false,
-      "noteFr": "L'animation montre un banc : pose les mains sur le bord de la table."
     },
     {
       "id": "ds:1473",
@@ -459,6 +356,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -488,6 +386,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -519,6 +418,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -526,122 +426,6 @@
       "media": "exercises/3360.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
       "inLadder": false
-    },
-    {
-      "id": "ds:0129",
-      "sourceId": "0129",
-      "nameEn": "bench dip (knees bent)",
-      "nameFr": "Dips sur chaise, genoux fléchis",
-      "stepsFr": [
-        "Assieds-toi au bord d'un banc ou d'une chaise, les mains agrippant le bord à côté de tes hanches.",
-        "Fais glisser tes fesses hors du banc et tends tes jambes devant toi, en gardant les talons au sol.",
-        "Plie tes coudes et abaisse ton corps vers le sol en gardant ton dos près du banc.",
-        "Marque une pause en bas, puis pousse-toi vers le haut jusqu'à la position de départ.",
-        "Répète le nombre de répétitions souhaité."
-      ],
-      "bodyPart": "upper arms",
-      "target": "triceps",
-      "secondaryMuscles": [
-        "chest",
-        "shoulders"
-      ],
-      "equipment": [
-        "chair"
-      ],
-      "contexts": [
-        "home"
-      ],
-      "media": "exercises/0129.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false
-    },
-    {
-      "id": "ds:1399",
-      "sourceId": "1399",
-      "nameEn": "bench dip on floor",
-      "nameFr": "Dips sur chaise, jambes tendues",
-      "stepsFr": [
-        "Assieds-toi au bord d'un banc ou d'une chaise, les mains agrippant le bord, doigts pointant vers l'avant.",
-        "Fais glisser tes fesses hors du banc, en soutenant ton poids avec tes mains.",
-        "Abaisse ton corps en fléchissant tes coudes jusqu'à ce que le haut de tes bras soit parallèle au sol.",
-        "Repousse-toi vers le haut jusqu'à la position de départ en tendant tes bras.",
-        "Répète le nombre de répétitions souhaité."
-      ],
-      "bodyPart": "upper arms",
-      "target": "triceps",
-      "secondaryMuscles": [
-        "chest",
-        "shoulders"
-      ],
-      "equipment": [
-        "chair"
-      ],
-      "contexts": [
-        "home"
-      ],
-      "media": "exercises/1399.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": true
-    },
-    {
-      "id": "ds:0130",
-      "sourceId": "0130",
-      "nameEn": "bench hip extension",
-      "nameFr": "Extension de hanche à quatre pattes",
-      "stepsFr": [
-        "Place-toi à quatre pattes, mains sous les épaules, genoux sous les hanches.",
-        "Tends une jambe vers l'arrière jusqu'à l'horizontale.",
-        "Serre le fessier en haut, sans cambrer le bas du dos.",
-        "Ramène le genou sous la hanche et enchaîne, puis change de jambe."
-      ],
-      "bodyPart": "upper legs",
-      "target": "glutes",
-      "secondaryMuscles": [
-        "hamstrings"
-      ],
-      "equipment": [
-        "none"
-      ],
-      "contexts": [
-        "home",
-        "travel"
-      ],
-      "media": "exercises/0130.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false,
-      "cueFr": "Dos plat, bassin immobile.",
-      "mistakeFr": "Cambrer le dos pour monter la jambe plus haut.",
-      "noteFr": "L'animation montre l'exercice sur un banc : fais-le au sol, à quatre pattes."
-    },
-    {
-      "id": "ds:3019",
-      "sourceId": "3019",
-      "nameEn": "bench pull-ups",
-      "nameFr": "Traction assistée, pied sur la chaise",
-      "stepsFr": [
-        "Place la chaise sous la barre et pose un pied sur l'assise.",
-        "Saisis la barre en pronation, mains un peu plus larges que les épaules.",
-        "Tire le menton au-dessus de la barre, en t'aidant de la jambe juste assez.",
-        "Redescends lentement jusqu'aux bras tendus."
-      ],
-      "bodyPart": "back",
-      "target": "lats",
-      "secondaryMuscles": [
-        "biceps",
-        "forearms"
-      ],
-      "equipment": [
-        "bar",
-        "chair"
-      ],
-      "contexts": [
-        "park"
-      ],
-      "media": "exercises/3019.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false,
-      "cueFr": "La jambe aide, les bras travaillent.",
-      "mistakeFr": "Pousser surtout avec la jambe."
     },
     {
       "id": "ds:3639",
@@ -665,92 +449,12 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
       ],
       "media": "exercises/3639.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false
-    },
-    {
-      "id": "ds:1770",
-      "sourceId": "1770",
-      "nameEn": "biceps leg concentration curl",
-      "nameFr": "Curl biceps avec la jambe",
-      "stepsFr": [
-        "Assieds-toi au bord de la chaise, buste droit.",
-        "Saisis l'arrière de ta cheville d'une main, coude posé contre l'intérieur de la cuisse.",
-        "Fléchis le bras pour monter la jambe, en résistant avec la jambe.",
-        "Redescends lentement et change de bras après la série."
-      ],
-      "bodyPart": "upper arms",
-      "target": "biceps",
-      "secondaryMuscles": [
-        "forearms"
-      ],
-      "equipment": [
-        "chair"
-      ],
-      "contexts": [
-        "home"
-      ],
-      "media": "exercises/1770.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false
-    },
-    {
-      "id": "ds:0139",
-      "sourceId": "0139",
-      "nameEn": "biceps narrow pull-ups",
-      "nameFr": "Rangée inversée prise serrée en supination",
-      "stepsFr": [
-        "Allonge-toi sous la table et saisis son bord, paumes vers toi, mains serrées.",
-        "Gaine ton corps en ligne droite des talons aux épaules.",
-        "Tire la poitrine vers le bord de la table, coudes près du corps.",
-        "Redescends bras tendus sous contrôle."
-      ],
-      "bodyPart": "upper arms",
-      "target": "biceps",
-      "secondaryMuscles": [
-        "forearms",
-        "shoulders"
-      ],
-      "equipment": [
-        "table"
-      ],
-      "contexts": [
-        "home"
-      ],
-      "media": "exercises/0139.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false,
-      "noteFr": "L'animation montre une barre guidée : fais-le sous une table solide."
-    },
-    {
-      "id": "ds:0140",
-      "sourceId": "0140",
-      "nameEn": "biceps pull-up",
-      "nameFr": "Traction biceps",
-      "stepsFr": [
-        "Suspends-toi à la barre, paumes vers toi, mains écartées à la largeur des épaules.",
-        "Gaine ta sangle abdominale et serre les omoplates.",
-        "Tire jusqu'à passer le menton au-dessus de la barre, coudes près du corps.",
-        "Redescends lentement jusqu'aux bras tendus."
-      ],
-      "bodyPart": "upper arms",
-      "target": "biceps",
-      "secondaryMuscles": [
-        "forearms",
-        "shoulders"
-      ],
-      "equipment": [
-        "bar"
-      ],
-      "contexts": [
-        "park"
-      ],
-      "media": "exercises/0140.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
       "inLadder": false
     },
@@ -774,6 +478,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -805,6 +510,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -812,34 +518,6 @@
       "media": "exercises/3543.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
       "inLadder": false
-    },
-    {
-      "id": "ds:3544",
-      "sourceId": "3544",
-      "nameEn": "bodyweight incline side plank",
-      "nameFr": "Gainage latéral incliné",
-      "stepsFr": [
-        "Pose une main sur l'assise de la chaise, bras tendu sous l'épaule.",
-        "Tends les jambes, pieds superposés, corps de profil.",
-        "Monte les hanches pour aligner la tête, le bassin et les pieds.",
-        "Tiens la position, puis change de côté."
-      ],
-      "bodyPart": "waist",
-      "target": "abs",
-      "secondaryMuscles": [
-        "obliques",
-        "shoulders"
-      ],
-      "equipment": [
-        "chair"
-      ],
-      "contexts": [
-        "home"
-      ],
-      "media": "exercises/3544.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": true,
-      "noteFr": "L'animation montre un banc : pose la main sur l'assise d'une chaise."
     },
     {
       "id": "ds:1771",
@@ -861,6 +539,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -888,6 +567,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -895,65 +575,6 @@
       "media": "exercises/1769.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
       "inLadder": false
-    },
-    {
-      "id": "ds:3168",
-      "sourceId": "3168",
-      "nameEn": "bodyweight squatting row",
-      "nameFr": "Squat avec tirage",
-      "stepsFr": [
-        "Tiens-toi debout, les pieds écartés à la largeur des épaules, en te tenant à un objet solide ou à un sangle de suspension, les bras tendus.",
-        "Descends en position accroupie, en gardant le dos droit et tes genoux derrière les orteils.",
-        "Depuis la position de squat, tire ton corps vers l'objet ou l'appareil de suspension, en resserrant tes omoplates.",
-        "Marque une pause en haut, puis abaisse lentement ton corps pour revenir à la position de départ.",
-        "Répète le nombre de répétitions souhaité."
-      ],
-      "bodyPart": "back",
-      "target": "upper back",
-      "secondaryMuscles": [
-        "biceps",
-        "shoulders"
-      ],
-      "equipment": [
-        "table"
-      ],
-      "contexts": [
-        "home"
-      ],
-      "media": "exercises/3168.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false,
-      "noteFr": "L'animation montre un espalier : tiens le chambranle d'une porte ou le pied d'une table solide."
-    },
-    {
-      "id": "ds:3167",
-      "sourceId": "3167",
-      "nameEn": "bodyweight squatting row (with towel)",
-      "nameFr": "Squat avec tirage à la serviette",
-      "stepsFr": [
-        "Tiens-toi debout, les pieds écartés à la largeur des épaules, en tenant une serviette devant toi, paumes tournées vers le bas.",
-        "Fléchis les genoux et abaisse ton corps en position accroupie en gardant le dos droit et la poitrine relevée.",
-        "En descendant dans le squat, tire simultanément la serviette vers ta poitrine en resserrant tes omoplates.",
-        "Marque une pause en bas du squat, puis reviens lentement à la position de départ en tendant tes bras.",
-        "Répète le nombre de répétitions souhaité."
-      ],
-      "bodyPart": "back",
-      "target": "upper back",
-      "secondaryMuscles": [
-        "biceps",
-        "shoulders"
-      ],
-      "equipment": [
-        "table",
-        "towel"
-      ],
-      "contexts": [
-        "home"
-      ],
-      "media": "exercises/3167.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false,
-      "noteFr": "L'animation montre un espalier : passe la serviette autour du pied d'une table solide."
     },
     {
       "id": "ds:1373",
@@ -976,6 +597,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -983,178 +605,6 @@
       "media": "exercises/1373.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
       "inLadder": true
-    },
-    {
-      "id": "ds:3156",
-      "sourceId": "3156",
-      "nameEn": "bodyweight standing close-grip one arm row",
-      "nameFr": "Rangée debout à un bras, prise serrée",
-      "stepsFr": [
-        "Face au chambranle d'une porte, saisis-le d'une main à hauteur de poitrine, pieds près du mur.",
-        "Penche-toi en arrière, bras tendu, corps gainé.",
-        "Tire la poitrine vers ta main, coude près du corps.",
-        "Redescends bras tendu sous contrôle, puis change de bras."
-      ],
-      "bodyPart": "back",
-      "target": "upper back",
-      "secondaryMuscles": [
-        "biceps",
-        "forearms"
-      ],
-      "equipment": [
-        "none"
-      ],
-      "contexts": [
-        "home",
-        "travel"
-      ],
-      "media": "exercises/3156.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false,
-      "noteFr": "L'animation montre un espalier : tiens le chambranle d'une porte."
-    },
-    {
-      "id": "ds:3158",
-      "sourceId": "3158",
-      "nameEn": "bodyweight standing close-grip row",
-      "nameFr": "Rangée debout, prise serrée",
-      "stepsFr": [
-        "Face au chambranle d'une porte, saisis-le à deux mains serrées, à hauteur de poitrine.",
-        "Avance les pieds sous tes mains et penche-toi en arrière, bras tendus.",
-        "Tire la poitrine vers tes mains, coudes près du corps.",
-        "Redescends bras tendus sous contrôle."
-      ],
-      "bodyPart": "back",
-      "target": "upper back",
-      "secondaryMuscles": [
-        "biceps",
-        "forearms"
-      ],
-      "equipment": [
-        "none"
-      ],
-      "contexts": [
-        "home",
-        "travel"
-      ],
-      "media": "exercises/3158.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false,
-      "noteFr": "L'animation montre un espalier : tiens le chambranle d'une porte."
-    },
-    {
-      "id": "ds:3162",
-      "sourceId": "3162",
-      "nameEn": "bodyweight standing one arm row",
-      "nameFr": "Rangée debout à un bras",
-      "stepsFr": [
-        "Face au chambranle d'une porte, saisis-le d'une main à hauteur de poitrine.",
-        "Avance les pieds et penche-toi en arrière, bras tendu, corps gainé.",
-        "Tire la poitrine vers ta main en serrant l'omoplate.",
-        "Redescends bras tendu sous contrôle, puis change de bras."
-      ],
-      "bodyPart": "back",
-      "target": "upper back",
-      "secondaryMuscles": [
-        "biceps",
-        "forearms"
-      ],
-      "equipment": [
-        "none"
-      ],
-      "contexts": [
-        "home",
-        "travel"
-      ],
-      "media": "exercises/3162.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false,
-      "noteFr": "L'animation montre un espalier : tiens le chambranle d'une porte."
-    },
-    {
-      "id": "ds:3161",
-      "sourceId": "3161",
-      "nameEn": "bodyweight standing one arm row (with towel)",
-      "nameFr": "Rangée debout à un bras à la serviette",
-      "stepsFr": [
-        "Passe la serviette autour de la poignée d'une porte fermée qui s'ouvre de l'autre côté, et tiens les deux bouts d'une main.",
-        "Avance les pieds et penche-toi en arrière, bras tendu.",
-        "Tire la poitrine vers ta main en serrant l'omoplate.",
-        "Redescends sous contrôle, puis change de bras."
-      ],
-      "bodyPart": "back",
-      "target": "upper back",
-      "secondaryMuscles": [
-        "biceps",
-        "forearms"
-      ],
-      "equipment": [
-        "towel"
-      ],
-      "contexts": [
-        "home"
-      ],
-      "media": "exercises/3161.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false,
-      "noteFr": "L'animation montre un espalier : passe la serviette autour de la poignée d'une porte fermée qui s'ouvre de l'autre côté."
-    },
-    {
-      "id": "ds:3166",
-      "sourceId": "3166",
-      "nameEn": "bodyweight standing row",
-      "nameFr": "Rangée debout",
-      "stepsFr": [
-        "Face au chambranle d'une porte, saisis-le à deux mains à hauteur de poitrine.",
-        "Avance les pieds et penche-toi en arrière, bras tendus, corps gainé.",
-        "Tire la poitrine vers tes mains en serrant les omoplates.",
-        "Redescends bras tendus sous contrôle."
-      ],
-      "bodyPart": "back",
-      "target": "upper back",
-      "secondaryMuscles": [
-        "biceps",
-        "shoulders"
-      ],
-      "equipment": [
-        "none"
-      ],
-      "contexts": [
-        "home",
-        "travel"
-      ],
-      "media": "exercises/3166.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false,
-      "noteFr": "L'animation montre un espalier : tiens le chambranle d'une porte."
-    },
-    {
-      "id": "ds:3165",
-      "sourceId": "3165",
-      "nameEn": "bodyweight standing row (with towel)",
-      "nameFr": "Rangée debout à la serviette",
-      "stepsFr": [
-        "Passe la serviette autour de la poignée d'une porte fermée qui s'ouvre de l'autre côté, un bout dans chaque main.",
-        "Avance les pieds et penche-toi en arrière, bras tendus.",
-        "Tire la poitrine vers tes mains en serrant les omoplates.",
-        "Redescends bras tendus sous contrôle."
-      ],
-      "bodyPart": "back",
-      "target": "upper back",
-      "secondaryMuscles": [
-        "biceps",
-        "shoulders"
-      ],
-      "equipment": [
-        "towel"
-      ],
-      "contexts": [
-        "home"
-      ],
-      "media": "exercises/3165.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false,
-      "noteFr": "L'animation montre un espalier : passe la serviette autour de la poignée d'une porte fermée qui s'ouvre de l'autre côté."
     },
     {
       "id": "ds:0138",
@@ -1177,6 +627,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -1211,6 +662,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -1245,6 +697,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -1273,6 +726,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -1304,6 +758,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -1333,6 +788,7 @@
       "equipment": [
         "wall"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -1362,6 +818,7 @@
       "equipment": [
         "wall"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -1369,61 +826,6 @@
       "media": "exercises/1377.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
       "inLadder": false
-    },
-    {
-      "id": "ds:1548",
-      "sourceId": "1548",
-      "nameEn": "chair leg extended stretch",
-      "nameFr": "Extension de jambe assis sur chaise",
-      "stepsFr": [
-        "Assieds-toi au bord d'une chaise, le dos droit et les pieds à plat sur le sol.",
-        "Étends une jambe droit devant toi, en gardant ton talon au sol.",
-        "Penche-toi légèrement en avant, en sentant un étirement dans tes quadriceps.",
-        "Maintiens cette position pendant 20 à 30 secondes.",
-        "Change de jambe et répète l'étirement."
-      ],
-      "bodyPart": "upper legs",
-      "target": "quads",
-      "secondaryMuscles": [
-        "hamstrings",
-        "calves"
-      ],
-      "equipment": [
-        "chair"
-      ],
-      "contexts": [
-        "home"
-      ],
-      "media": "exercises/1548.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false
-    },
-    {
-      "id": "ds:1271",
-      "sourceId": "1271",
-      "nameEn": "chest and front of shoulder stretch",
-      "nameFr": "Passage d'épaules à la serviette",
-      "stepsFr": [
-        "Debout, tiens une serviette tendue devant toi, mains bien plus écartées que les épaules.",
-        "Monte la serviette au-dessus de la tête, bras tendus.",
-        "Continue derrière toi aussi loin que tes épaules le permettent, sans plier les bras.",
-        "Reviens devant toi par le même chemin."
-      ],
-      "bodyPart": "chest",
-      "target": "pectorals",
-      "secondaryMuscles": [
-        "deltoids"
-      ],
-      "equipment": [
-        "towel"
-      ],
-      "contexts": [
-        "home"
-      ],
-      "media": "exercises/1271.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false,
-      "noteFr": "L'animation montre un bâton : tiens une serviette tendue."
     },
     {
       "id": "ds:3216",
@@ -1447,67 +849,12 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
       ],
       "media": "exercises/3216.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false
-    },
-    {
-      "id": "ds:1326",
-      "sourceId": "1326",
-      "nameEn": "chin-up",
-      "nameFr": "Traction en supination",
-      "stepsFr": [
-        "Suspends-toi à une barre de traction, les paumes tournées vers toi et les mains écartées à la largeur des épaules.",
-        "Gaine ta sangle abdominale et tire ton corps vers la barre, en menant avec ta poitrine.",
-        "Continue à tirer jusqu'à ce que ton menton soit au-dessus de la barre.",
-        "Marque une pause en haut, puis abaisse lentement ton corps pour revenir à la position de départ.",
-        "Répète le nombre de répétitions souhaité."
-      ],
-      "bodyPart": "back",
-      "target": "lats",
-      "secondaryMuscles": [
-        "biceps",
-        "forearms"
-      ],
-      "equipment": [
-        "bar"
-      ],
-      "contexts": [
-        "park"
-      ],
-      "media": "exercises/1326.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": true
-    },
-    {
-      "id": "ds:0253",
-      "sourceId": "0253",
-      "nameEn": "chin-ups (narrow parallel grip)",
-      "nameFr": "Traction prise neutre serrée",
-      "stepsFr": [
-        "Suspends-toi à une barre de traction avec une prise parallèle serrée, les paumes tournées vers toi.",
-        "Sollicite les muscles de ton dos et tire ton corps vers la barre, en gardant tes coudes près de ton corps.",
-        "Continue à tirer jusqu'à ce que ton menton soit au-dessus de la barre.",
-        "Marque une pause en haut, puis abaisse lentement ton corps pour revenir à la position de départ.",
-        "Répète le nombre de répétitions souhaité."
-      ],
-      "bodyPart": "back",
-      "target": "upper back",
-      "secondaryMuscles": [
-        "biceps",
-        "forearms"
-      ],
-      "equipment": [
-        "bar"
-      ],
-      "contexts": [
-        "park"
-      ],
-      "media": "exercises/0253.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
       "inLadder": false
     },
@@ -1531,6 +878,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -1560,6 +908,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -1591,40 +940,12 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
       ],
       "media": "exercises/0258.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false
-    },
-    {
-      "id": "ds:1327",
-      "sourceId": "1327",
-      "nameEn": "close grip chin-up",
-      "nameFr": "Traction en supination, prise serrée",
-      "stepsFr": [
-        "Saisis la barre de traction, les paumes tournées vers toi et les mains écartées à la largeur des épaules.",
-        "Suspends-toi à la barre, les bras complètement étendus et les pieds décollés du sol.",
-        "Sollicite les muscles de ton dos et tire ton corps vers la barre, en gardant tes coudes près de ton corps.",
-        "Continue à tirer jusqu'à ce que ton menton soit au-dessus de la barre.",
-        "Marque une pause en haut, puis abaisse lentement ton corps pour revenir à la position de départ.",
-        "Répète le nombre de répétitions souhaité."
-      ],
-      "bodyPart": "back",
-      "target": "lats",
-      "secondaryMuscles": [
-        "biceps",
-        "forearms"
-      ],
-      "equipment": [
-        "bar"
-      ],
-      "contexts": [
-        "park"
-      ],
-      "media": "exercises/1327.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
       "inLadder": false
     },
@@ -1648,6 +969,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -1677,6 +999,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -1705,6 +1028,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -1734,6 +1058,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -1763,6 +1088,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -1791,6 +1117,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -1819,6 +1146,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -1847,6 +1175,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -1878,6 +1207,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -1909,6 +1239,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -1938,6 +1269,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "body weight",
       "contexts": [
         "home",
         "travel"
@@ -1968,6 +1300,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -1975,34 +1308,6 @@
       "media": "exercises/0283.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
       "inLadder": true
-    },
-    {
-      "id": "ds:0284",
-      "sourceId": "0284",
-      "nameEn": "donkey calf raise",
-      "nameFr": "Mollets penché en avant",
-      "stepsFr": [
-        "Pose les mains sur la table et recule les pieds jusqu'à avoir le buste à l'horizontale.",
-        "Garde les jambes tendues, pieds écartés à la largeur des hanches.",
-        "Monte sur la pointe des pieds le plus haut possible.",
-        "Redescends lentement les talons au sol."
-      ],
-      "bodyPart": "lower legs",
-      "target": "calves",
-      "secondaryMuscles": [
-        "hamstrings",
-        "glutes"
-      ],
-      "equipment": [
-        "table"
-      ],
-      "contexts": [
-        "home"
-      ],
-      "media": "exercises/0284.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false,
-      "noteFr": "L'animation montre une cale sous les pieds : fais-le pieds à plat, mains sur la table."
     },
     {
       "id": "ds:1167",
@@ -2026,6 +1331,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -2033,35 +1339,6 @@
       "media": "exercises/1167.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
       "inLadder": false
-    },
-    {
-      "id": "ds:1772",
-      "sourceId": "1772",
-      "nameEn": "elbow lift - reverse push-up",
-      "nameFr": "Pompe inversée sur les coudes",
-      "stepsFr": [
-        "Allonge-toi sur le dos, jambes tendues, coudes pliés à côté du buste.",
-        "Appuie fort les coudes dans le sol.",
-        "Décolle le haut du dos du sol en serrant les omoplates.",
-        "Marque un temps en haut, puis redescends lentement."
-      ],
-      "bodyPart": "back",
-      "target": "upper back",
-      "secondaryMuscles": [
-        "triceps",
-        "shoulders"
-      ],
-      "equipment": [
-        "none"
-      ],
-      "contexts": [
-        "home",
-        "travel"
-      ],
-      "media": "exercises/1772.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false,
-      "noteFr": "L'animation montre un banc : fais-le allongé au sol."
     },
     {
       "id": "ds:0443",
@@ -2085,6 +1362,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -2114,6 +1392,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -2143,6 +1422,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -2150,35 +1430,6 @@
       "media": "exercises/0457.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
       "inLadder": false
-    },
-    {
-      "id": "ds:0459",
-      "sourceId": "0459",
-      "nameEn": "flutter kicks",
-      "nameFr": "Battements de jambes à plat ventre",
-      "stepsFr": [
-        "Allonge-toi à plat ventre, front posé sur les mains.",
-        "Décolle les deux jambes tendues du sol en serrant les fessiers.",
-        "Monte et descends les jambes en alternance, par petits battements.",
-        "Garde le bassin au sol pendant toute la série."
-      ],
-      "bodyPart": "upper legs",
-      "target": "glutes",
-      "secondaryMuscles": [
-        "hip flexors",
-        "lower abs"
-      ],
-      "equipment": [
-        "none"
-      ],
-      "contexts": [
-        "home",
-        "travel"
-      ],
-      "media": "exercises/0459.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false,
-      "noteFr": "L'animation montre un banc : fais-le à plat ventre au sol."
     },
     {
       "id": "ds:1472",
@@ -2203,6 +1454,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -2233,6 +1485,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -2261,6 +1514,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -2290,71 +1544,12 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
       ],
       "media": "exercises/3301.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false
-    },
-    {
-      "id": "ds:3296",
-      "sourceId": "3296",
-      "nameEn": "front lever",
-      "nameFr": "Front lever",
-      "stepsFr": [
-        "Commence suspendu à une barre de traction en prise pronation, les mains écartées à la largeur des épaules.",
-        "Gaine ta sangle abdominale et tire tes omoplates vers le bas et l'arrière.",
-        "Fléchis les genoux et ramène-les vers ta poitrine.",
-        "Simultanément, lève tes jambes et étends-les droit devant toi, en gardant ton corps parallèle au sol.",
-        "Maintiens cette position aussi longtemps que possible, en visant une position de front lever complète.",
-        "Pour relâcher, abaisse lentement tes jambes et reviens à la position de départ.",
-        "Répète le nombre de répétitions souhaité."
-      ],
-      "bodyPart": "waist",
-      "target": "abs",
-      "secondaryMuscles": [
-        "lats",
-        "shoulders",
-        "forearms"
-      ],
-      "equipment": [
-        "bar"
-      ],
-      "contexts": [
-        "park"
-      ],
-      "media": "exercises/3296.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false
-    },
-    {
-      "id": "ds:3295",
-      "sourceId": "3295",
-      "nameEn": "front lever reps",
-      "nameFr": "Front lever en répétitions",
-      "stepsFr": [
-        "Suspends-toi à une barre de traction avec une prise en pronation, les paumes tournées vers l'extérieur.",
-        "Gaine ta sangle abdominale et tire tes omoplates vers le bas et l'arrière.",
-        "En gardant le corps droit, lève tes jambes jusqu'à ce qu'elles soient parallèles au sol.",
-        "Maintiens cette position aussi longtemps que possible, en visant 10 à 20 secondes.",
-        "Abaisse lentement tes jambes vers la position de départ.",
-        "Répète le nombre de répétitions souhaité."
-      ],
-      "bodyPart": "back",
-      "target": "upper back",
-      "secondaryMuscles": [
-        "core",
-        "shoulders"
-      ],
-      "equipment": [
-        "bar"
-      ],
-      "contexts": [
-        "park"
-      ],
-      "media": "exercises/3295.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
       "inLadder": false
     },
@@ -2381,6 +1576,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -2409,6 +1605,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -2440,6 +1637,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -2472,41 +1670,12 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
       ],
       "media": "exercises/3327.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false
-    },
-    {
-      "id": "ds:0466",
-      "sourceId": "0466",
-      "nameEn": "gironda sternum chin",
-      "nameFr": "Traction sternum",
-      "stepsFr": [
-        "Tiens-toi face à une barre haute, les pieds écartés à la largeur des épaules.",
-        "Lève les bras et saisis la barre en prise pronation, un peu plus large que la largeur des épaules.",
-        "Suspends-toi à la barre, les bras complètement étendus et le corps droit.",
-        "Contracte tes grands dorsaux et tes biceps pour amener ta poitrine vers la barre, en menant avec le sternum.",
-        "Marque une pause en haut, puis abaisse-toi lentement pour revenir à la position de départ.",
-        "Répète le nombre de répétitions souhaité."
-      ],
-      "bodyPart": "back",
-      "target": "lats",
-      "secondaryMuscles": [
-        "biceps",
-        "rhomboids",
-        "rear deltoids"
-      ],
-      "equipment": [
-        "bar"
-      ],
-      "contexts": [
-        "park"
-      ],
-      "media": "exercises/0466.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
       "inLadder": false
     },
@@ -2532,70 +1701,12 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
       ],
       "media": "exercises/3561.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false
-    },
-    {
-      "id": "ds:3523",
-      "sourceId": "3523",
-      "nameEn": "glute bridge two legs on bench (male)",
-      "nameFr": "Pont fessier, talons sur la chaise",
-      "stepsFr": [
-        "Allonge-toi sur le dos, talons posés sur l'assise de la chaise, genoux pliés.",
-        "Pousse sur les talons pour monter les hanches jusqu'à l'alignement genoux-épaules.",
-        "Serre les fessiers une seconde en haut.",
-        "Redescends lentement sans poser les fessiers, puis recommence."
-      ],
-      "bodyPart": "upper legs",
-      "target": "glutes",
-      "secondaryMuscles": [
-        "hamstrings",
-        "core"
-      ],
-      "equipment": [
-        "chair"
-      ],
-      "contexts": [
-        "home"
-      ],
-      "media": "exercises/3523.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false,
-      "cueFr": "La poussée part des talons.",
-      "mistakeFr": "Cambrer le bas du dos en haut du mouvement.",
-      "noteFr": "L'animation montre un banc : pose les talons sur l'assise d'une chaise."
-    },
-    {
-      "id": "ds:0467",
-      "sourceId": "0467",
-      "nameEn": "gorilla chin",
-      "nameFr": "Traction gorille",
-      "stepsFr": [
-        "Tiens-toi debout, les pieds écartés à la largeur des épaules et les genoux légèrement fléchis.",
-        "Saisis une barre de traction avec une prise en pronation, un peu plus large que la largeur des épaules.",
-        "Suspends-toi à la barre, les bras complètement étendus et les paumes tournées vers l'extérieur.",
-        "Gaine ta sangle abdominale et tire ton corps vers la barre, en amenant ton menton au-dessus de la barre.",
-        "Marque une pause en haut, puis abaisse lentement ton corps pour revenir à la position de départ.",
-        "Répète le nombre de répétitions souhaité."
-      ],
-      "bodyPart": "waist",
-      "target": "abs",
-      "secondaryMuscles": [
-        "forearms",
-        "biceps"
-      ],
-      "equipment": [
-        "bar"
-      ],
-      "contexts": [
-        "park"
-      ],
-      "media": "exercises/0467.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
       "inLadder": false
     },
@@ -2620,6 +1731,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -2649,6 +1761,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -2677,6 +1790,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -2704,6 +1818,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -2734,6 +1849,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -2766,6 +1882,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -2794,6 +1911,7 @@
       "equipment": [
         "wall"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -2824,6 +1942,7 @@
       "equipment": [
         "wall"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -2831,197 +1950,6 @@
       "media": "exercises/0471.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
       "inLadder": true
-    },
-    {
-      "id": "ds:1764",
-      "sourceId": "1764",
-      "nameEn": "hanging leg hip raise",
-      "nameFr": "Relevé de bassin suspendu",
-      "stepsFr": [
-        "Suspends-toi à une barre de traction, les bras complètement étendus et les paumes tournées vers l'extérieur.",
-        "Gaine ta sangle abdominale et lève tes jambes en fléchissant tes hanches et tes genoux jusqu'à ce que tes cuisses soient parallèles au sol.",
-        "Marque une pause en haut, puis abaisse lentement tes jambes pour revenir à la position de départ.",
-        "Répète le nombre de répétitions souhaité."
-      ],
-      "bodyPart": "waist",
-      "target": "abs",
-      "secondaryMuscles": [
-        "hip flexors",
-        "lower back"
-      ],
-      "equipment": [
-        "bar"
-      ],
-      "contexts": [
-        "park"
-      ],
-      "media": "exercises/1764.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false
-    },
-    {
-      "id": "ds:0472",
-      "sourceId": "0472",
-      "nameEn": "hanging leg raise",
-      "nameFr": "Relevé de jambes suspendu",
-      "stepsFr": [
-        "Suspends-toi à la barre en pronation, bras tendus, épaules engagées.",
-        "Monte les genoux pliés jusqu'à ce que les cuisses dépassent l'horizontale.",
-        "Marque un temps en haut, sans te balancer.",
-        "Redescends lentement jusqu'aux jambes tendues."
-      ],
-      "bodyPart": "waist",
-      "target": "abs",
-      "secondaryMuscles": [
-        "hip flexors"
-      ],
-      "equipment": [
-        "bar"
-      ],
-      "contexts": [
-        "park"
-      ],
-      "media": "exercises/0472.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false
-    },
-    {
-      "id": "ds:1761",
-      "sourceId": "1761",
-      "nameEn": "hanging oblique knee raise",
-      "nameFr": "Relevé de genoux oblique suspendu",
-      "stepsFr": [
-        "Suspends-toi à une barre de traction, les bras complètement étendus et les paumes tournées vers l'extérieur.",
-        "Gaine ta sangle abdominale et lève tes genoux vers ta poitrine, en faisant pivoter ton torse sur le côté en même temps.",
-        "Marque une pause en haut, puis abaisse lentement tes jambes pour revenir à la position de départ.",
-        "Répète de l'autre côté en faisant pivoter ton torse dans la direction opposée.",
-        "Continue à alterner les côtés pour le nombre de répétitions souhaité."
-      ],
-      "bodyPart": "waist",
-      "target": "abs",
-      "secondaryMuscles": [
-        "obliques"
-      ],
-      "equipment": [
-        "bar"
-      ],
-      "contexts": [
-        "park"
-      ],
-      "media": "exercises/1761.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false
-    },
-    {
-      "id": "ds:0473",
-      "sourceId": "0473",
-      "nameEn": "hanging pike",
-      "nameFr": "Orteils à la barre",
-      "stepsFr": [
-        "Suspends-toi à une barre de traction, les bras complètement étendus et les paumes tournées vers l'extérieur.",
-        "Gaine ta sangle abdominale et lève tes jambes vers la barre, en les gardant droites.",
-        "Continue à soulever jusqu'à ce que ton corps forme un « V », les jambes parallèles au sol.",
-        "Maintiens la position un moment, puis abaisse lentement tes jambes jusqu'à la position de départ.",
-        "Répète le nombre de répétitions souhaité."
-      ],
-      "bodyPart": "waist",
-      "target": "abs",
-      "secondaryMuscles": [
-        "hip flexors",
-        "shoulders"
-      ],
-      "equipment": [
-        "bar"
-      ],
-      "contexts": [
-        "park"
-      ],
-      "media": "exercises/0473.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false
-    },
-    {
-      "id": "ds:0474",
-      "sourceId": "0474",
-      "nameEn": "hanging straight leg hip raise",
-      "nameFr": "Relevé de bassin suspendu, jambes tendues",
-      "stepsFr": [
-        "Suspends-toi à une barre de traction, les bras complètement étendus et les paumes tournées vers l'extérieur.",
-        "Gaine ta sangle abdominale et lève tes jambes devant toi jusqu'à ce qu'elles soient parallèles au sol.",
-        "Marque une pause en haut, puis abaisse lentement tes jambes pour revenir à la position de départ.",
-        "Répète le nombre de répétitions souhaité."
-      ],
-      "bodyPart": "waist",
-      "target": "abs",
-      "secondaryMuscles": [
-        "hip flexors"
-      ],
-      "equipment": [
-        "bar"
-      ],
-      "contexts": [
-        "park"
-      ],
-      "media": "exercises/0474.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false
-    },
-    {
-      "id": "ds:0475",
-      "sourceId": "0475",
-      "nameEn": "hanging straight leg raise",
-      "nameFr": "Relevé de jambes tendues",
-      "stepsFr": [
-        "Suspends-toi à une barre de traction, les bras complètement étendus et les paumes tournées vers l'extérieur.",
-        "Gaine ta sangle abdominale et lève tes jambes devant toi, en les gardant droites.",
-        "Continue à soulever jusqu'à ce que tes jambes soient parallèles au sol ou aussi haut que tu peux confortablement aller.",
-        "Marque une pause en haut, puis abaisse lentement tes jambes pour revenir à la position de départ.",
-        "Répète le nombre de répétitions souhaité."
-      ],
-      "bodyPart": "waist",
-      "target": "abs",
-      "secondaryMuscles": [
-        "hip flexors"
-      ],
-      "equipment": [
-        "bar"
-      ],
-      "contexts": [
-        "park"
-      ],
-      "media": "exercises/0475.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false
-    },
-    {
-      "id": "ds:0476",
-      "sourceId": "0476",
-      "nameEn": "hanging straight twisting leg hip raise",
-      "nameFr": "Relevé de jambes avec rotation, suspendu",
-      "stepsFr": [
-        "Suspends-toi à une barre de traction, les bras complètement étendus et les jambes tendues.",
-        "Gaine ta sangle abdominale et lève tes jambes vers ta poitrine, en les gardant droites.",
-        "Une fois tes jambes parallèles au sol, effectue une rotation des hanches d'un côté, en amenant tes jambes vers ce côté.",
-        "Marque une pause, puis reviens à la position de départ.",
-        "Répète le mouvement, mais cette fois fais pivoter tes hanches vers le côté opposé.",
-        "Continue à alterner les côtés pour le nombre de répétitions souhaité."
-      ],
-      "bodyPart": "waist",
-      "target": "abs",
-      "secondaryMuscles": [
-        "obliques",
-        "hip flexors"
-      ],
-      "equipment": [
-        "bar"
-      ],
-      "contexts": [
-        "park"
-      ],
-      "media": "exercises/0476.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false,
-      "noteFr": "L'animation montre des sangles : suspends-toi directement à la barre, mains en pronation."
     },
     {
       "id": "ds:3636",
@@ -3048,6 +1976,7 @@
       "equipment": [
         "wall"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -3076,13 +2005,14 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
       ],
       "media": "exercises/0484.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false
+      "inLadder": true
     },
     {
       "id": "ds:1418",
@@ -3104,6 +2034,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -3111,35 +2042,6 @@
       "media": "exercises/1418.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
       "inLadder": false
-    },
-    {
-      "id": "ds:0489",
-      "sourceId": "0489",
-      "nameEn": "hyperextension",
-      "nameFr": "Extension lombaire au sol",
-      "stepsFr": [
-        "Allonge-toi à plat ventre, mains sur les tempes, jambes tendues.",
-        "Décolle la poitrine du sol en serrant les fessiers, regard vers le sol.",
-        "Marque un temps en haut, sans forcer sur la nuque.",
-        "Redescends lentement."
-      ],
-      "bodyPart": "back",
-      "target": "spine",
-      "secondaryMuscles": [
-        "glutes",
-        "hamstrings"
-      ],
-      "equipment": [
-        "none"
-      ],
-      "contexts": [
-        "home",
-        "travel"
-      ],
-      "media": "exercises/0489.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": true,
-      "noteFr": "L'animation montre un banc à lombaires : fais-le à plat ventre au sol."
     },
     {
       "id": "ds:1471",
@@ -3163,6 +2065,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -3192,6 +2095,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -3199,62 +2103,6 @@
       "media": "exercises/3698.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
       "inLadder": false
-    },
-    {
-      "id": "ds:0490",
-      "sourceId": "0490",
-      "nameEn": "incline close-grip push-up",
-      "nameFr": "Pompe inclinée prise serrée",
-      "stepsFr": [
-        "Pose les mains sur le bord de la table, écartées de la largeur des épaules.",
-        "Recule les pieds pour aligner le corps des talons à la tête.",
-        "Descends la poitrine vers la table, coudes serrés le long du corps.",
-        "Pousse pour tendre les bras."
-      ],
-      "bodyPart": "upper arms",
-      "target": "triceps",
-      "secondaryMuscles": [
-        "chest",
-        "shoulders"
-      ],
-      "equipment": [
-        "table"
-      ],
-      "contexts": [
-        "home"
-      ],
-      "media": "exercises/0490.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false,
-      "noteFr": "L'animation montre une barre guidée : pose les mains sur le bord de la table."
-    },
-    {
-      "id": "ds:0491",
-      "sourceId": "0491",
-      "nameEn": "incline leg hip raise (leg straight)",
-      "nameFr": "Relevé de jambes et de bassin au sol",
-      "stepsFr": [
-        "Allonge-toi sur le dos, mains au sol le long du corps.",
-        "Monte les jambes tendues jusqu'à la verticale.",
-        "Pousse les pieds vers le plafond pour décoller le bassin du sol.",
-        "Repose le bassin puis redescends les jambes lentement."
-      ],
-      "bodyPart": "waist",
-      "target": "abs",
-      "secondaryMuscles": [
-        "hip flexors"
-      ],
-      "equipment": [
-        "none"
-      ],
-      "contexts": [
-        "home",
-        "travel"
-      ],
-      "media": "exercises/0491.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": true,
-      "noteFr": "L'animation montre un banc incliné : fais-le allongé au sol."
     },
     {
       "id": "ds:0493",
@@ -3277,6 +2125,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "body weight",
       "contexts": [
         "home",
         "travel"
@@ -3285,62 +2134,6 @@
       "attribution": "© Gym visual — https://gymvisual.com/",
       "inLadder": true,
       "noteFr": "Pose les mains sur une table, une chaise calée contre un mur ou le bord du lit."
-    },
-    {
-      "id": "ds:3785",
-      "sourceId": "3785",
-      "nameEn": "incline push-up (on box)",
-      "nameFr": "Pompe inclinée sur chaise",
-      "stepsFr": [
-        "Place tes mains sur le bord d'une caisse ou d'une surface surélevée, légèrement plus écartées que la largeur des épaules.",
-        "Étends tes jambes derrière toi, en appui sur la pointe des pieds, en formant une ligne droite de ta tête à tes talons.",
-        "Abaisse ta poitrine vers la box en fléchissant les coudes, en gardant ton corps aligné.",
-        "Marque une pause en bas, puis pousse-toi vers le haut jusqu'à la position de départ en tendant tes bras.",
-        "Répète le nombre de répétitions souhaité."
-      ],
-      "bodyPart": "chest",
-      "target": "pectorals",
-      "secondaryMuscles": [
-        "triceps",
-        "shoulders"
-      ],
-      "equipment": [
-        "chair"
-      ],
-      "contexts": [
-        "home"
-      ],
-      "media": "exercises/3785.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false
-    },
-    {
-      "id": "ds:3011",
-      "sourceId": "3011",
-      "nameEn": "incline scapula push up",
-      "nameFr": "Pompe scapulaire inclinée",
-      "stepsFr": [
-        "Pose les mains sur le bord de la table, bras tendus, corps aligné.",
-        "Sans plier les coudes, laisse la poitrine descendre en rapprochant les omoplates.",
-        "Pousse dans les mains pour écarter les omoplates et arrondir légèrement le haut du dos.",
-        "Enchaîne lentement, les bras restent tendus."
-      ],
-      "bodyPart": "chest",
-      "target": "serratus anterior",
-      "secondaryMuscles": [
-        "triceps",
-        "shoulders"
-      ],
-      "equipment": [
-        "table"
-      ],
-      "contexts": [
-        "home"
-      ],
-      "media": "exercises/3011.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false,
-      "noteFr": "L'animation montre un banc : pose les mains sur le bord de la table."
     },
     {
       "id": "ds:0499",
@@ -3365,6 +2158,7 @@
       "equipment": [
         "table"
       ],
+      "datasetEquipment": "body weight",
       "contexts": [
         "home"
       ],
@@ -3395,6 +2189,7 @@
       "equipment": [
         "table"
       ],
+      "datasetEquipment": "body weight",
       "contexts": [
         "home"
       ],
@@ -3402,37 +2197,6 @@
       "attribution": "© Gym visual — https://gymvisual.com/",
       "inLadder": true,
       "noteFr": "L'animation montre une barre guidée : fais-le sous une table solide."
-    },
-    {
-      "id": "ds:2298",
-      "sourceId": "2298",
-      "nameEn": "inverted row on bench",
-      "nameFr": "Rangée inversée, pieds sur la chaise",
-      "stepsFr": [
-        "Allonge-toi sous la table et saisis son bord, pieds posés sur une chaise à hauteur de la table.",
-        "Gaine ton corps en ligne droite des talons aux épaules.",
-        "Tire la poitrine vers le bord de la table, coudes vers l'arrière.",
-        "Redescends bras tendus sous contrôle."
-      ],
-      "bodyPart": "back",
-      "target": "upper back",
-      "secondaryMuscles": [
-        "biceps",
-        "forearms"
-      ],
-      "equipment": [
-        "table",
-        "chair"
-      ],
-      "contexts": [
-        "home"
-      ],
-      "media": "exercises/2298.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false,
-      "cueFr": "Le bassin reste aligné avec les épaules.",
-      "mistakeFr": "Laisser le bassin s'affaisser. Vérifie d'abord que la table ne bascule pas.",
-      "noteFr": "L'animation montre une barre guidée : fais-le sous une table solide, pieds sur une chaise."
     },
     {
       "id": "ds:1419",
@@ -3456,6 +2220,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -3486,6 +2251,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -3515,6 +2281,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -3550,6 +2317,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -3578,6 +2346,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -3605,13 +2374,14 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
       ],
       "media": "exercises/0507.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false
+      "inLadder": true
     },
     {
       "id": "ds:0508",
@@ -3634,6 +2404,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -3665,6 +2436,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -3695,6 +2467,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -3723,6 +2496,7 @@
       "equipment": [
         "wall"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -3756,6 +2530,7 @@
         "bar",
         "park-bar"
       ],
+      "datasetEquipment": "body weight",
       "contexts": [
         "park"
       ],
@@ -3784,6 +2559,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -3812,6 +2588,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -3840,6 +2617,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -3868,6 +2646,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -3875,35 +2654,6 @@
       "media": "exercises/3211.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
       "inLadder": true
-    },
-    {
-      "id": "ds:3418",
-      "sourceId": "3418",
-      "nameEn": "l-pull-up",
-      "nameFr": "Traction en L",
-      "stepsFr": [
-        "Saisis la barre de traction avec une prise en pronation, un peu plus large que la largeur des épaules.",
-        "Suspends-toi, les bras complètement étendus et le corps droit.",
-        "Contracte tes grands dorsaux et tes biceps pour hisser ton corps vers la barre, en gardant les coudes près du corps.",
-        "Continue à tirer jusqu'à ce que ton menton soit au-dessus de la barre.",
-        "Marque une pause en haut, puis abaisse lentement ton corps pour revenir à la position de départ.",
-        "Répète le nombre de répétitions souhaité."
-      ],
-      "bodyPart": "back",
-      "target": "lats",
-      "secondaryMuscles": [
-        "biceps",
-        "forearms"
-      ],
-      "equipment": [
-        "bar"
-      ],
-      "contexts": [
-        "park"
-      ],
-      "media": "exercises/3418.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false
     },
     {
       "id": "ds:3419",
@@ -3927,6 +2677,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -3957,6 +2708,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -3987,6 +2739,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -3994,37 +2747,6 @@
       "media": "exercises/2271.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
       "inLadder": false
-    },
-    {
-      "id": "ds:0570",
-      "sourceId": "0570",
-      "nameEn": "leg pull in flat bench",
-      "nameFr": "Ramené de genoux allongé",
-      "stepsFr": [
-        "Allonge-toi sur le dos, mains sous les fessiers.",
-        "Décolle les pieds du sol, jambes tendues.",
-        "Ramène les genoux vers la poitrine.",
-        "Tends les jambes sans reposer les pieds, puis recommence."
-      ],
-      "bodyPart": "waist",
-      "target": "abs",
-      "secondaryMuscles": [
-        "hip flexors",
-        "lower back"
-      ],
-      "equipment": [
-        "none"
-      ],
-      "contexts": [
-        "home",
-        "travel"
-      ],
-      "media": "exercises/0570.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false,
-      "cueFr": "Bas du dos plaqué au sol.",
-      "mistakeFr": "Reposer les pieds entre deux répétitions.",
-      "noteFr": "L'animation montre l'exercice sur un banc : fais-le allongé au sol."
     },
     {
       "id": "ds:1576",
@@ -4046,6 +2768,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -4076,6 +2799,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -4104,13 +2828,14 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
       ],
       "media": "exercises/1352.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false
+      "inLadder": true
     },
     {
       "id": "ds:3582",
@@ -4134,6 +2859,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -4165,6 +2891,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -4193,6 +2920,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -4224,6 +2952,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -4231,65 +2960,6 @@
       "media": "exercises/2312.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
       "inLadder": false
-    },
-    {
-      "id": "ds:0620",
-      "sourceId": "0620",
-      "nameEn": "lying leg raise flat bench",
-      "nameFr": "Relevé de jambes allongé",
-      "stepsFr": [
-        "Allonge-toi sur le dos, mains sous les fessiers.",
-        "Lève les jambes tendues et serrées jusqu'à la verticale.",
-        "Redescends lentement jusqu'à frôler le sol.",
-        "Remonte sans reposer les talons."
-      ],
-      "bodyPart": "waist",
-      "target": "abs",
-      "secondaryMuscles": [
-        "hip flexors"
-      ],
-      "equipment": [
-        "none"
-      ],
-      "contexts": [
-        "home",
-        "travel"
-      ],
-      "media": "exercises/0620.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": true,
-      "cueFr": "Bas du dos plaqué au sol.",
-      "mistakeFr": "Cambrer le dos en fin de descente.",
-      "noteFr": "L'animation montre l'exercice sur un banc : fais-le allongé au sol."
-    },
-    {
-      "id": "ds:0865",
-      "sourceId": "0865",
-      "nameEn": "lying leg-hip raise",
-      "nameFr": "Relevé de genoux et de bassin allongé",
-      "stepsFr": [
-        "Allonge-toi sur le dos, les jambes tendues et les bras le long du corps.",
-        "Place tes mains sous tes fessiers pour te soutenir.",
-        "Gaine ta sangle abdominale et lève tes jambes du sol, en les levant vers le plafond.",
-        "Marque une pause en haut, puis abaisse lentement tes jambes pour revenir à la position de départ.",
-        "Répète le nombre de répétitions souhaité."
-      ],
-      "bodyPart": "waist",
-      "target": "abs",
-      "secondaryMuscles": [
-        "hip flexors"
-      ],
-      "equipment": [
-        "none"
-      ],
-      "contexts": [
-        "home",
-        "travel"
-      ],
-      "media": "exercises/0865.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false,
-      "noteFr": "L'animation montre un banc : fais-le allongé au sol."
     },
     {
       "id": "ds:0624",
@@ -4313,40 +2983,12 @@
       "equipment": [
         "wall"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
       ],
       "media": "exercises/0624.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false
-    },
-    {
-      "id": "ds:0627",
-      "sourceId": "0627",
-      "nameEn": "mixed grip chin-up",
-      "nameFr": "Traction prise mixte",
-      "stepsFr": [
-        "Saisis la barre de traction avec une prise en supination (paumes tournées vers toi), les mains un peu plus larges que la largeur des épaules.",
-        "Suspends-toi à la barre, les bras complètement étendus et les pieds décollés du sol.",
-        "Sollicite les muscles de ton dos et tire ton corps vers la barre, en menant avec ta poitrine.",
-        "Continue à tirer jusqu'à ce que ton menton soit au-dessus de la barre.",
-        "Marque une pause en haut, puis abaisse lentement ton corps pour revenir à la position de départ avec contrôle.",
-        "Répète le nombre de répétitions souhaité."
-      ],
-      "bodyPart": "back",
-      "target": "lats",
-      "secondaryMuscles": [
-        "biceps",
-        "forearms"
-      ],
-      "equipment": [
-        "bar"
-      ],
-      "contexts": [
-        "park"
-      ],
-      "media": "exercises/0627.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
       "inLadder": false
     },
@@ -4372,6 +3014,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -4401,6 +3044,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -4429,6 +3073,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -4459,6 +3104,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -4492,6 +3138,7 @@
         "bar",
         "park-bar"
       ],
+      "datasetEquipment": "body weight",
       "contexts": [
         "park"
       ],
@@ -4521,6 +3168,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -4528,35 +3176,6 @@
       "media": "exercises/1403.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
       "inLadder": false
-    },
-    {
-      "id": "ds:1495",
-      "sourceId": "1495",
-      "nameEn": "oblique crunch v. 2",
-      "nameFr": "Crunch oblique, mollets sur la chaise",
-      "stepsFr": [
-        "Allonge-toi sur le dos, les genoux fléchis et les pieds à plat au sol.",
-        "Place tes mains derrière ta tête ou croise-les sur ta poitrine.",
-        "Gaine tes abdominaux et décolle tes omoplates du sol, en faisant pivoter ton torse d'un côté.",
-        "Marque une pause, puis abaisse tes omoplates jusqu'à la position de départ.",
-        "Répète de l'autre côté.",
-        "Continue à alterner les côtés pour le nombre de répétitions souhaité."
-      ],
-      "bodyPart": "waist",
-      "target": "abs",
-      "secondaryMuscles": [
-        "obliques"
-      ],
-      "equipment": [
-        "chair"
-      ],
-      "contexts": [
-        "home"
-      ],
-      "media": "exercises/1495.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false,
-      "noteFr": "L'animation montre un banc : pose les mollets sur l'assise d'une chaise."
     },
     {
       "id": "ds:0635",
@@ -4578,6 +3197,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -4606,6 +3226,7 @@
       "equipment": [
         "wall"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -4613,124 +3234,6 @@
       "media": "exercises/1355.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
       "inLadder": false
-    },
-    {
-      "id": "ds:0638",
-      "sourceId": "0638",
-      "nameEn": "one arm chin-up",
-      "nameFr": "Traction à un bras",
-      "stepsFr": [
-        "Tiens-toi face à une barre de traction, les pieds écartés à la largeur des épaules.",
-        "Lève les bras et saisis la barre en prise supination, une main agrippant la barre et l'autre tenant ton poignet pour te soutenir.",
-        "Suspends-toi à la barre, le bras complètement étendu, en gardant le corps droit et la sangle abdominale gainée.",
-        "Hisse-toi vers le haut en direction de la barre en fléchissant ton coude et en contractant les muscles de ton dos.",
-        "Continue à tirer jusqu'à ce que ton menton soit au-dessus de la barre, puis abaisse-toi lentement jusqu'à la position de départ.",
-        "Répète le nombre de répétitions souhaité, puis change de bras et recommence."
-      ],
-      "bodyPart": "back",
-      "target": "lats",
-      "secondaryMuscles": [
-        "biceps",
-        "forearms"
-      ],
-      "equipment": [
-        "bar"
-      ],
-      "contexts": [
-        "park"
-      ],
-      "media": "exercises/0638.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false
-    },
-    {
-      "id": "ds:0639",
-      "sourceId": "0639",
-      "nameEn": "one arm dip",
-      "nameFr": "Dips à un bras sur chaise",
-      "stepsFr": [
-        "Tiens-toi dos à un banc ou une chaise, les pieds écartés à la largeur des épaules.",
-        "Place une main sur le banc ou la chaise derrière toi, les doigts pointés vers ton corps.",
-        "Étends tes jambes devant toi, en gardant les talons au sol.",
-        "Plie tes coudes et abaisse ton corps vers le sol en gardant ton dos près du banc ou de la chaise.",
-        "Marque une pause en bas, puis pousse sur tes paumes pour tendre tes bras et revenir à la position de départ.",
-        "Répète le nombre de répétitions souhaité, puis change de côté et recommence avec l'autre bras."
-      ],
-      "bodyPart": "upper arms",
-      "target": "triceps",
-      "secondaryMuscles": [
-        "chest",
-        "shoulders"
-      ],
-      "equipment": [
-        "chair"
-      ],
-      "contexts": [
-        "home"
-      ],
-      "media": "exercises/0639.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false
-    },
-    {
-      "id": "ds:1773",
-      "sourceId": "1773",
-      "nameEn": "one arm towel row",
-      "nameFr": "Rangée à un bras à la serviette",
-      "stepsFr": [
-        "Tiens-toi debout, les pieds écartés à la largeur des épaules, les genoux légèrement fléchis, et tiens une serviette d'une main.",
-        "Penche-toi vers l'avant au niveau de la taille en gardant ton dos droit et ta sangle abdominale gainée.",
-        "Étends complètement ton bras, en laissant la serviette pendre devant toi.",
-        "Tire la serviette vers ta poitrine en contractant tes omoplates l'une vers l'autre.",
-        "Marque une pause en haut, puis abaisse lentement la serviette pour revenir à la position de départ.",
-        "Répète le nombre de répétitions souhaité, puis change de bras."
-      ],
-      "bodyPart": "back",
-      "target": "upper back",
-      "secondaryMuscles": [
-        "biceps",
-        "forearms"
-      ],
-      "equipment": [
-        "towel"
-      ],
-      "contexts": [
-        "home"
-      ],
-      "media": "exercises/1773.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false,
-      "noteFr": "L'animation montre un espalier : passe la serviette autour de la poignée d'une porte fermée qui s'ouvre de l'autre côté."
-    },
-    {
-      "id": "ds:1386",
-      "sourceId": "1386",
-      "nameEn": "one leg donkey calf raise",
-      "nameFr": "Mollets penché en avant sur une jambe",
-      "stepsFr": [
-        "Tiens-toi debout, les pieds écartés à la largeur des épaules, les orteils pointés vers l'avant.",
-        "Place tes mains sur une surface stable pour le soutien, comme un mur ou une barre.",
-        "Décolle une jambe du sol, en gardant ton genou légèrement fléchi.",
-        "Lève ton talon aussi haut que possible en utilisant tes mollets.",
-        "Marque une pause en haut, puis abaisse lentement ton talon.",
-        "Répète le nombre de répétitions souhaité, puis change de jambe."
-      ],
-      "bodyPart": "lower legs",
-      "target": "calves",
-      "secondaryMuscles": [
-        "hamstrings",
-        "glutes"
-      ],
-      "equipment": [
-        "table"
-      ],
-      "contexts": [
-        "home"
-      ],
-      "media": "exercises/1386.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false,
-      "noteFr": "L'animation montre un banc : pose les mains sur la table."
     },
     {
       "id": "ds:1387",
@@ -4753,6 +3256,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -4782,6 +3286,7 @@
       "equipment": [
         "chair"
       ],
+      "datasetEquipment": "body weight",
       "contexts": [
         "home"
       ],
@@ -4814,6 +3319,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -4842,6 +3348,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -4871,6 +3378,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -4902,6 +3410,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -4935,6 +3444,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -4965,6 +3475,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -4998,6 +3509,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -5028,6 +3540,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -5035,37 +3548,6 @@
       "media": "exercises/3119.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
       "inLadder": false
-    },
-    {
-      "id": "ds:3132",
-      "sourceId": "3132",
-      "nameEn": "potty squat with support",
-      "nameFr": "Squat profond avec appui",
-      "stepsFr": [
-        "Tiens-toi debout, les pieds écartés à la largeur des épaules, les orteils légèrement tournés vers l'extérieur.",
-        "Tiens-toi à un support stable, comme une chaise ou un mur, pour l'équilibre.",
-        "Abaisse ton corps en position de squat en fléchissant tes genoux et en poussant tes hanches vers l'arrière.",
-        "Garde la poitrine relevée et le dos droit tout au long du mouvement.",
-        "Marque une pause en bas, puis pousse sur tes talons pour revenir à la position de départ.",
-        "Répète le nombre de répétitions souhaité."
-      ],
-      "bodyPart": "upper legs",
-      "target": "glutes",
-      "secondaryMuscles": [
-        "quadriceps",
-        "hamstrings",
-        "calves"
-      ],
-      "equipment": [
-        "chair"
-      ],
-      "contexts": [
-        "home"
-      ],
-      "media": "exercises/3132.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false,
-      "noteFr": "L'animation montre un banc : tiens le dossier d'une chaise."
     },
     {
       "id": "ds:3665",
@@ -5088,6 +3570,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -5116,6 +3599,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -5123,35 +3607,6 @@
       "media": "exercises/3203.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
       "inLadder": false
-    },
-    {
-      "id": "ds:0651",
-      "sourceId": "0651",
-      "nameEn": "pull up (neutral grip)",
-      "nameFr": "Traction prise neutre",
-      "stepsFr": [
-        "Suspends-toi à une barre de traction avec une prise neutre (paumes tournées l'une vers l'autre) et les bras complètement étendus.",
-        "Gaine ta sangle abdominale et resserre tes omoplates.",
-        "Tire ton corps vers le haut en direction de la barre en fléchissant tes coudes et en les entraînant vers le bas en direction de tes hanches.",
-        "Continue à tirer jusqu'à ce que ton menton soit au-dessus de la barre.",
-        "Marque une pause en haut, puis abaisse lentement ton corps pour revenir à la position de départ avec contrôle.",
-        "Répète le nombre de répétitions souhaité."
-      ],
-      "bodyPart": "back",
-      "target": "lats",
-      "secondaryMuscles": [
-        "biceps",
-        "forearms"
-      ],
-      "equipment": [
-        "bar"
-      ],
-      "contexts": [
-        "park"
-      ],
-      "media": "exercises/0651.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": true
     },
     {
       "id": "ds:0652",
@@ -5174,6 +3629,7 @@
       "equipment": [
         "bar"
       ],
+      "datasetEquipment": "body weight",
       "contexts": [
         "park"
       ],
@@ -5201,6 +3657,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -5230,6 +3687,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -5259,6 +3717,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -5289,6 +3748,7 @@
       "equipment": [
         "wall"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -5320,6 +3780,7 @@
       "equipment": [
         "wall"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -5351,6 +3812,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -5380,6 +3842,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -5410,6 +3873,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -5442,6 +3906,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -5449,34 +3914,6 @@
       "media": "exercises/0664.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
       "inLadder": false
-    },
-    {
-      "id": "ds:3533",
-      "sourceId": "3533",
-      "nameEn": "quads",
-      "nameFr": "Squat bulgare, variante",
-      "stepsFr": [
-        "Dos à une chaise, pose le dessus du pied arrière sur l'assise.",
-        "Place le pied avant assez loin pour que le genou reste au-dessus de la cheville en bas du mouvement.",
-        "Descends verticalement jusqu'à ce que le genou arrière frôle le sol.",
-        "Remonte en poussant sur le talon avant."
-      ],
-      "bodyPart": "upper legs",
-      "target": "quads",
-      "secondaryMuscles": [
-        "hamstrings",
-        "glutes"
-      ],
-      "equipment": [
-        "chair"
-      ],
-      "contexts": [
-        "home"
-      ],
-      "media": "exercises/3533.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false,
-      "noteFr": "L'animation montre un banc : pose le pied arrière sur l'assise d'une chaise."
     },
     {
       "id": "ds:3201",
@@ -5498,6 +3935,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -5526,6 +3964,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -5556,6 +3995,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -5585,6 +4025,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -5614,40 +4055,12 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
       ],
       "media": "exercises/0669.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false
-    },
-    {
-      "id": "ds:0670",
-      "sourceId": "0670",
-      "nameEn": "rear pull-up",
-      "nameFr": "Traction derrière la nuque",
-      "stepsFr": [
-        "Saisis la barre de traction avec une prise en pronation, un peu plus large que la largeur des épaules.",
-        "Suspends-toi à la barre, les bras complètement étendus et le corps droit.",
-        "Sollicite les muscles de ton dos et tire ton corps vers la barre, en gardant tes coudes près de ton corps.",
-        "Continue à tirer jusqu'à ce que ton menton soit au-dessus de la barre.",
-        "Marque une pause en haut, puis abaisse lentement ton corps pour revenir à la position de départ.",
-        "Répète le nombre de répétitions souhaité."
-      ],
-      "bodyPart": "back",
-      "target": "lats",
-      "secondaryMuscles": [
-        "biceps",
-        "forearms"
-      ],
-      "equipment": [
-        "bar"
-      ],
-      "contexts": [
-        "park"
-      ],
-      "media": "exercises/0670.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
       "inLadder": false
     },
@@ -5671,6 +4084,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -5678,65 +4092,6 @@
       "media": "exercises/0872.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
       "inLadder": true
-    },
-    {
-      "id": "ds:0674",
-      "sourceId": "0674",
-      "nameEn": "reverse grip pull-up",
-      "nameFr": "Traction prise inversée",
-      "stepsFr": [
-        "Saisis la barre de traction avec une prise en supination, les mains écartées à la largeur des épaules.",
-        "Suspends-toi à la barre, les bras complètement étendus et le corps droit.",
-        "Sollicite les muscles de ton dos et tire ton corps vers la barre, en menant avec ta poitrine.",
-        "Continue à tirer jusqu'à ce que ton menton soit au-dessus de la barre.",
-        "Marque une pause en haut, puis abaisse lentement ton corps pour revenir à la position de départ.",
-        "Répète le nombre de répétitions souhaité."
-      ],
-      "bodyPart": "back",
-      "target": "lats",
-      "secondaryMuscles": [
-        "biceps",
-        "forearms"
-      ],
-      "equipment": [
-        "bar"
-      ],
-      "contexts": [
-        "park"
-      ],
-      "media": "exercises/0674.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false
-    },
-    {
-      "id": "ds:1423",
-      "sourceId": "1423",
-      "nameEn": "reverse hyper on flat bench",
-      "nameFr": "Reverse hyper sur la table",
-      "stepsFr": [
-        "Allonge-toi à plat ventre sur la table, hanches au bord, jambes dans le vide.",
-        "Tiens les côtés de la table pour rester stable.",
-        "Lève les jambes tendues jusqu'à l'horizontale en serrant les fessiers.",
-        "Redescends lentement et recommence."
-      ],
-      "bodyPart": "upper legs",
-      "target": "glutes",
-      "secondaryMuscles": [
-        "hamstrings",
-        "lower back"
-      ],
-      "equipment": [
-        "table"
-      ],
-      "contexts": [
-        "home"
-      ],
-      "media": "exercises/1423.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false,
-      "cueFr": "Mouvement lent, sans élan.",
-      "mistakeFr": "Monter les jambes au-dessus de l'horizontale en cambrant.",
-      "noteFr": "L'animation montre un banc : fais-le sur une table solide."
     },
     {
       "id": "ds:3663",
@@ -5761,6 +4116,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -5792,40 +4148,12 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
       ],
       "media": "exercises/2571.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false
-    },
-    {
-      "id": "ds:0678",
-      "sourceId": "0678",
-      "nameEn": "rocky pull-up pulldown",
-      "nameFr": "Traction Rocky",
-      "stepsFr": [
-        "Tiens-toi devant une barre de traction, les pieds écartés à la largeur des épaules.",
-        "Lève les bras et saisis la barre en prise pronation, un peu plus large que la largeur des épaules.",
-        "Suspends-toi à la barre, les bras complètement étendus et le corps droit.",
-        "Sollicite les muscles de ton dos et tire ton corps vers la barre, en menant avec ta poitrine.",
-        "Marque une pause en haut, puis abaisse lentement ton corps pour revenir à la position de départ.",
-        "Répète le nombre de répétitions souhaité."
-      ],
-      "bodyPart": "back",
-      "target": "lats",
-      "secondaryMuscles": [
-        "biceps",
-        "forearms"
-      ],
-      "equipment": [
-        "bar"
-      ],
-      "contexts": [
-        "park"
-      ],
-      "media": "exercises/0678.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
       "inLadder": false
     },
@@ -5851,6 +4179,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -5879,6 +4208,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -5909,38 +4239,12 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
       ],
       "media": "exercises/0687.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false
-    },
-    {
-      "id": "ds:3012",
-      "sourceId": "3012",
-      "nameEn": "scapula dips",
-      "nameFr": "Dips scapulaires sur chaise",
-      "stepsFr": [
-        "Assieds-toi au bord de la chaise, mains sur l'assise de chaque côté des hanches.",
-        "Avance les fessiers juste devant l'assise, bras tendus.",
-        "Sans plier les coudes, laisse le corps descendre en montant les épaules vers les oreilles.",
-        "Pousse les épaules vers le bas pour remonter le corps."
-      ],
-      "bodyPart": "back",
-      "target": "traps",
-      "secondaryMuscles": [
-        "rhomboids",
-        "deltoids"
-      ],
-      "equipment": [
-        "chair"
-      ],
-      "contexts": [
-        "home"
-      ],
-      "media": "exercises/3012.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
       "inLadder": false
     },
@@ -5965,6 +4269,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -5995,6 +4300,7 @@
       "equipment": [
         "bar"
       ],
+      "datasetEquipment": "body weight",
       "contexts": [
         "park"
       ],
@@ -6024,6 +4330,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -6051,6 +4358,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -6080,92 +4388,12 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
       ],
       "media": "exercises/1424.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false
-    },
-    {
-      "id": "ds:0689",
-      "sourceId": "0689",
-      "nameEn": "seated leg raise",
-      "nameFr": "Relevé de jambes assis",
-      "stepsFr": [
-        "Assieds-toi sur un banc plat, le dos droit et les pieds à plat sur le sol.",
-        "Place tes mains sur les côtés du banc pour te soutenir.",
-        "En gardant les jambes tendues, lève-les lentement devant toi jusqu'à ce qu'elles soient parallèles au sol.",
-        "Marque une pause en haut, puis abaisse lentement tes jambes pour revenir à la position de départ.",
-        "Répète le nombre de répétitions souhaité."
-      ],
-      "bodyPart": "waist",
-      "target": "abs",
-      "secondaryMuscles": [
-        "hip flexors"
-      ],
-      "equipment": [
-        "chair"
-      ],
-      "contexts": [
-        "home"
-      ],
-      "media": "exercises/0689.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false,
-      "noteFr": "L'animation montre un banc : assieds-toi au bord d'une chaise."
-    },
-    {
-      "id": "ds:0690",
-      "sourceId": "0690",
-      "nameEn": "seated lower back stretch",
-      "nameFr": "Étirement latéral assis",
-      "stepsFr": [
-        "Assieds-toi sur la chaise, dos droit, pieds à plat.",
-        "Lève un bras tendu au-dessus de la tête.",
-        "Incline le buste du côté opposé, sans décoller les fessiers.",
-        "Tiens 20 à 30 secondes, puis change de côté."
-      ],
-      "bodyPart": "back",
-      "target": "lats",
-      "secondaryMuscles": [
-        "glutes",
-        "hamstrings"
-      ],
-      "equipment": [
-        "chair"
-      ],
-      "contexts": [
-        "home"
-      ],
-      "media": "exercises/0690.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false
-    },
-    {
-      "id": "ds:2567",
-      "sourceId": "2567",
-      "nameEn": "seated piriformis stretch",
-      "nameFr": "Étirement du piriforme assis",
-      "stepsFr": [
-        "Assieds-toi au bord de la chaise, pieds à plat.",
-        "Pose la cheville droite sur le genou gauche.",
-        "Penche le buste en avant, dos plat, jusqu'à sentir l'étirement dans la fesse droite.",
-        "Tiens 20 à 30 secondes, puis change de côté."
-      ],
-      "bodyPart": "upper legs",
-      "target": "glutes",
-      "secondaryMuscles": [
-        "hamstrings"
-      ],
-      "equipment": [
-        "chair"
-      ],
-      "contexts": [
-        "home"
-      ],
-      "media": "exercises/2567.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
       "inLadder": false
     },
@@ -6188,6 +4416,7 @@
       "equipment": [
         "wall"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -6220,6 +4449,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -6248,6 +4478,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "body weight",
       "contexts": [
         "home",
         "travel"
@@ -6280,6 +4511,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -6310,39 +4542,12 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
       ],
       "media": "exercises/3656.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false
-    },
-    {
-      "id": "ds:1763",
-      "sourceId": "1763",
-      "nameEn": "shoulder grip pull-up",
-      "nameFr": "Traction prise à largeur d'épaules",
-      "stepsFr": [
-        "Saisis la barre de traction avec une prise à la largeur des épaules, les paumes tournées vers l'extérieur.",
-        "Suspends-toi librement, les bras complètement étendus.",
-        "Sollicite les muscles de ton dos et tire ton corps vers la barre jusqu'à ce que ton menton dépasse la barre.",
-        "Marque une pause en haut, puis abaisse lentement ton corps pour revenir à la position de départ.",
-        "Répète le nombre de répétitions souhaité."
-      ],
-      "bodyPart": "back",
-      "target": "lats",
-      "secondaryMuscles": [
-        "biceps",
-        "forearms"
-      ],
-      "equipment": [
-        "bar"
-      ],
-      "contexts": [
-        "park"
-      ],
-      "media": "exercises/1763.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
       "inLadder": false
     },
@@ -6367,6 +4572,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -6398,6 +4604,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -6428,6 +4635,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -6458,13 +4666,14 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
       ],
       "media": "exercises/0705.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false
+      "inLadder": true
     },
     {
       "id": "ds:0710",
@@ -6486,6 +4695,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -6516,6 +4726,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -6544,6 +4755,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -6551,34 +4763,6 @@
       "media": "exercises/3667.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
       "inLadder": false
-    },
-    {
-      "id": "ds:1775",
-      "sourceId": "1775",
-      "nameEn": "side plank hip adduction",
-      "nameFr": "Gainage latéral avec adduction",
-      "stepsFr": [
-        "Allonge-toi sur le côté, avant-bras au sol, pied du dessus posé sur l'assise de la chaise.",
-        "Monte les hanches pour aligner le corps.",
-        "Lève la jambe du dessous jusqu'à toucher l'assise.",
-        "Redescends-la sans poser les hanches, puis change de côté."
-      ],
-      "bodyPart": "upper legs",
-      "target": "adductors",
-      "secondaryMuscles": [
-        "obliques",
-        "glutes"
-      ],
-      "equipment": [
-        "chair"
-      ],
-      "contexts": [
-        "home"
-      ],
-      "media": "exercises/1775.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false,
-      "noteFr": "L'animation montre un banc : pose le pied du dessus sur l'assise d'une chaise."
     },
     {
       "id": "ds:0716",
@@ -6602,6 +4786,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -6633,6 +4818,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -6662,40 +4848,12 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
       ],
       "media": "exercises/0721.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false
-    },
-    {
-      "id": "ds:0720",
-      "sourceId": "0720",
-      "nameEn": "side-to-side chin",
-      "nameFr": "Traction d'un côté à l'autre",
-      "stepsFr": [
-        "Tiens-toi debout, les pieds écartés à la largeur des épaules et les genoux légèrement fléchis.",
-        "Saisis une barre de traction avec une prise en pronation, les mains un peu plus larges que la largeur des épaules.",
-        "Suspends-toi à la barre, les bras complètement étendus et le corps relâché.",
-        "Hisse-toi vers le haut en fléchissant tes coudes et en amenant ton menton vers la barre, tout en gardant ton corps droit.",
-        "Une fois ton menton au-dessus de la barre, redescends jusqu'à la position de départ.",
-        "Répète le nombre de répétitions souhaité."
-      ],
-      "bodyPart": "back",
-      "target": "lats",
-      "secondaryMuscles": [
-        "biceps",
-        "forearms"
-      ],
-      "equipment": [
-        "bar"
-      ],
-      "contexts": [
-        "park"
-      ],
-      "media": "exercises/0720.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
       "inLadder": false
     },
@@ -6719,6 +4877,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -6749,6 +4908,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -6778,6 +4938,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -6806,6 +4967,7 @@
       "equipment": [
         "towel"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home"
       ],
@@ -6837,6 +4999,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -6844,36 +5007,6 @@
       "media": "exercises/1759.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
       "inLadder": true
-    },
-    {
-      "id": "ds:1489",
-      "sourceId": "1489",
-      "nameEn": "sissy squat",
-      "nameFr": "Sissy squat",
-      "stepsFr": [
-        "Tiens-toi debout, les pieds écartés à la largeur des épaules et les orteils légèrement tournés vers l'extérieur.",
-        "Tiens-toi à un objet stable pour l'équilibre si nécessaire.",
-        "Abaisse lentement ton corps en fléchissant les genoux et en te penchant en arrière, en gardant ton torse droit.",
-        "Continue à descendre jusqu'à ce que tes cuisses soient parallèles au sol ou aussi loin que tu peux confortablement aller.",
-        "Marque une pause, puis pousse sur tes talons pour revenir à la position de départ.",
-        "Répète le nombre de répétitions souhaité."
-      ],
-      "bodyPart": "upper legs",
-      "target": "quads",
-      "secondaryMuscles": [
-        "calves",
-        "glutes"
-      ],
-      "equipment": [
-        "chair"
-      ],
-      "contexts": [
-        "home"
-      ],
-      "media": "exercises/1489.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false,
-      "noteFr": "L'animation montre un banc : tiens le dossier d'une chaise."
     },
     {
       "id": "ds:0735",
@@ -6895,6 +5028,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -6923,6 +5057,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -6956,6 +5091,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -6988,6 +5124,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -6995,36 +5132,6 @@
       "media": "exercises/3671.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
       "inLadder": false
-    },
-    {
-      "id": "ds:3304",
-      "sourceId": "3304",
-      "nameEn": "skin the cat",
-      "nameFr": "Skin the cat",
-      "stepsFr": [
-        "Commence suspendu à une barre, les bras complètement tendus et le corps détendu.",
-        "Gaine ta sangle abdominale et lève tes jambes, en amenant tes genoux vers ta poitrine.",
-        "Continue à lever tes jambes vers le haut et par-dessus ta tête, en laissant ton corps passer à travers tes bras.",
-        "Une fois tes jambes complètement étendues au-dessus de ta tête, commence à les redescendre vers la position de départ.",
-        "En abaissant tes jambes, laisse ton corps repasser entre tes bras jusqu'à ce que tu sois de nouveau suspendu, les bras complètement étendus.",
-        "Répète le nombre de répétitions souhaité."
-      ],
-      "bodyPart": "back",
-      "target": "upper back",
-      "secondaryMuscles": [
-        "shoulders",
-        "core"
-      ],
-      "equipment": [
-        "park-bar"
-      ],
-      "contexts": [
-        "park"
-      ],
-      "media": "exercises/3304.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false,
-      "noteFr": "L'animation montre des anneaux : fais-le à la barre de parc, pas à la barre de porte."
     },
     {
       "id": "ds:1362",
@@ -7047,6 +5154,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -7077,6 +5185,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -7105,6 +5214,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -7136,6 +5246,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -7167,6 +5278,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -7197,6 +5309,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -7227,6 +5340,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -7255,6 +5369,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -7287,6 +5402,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -7315,38 +5431,12 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
       ],
       "media": "exercises/1397.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false
-    },
-    {
-      "id": "ds:1398",
-      "sourceId": "1398",
-      "nameEn": "standing calves calf stretch",
-      "nameFr": "Étirement des mollets, talon sur la chaise",
-      "stepsFr": [
-        "Pose un talon sur l'assise de la chaise, jambe tendue.",
-        "Garde l'autre jambe droite, pied à plat au sol.",
-        "Penche le buste en avant, dos plat, et attrape la pointe du pied posé.",
-        "Tiens 20 à 30 secondes, puis change de jambe."
-      ],
-      "bodyPart": "lower legs",
-      "target": "calves",
-      "secondaryMuscles": [
-        "hamstrings",
-        "glutes"
-      ],
-      "equipment": [
-        "chair"
-      ],
-      "contexts": [
-        "home"
-      ],
-      "media": "exercises/1398.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
       "inLadder": false
     },
@@ -7372,6 +5462,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -7400,6 +5491,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -7428,6 +5520,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -7458,6 +5551,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -7486,6 +5580,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -7515,6 +5610,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -7543,6 +5639,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -7571,6 +5668,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -7601,6 +5699,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -7608,37 +5707,6 @@
       "media": "exercises/3433.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
       "inLadder": false
-    },
-    {
-      "id": "ds:0812",
-      "sourceId": "0812",
-      "nameEn": "triceps dip (bench leg)",
-      "nameFr": "Dips, mains sur la chaise et pieds sur la table",
-      "stepsFr": [
-        "Cale la chaise contre un mur. Dos à elle, pose les mains sur le bord de l'assise, doigts vers l'avant.",
-        "Pose les talons sur la table, jambes tendues.",
-        "Plie les coudes jusqu'à ce que les bras soient à l'horizontale, dos près de la chaise.",
-        "Pousse sur les paumes pour tendre les bras."
-      ],
-      "bodyPart": "upper arms",
-      "target": "triceps",
-      "secondaryMuscles": [
-        "chest",
-        "shoulders"
-      ],
-      "equipment": [
-        "chair",
-        "table"
-      ],
-      "contexts": [
-        "home"
-      ],
-      "media": "exercises/0812.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false,
-      "cueFr": "Épaules basses, loin des oreilles.",
-      "mistakeFr": "Descendre trop bas et forcer sur l'avant des épaules.",
-      "noteFr": "L'animation montre deux bancs : mains sur la chaise, talons sur la table."
     },
     {
       "id": "ds:0815",
@@ -7660,40 +5728,14 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
       ],
       "media": "exercises/0815.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false
-    },
-    {
-      "id": "ds:0816",
-      "sourceId": "0816",
-      "nameEn": "triceps press",
-      "nameFr": "Extension des triceps à la table",
-      "stepsFr": [
-        "Pose les mains sur le bord de la table, bras tendus, et recule les pieds pour incliner le corps.",
-        "Plie les coudes pour amener le front vers tes mains, coudes vers le bas.",
-        "Garde le corps aligné, sans casser les hanches.",
-        "Pousse sur les mains pour tendre les bras."
-      ],
-      "bodyPart": "upper arms",
-      "target": "triceps",
-      "secondaryMuscles": [
-        "shoulders"
-      ],
-      "equipment": [
-        "table"
-      ],
-      "contexts": [
-        "home"
-      ],
-      "media": "exercises/0816.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false,
-      "noteFr": "L'animation montre une barre guidée : pose les avant-bras sur le bord de la table."
+      "inLadder": true
     },
     {
       "id": "ds:0817",
@@ -7714,6 +5756,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -7742,6 +5785,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -7772,6 +5816,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -7801,6 +5846,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -7830,6 +5876,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -7860,6 +5907,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -7888,6 +5936,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -7921,6 +5970,7 @@
       "equipment": [
         "elliptical"
       ],
+      "datasetEquipment": "elliptical machine",
       "contexts": [
         "home"
       ],
@@ -7953,6 +6003,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -7984,6 +6035,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -8013,6 +6065,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -8042,41 +6095,13 @@
       "equipment": [
         "bar"
       ],
+      "datasetEquipment": "body weight",
       "contexts": [
         "park"
       ],
       "media": "exercises/1429.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
       "inLadder": true
-    },
-    {
-      "id": "ds:1367",
-      "sourceId": "1367",
-      "nameEn": "wide grip rear pull-up",
-      "nameFr": "Traction prise large derrière la nuque",
-      "stepsFr": [
-        "Saisis la barre de traction avec une prise large en pronation, les mains un peu plus larges que la largeur des épaules.",
-        "Suspends-toi à la barre, les bras complètement étendus et le corps droit.",
-        "Sollicite les muscles de ton dos et tire ton corps vers la barre, en menant avec ta poitrine.",
-        "Continue à tirer jusqu'à ce que ton menton soit au-dessus de la barre.",
-        "Marque une pause en haut, puis abaisse lentement ton corps pour revenir à la position de départ.",
-        "Répète le nombre de répétitions souhaité."
-      ],
-      "bodyPart": "back",
-      "target": "lats",
-      "secondaryMuscles": [
-        "biceps",
-        "forearms"
-      ],
-      "equipment": [
-        "bar"
-      ],
-      "contexts": [
-        "park"
-      ],
-      "media": "exercises/1367.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false
     },
     {
       "id": "ds:1311",
@@ -8099,39 +6124,12 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
       ],
       "media": "exercises/1311.webp",
-      "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false
-    },
-    {
-      "id": "ds:0858",
-      "sourceId": "0858",
-      "nameEn": "wind sprints",
-      "nameFr": "Course suspendue à la barre",
-      "stepsFr": [
-        "Suspends-toi à la barre en pronation, bras tendus, épaules engagées.",
-        "Monte un genou vers la poitrine.",
-        "Redescends-le en montant l'autre, comme une course.",
-        "Enchaîne vite sans te balancer."
-      ],
-      "bodyPart": "waist",
-      "target": "abs",
-      "secondaryMuscles": [
-        "quadriceps",
-        "hamstrings",
-        "calves"
-      ],
-      "equipment": [
-        "bar"
-      ],
-      "contexts": [
-        "park"
-      ],
-      "media": "exercises/0858.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
       "inLadder": false
     },
@@ -8158,6 +6156,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"
@@ -8186,6 +6185,7 @@
       "equipment": [
         "none"
       ],
+      "datasetEquipment": "none",
       "contexts": [
         "home",
         "travel"

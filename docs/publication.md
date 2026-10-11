@@ -1,6 +1,6 @@
 # Publier PrepPhi depuis claude.ai
 
-Le build est prêt : `npm run build` produit `dist/index.html`, un seul fichier de 8,8 Mo environ, sans aucune ressource externe. Les 280 animations et les polices y sont intégrées, et le script échoue au-delà de 15 Mo. La publication se fait depuis une conversation claude.ai où Claude clone ce dépôt (CLAUDE.md, « Exécution dans claude.ai »).
+Le build est prêt : `npm run build` produit `dist/index.html`, un seul fichier de 7 Mo environ, sans aucune ressource externe. Les 203 animations et les polices y sont intégrées, et le script échoue au-delà de 15 Mo. La publication se fait depuis une conversation claude.ai où Claude clone ce dépôt (CLAUDE.md, « Exécution dans claude.ai »).
 
 ## 1. Relever les formats du connecteur Google Agenda
 
@@ -66,3 +66,9 @@ Puis ceux du 11 octobre 2026 (plus de barre de traction à la maison, échelles 
 - Gainage suspendu : devient « Relevés de jambes », au sol, en 4 paliers : relevé de bassin au sol, relevé de jambes allongé (`ds:0620`, 10–15), relevé de jambes et de bassin au sol (`ds:0491`, 8–12), L-sit au sol.
 - Séance A : le tirage horizontal remplace le tirage vertical.
 - Les fiches hors dataset repassent à 18 (« Relevé de genoux suspendu » retiré).
+
+Puis ceux du 12 octobre 2026 (catalogue sans matériel, échelles v1.3.0) :
+
+- Relevés de jambes : les paliers 2 et 3 deviennent le relevé de bassin genoux fléchis (`ds:0484`, 8–15) et le relevé en canif (`ds:0507`, 6–12).
+- Accessoires cités : dips au sol (`ds:0815`), extension du dos allongé (`ds:1352`), gainage latéral bras tendu (`ds:0705`). Les tractions en supination et prise neutre ne sont plus au catalogue.
+- Le catalogue compte 203 exercices : les 190 sans aucun matériel du dataset, plus les paliers d'échelles qui demandent un support et l'elliptique.

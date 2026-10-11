@@ -4,14 +4,19 @@
 Why this script exists: the app embeds a closed catalog (no exercise the coach
 can invent) with animated media small enough to fit in a single published HTML
 file (16 MB limit). The dataset is general-purpose and gym-oriented, so we keep
-only what Anthony's setup allows, tag each exercise with the equipment it needs,
-and convert the GIFs to animated WebP (quality 40, about 22 % of the GIF size).
+only the exercises the dataset files under equipment "none" (no gear at all,
+since 2026-10-12), plus the ladder steps and the elliptical, tag each exercise
+with what it still needs (a wall, a free floor...), and convert the GIFs to
+animated WebP (quality 40, about 22 % of the GIF size).
 
 Usage:
     pip install pillow
-    python scripts/build-catalog.py --dataset ../exercises-dataset
+    python scripts/build-catalog.py --dataset ../exercises-dataset-main
     # or let the script clone the dataset into .cache/:
     python scripts/build-catalog.py
+
+The dataset must be a version that splits "body weight" into "none" and
+"body weight" (2026): an older copy is refused.
 
 Inputs besides the dataset:
     data/ladders.json                ladder steps (verifyMedia flags)
@@ -52,10 +57,12 @@ TRAVEL_EQUIPMENT = {"none", "wall"}  # hotel room: a free wall at best
 PARK_BARS = {"bar", "park-bar", "low-bar"}
 PARK_EQUIPMENT = HOME_EQUIPMENT | PARK_BARS
 
-# Dataset "equipment" values we keep. Everything else needs gear he does not own.
-KEPT_EQUIPMENT = {"body weight", "elliptical machine"}
+# Dataset "equipment" values we keep: "none" is no gear at all. "body weight"
+# exercises need a support (bench, bar, table...): only the ladder steps among
+# them stay (LADDER_IDS). The coach's accessory pool takes "none" only.
+KEPT_EQUIPMENT = {"none", "elliptical machine"}
 
-# Names that reveal gear even when the dataset says "body weight". Excluded.
+# Names that reveal gear even when the dataset says "none". Excluded.
 EXCLUDE_NAME = re.compile(
     r"machine|cable|cage|\brings?\b|straps|suspended|parallel bars|stability|bosu|"
     r"\bball\b|sled|rope|band|smith|captains chair|leverage|vertical bar|"
@@ -73,14 +80,15 @@ TAG_RULES: list[tuple[str, re.Pattern[str]]] = [
     ("chair", re.compile(r"bench|chair|\bbox\b|staircase|on (a )?step|step-?up")),
 ]
 
-# Exercises referenced by data/ladders.json: always kept, whatever the filters say.
+# Exercises referenced by data/ladders.json (steps and accessories in the notes)
+# and data/rules.json: always kept, whatever the filters say.
 LADDER_IDS = {
-    "0688", "0652", "1429", "3293", "1326", "0651",  # pull vertical (park)
+    "0688", "0652", "1429", "3293",  # pull vertical (park)
     "2300", "0499",  # pull horizontal
-    "0659", "0493", "3211", "0662", "0283", "0279", "3294", "1399",  # push
+    "0659", "0493", "3211", "0662", "0283", "0279", "3294", "0815",  # push
     "3470", "2368", "1476", "1759",  # legs, front chain
-    "3013", "3645", "0696", "1373", "1387", "0489",  # legs, posterior chain
-    "0872", "0620", "0491", "3419", "3544",  # core
+    "3013", "3645", "0696", "1373", "1387", "1352",  # legs, posterior chain
+    "0872", "0484", "0507", "3419", "0705",  # core
     "3302", "0471",  # handstand
     "0558", "0631",  # muscle-up (park)
     "1160", "0630", "0514",  # travel cardio circuit
@@ -157,6 +165,8 @@ def main() -> int:
 
     ds = ensure_dataset(args.dataset)
     records = json.loads((ds / "data" / "exercises.json").read_text(encoding="utf-8"))
+    if not any(r["equipment"] == "none" for r in records):
+        sys.exit(f"{ds} is an older dataset with no \"none\" equipment: use a 2026 copy (exercises-dataset-main).")
 
     names_fr = json.loads(NAMES_FR.read_text(encoding="utf-8")) if NAMES_FR.exists() else {}
     manual_exclude, reviewed = OVERRIDES["exclude"], set(OVERRIDES["reviewed"])
@@ -165,7 +175,7 @@ def main() -> int:
         rid, name, eq = r["id"], r["name"], r["equipment"]
         forced = rid in LADDER_IDS
         if not forced and (eq not in KEPT_EQUIPMENT or EXCLUDE_NAME.search(name)):
-            if eq == "body weight":
+            if eq == "none":
                 excluded.append(f"{rid} {name}")
             continue
         if rid in manual_exclude:
@@ -188,6 +198,7 @@ def main() -> int:
             "target": r.get("target"),
             "secondaryMuscles": r.get("secondary_muscles") or [],
             "equipment": tags,
+            "datasetEquipment": eq,
             "contexts": ctx,
             "media": f"exercises/{rid}.webp",
             "attribution": ATTRIBUTION,
@@ -231,11 +242,11 @@ def main() -> int:
         f"- Exercises kept: {len(kept)}",
         f"- Available at home: {by_ctx['home']} · travel: {by_ctx['travel']} · park: {by_ctx['park']}",
         f"- Media total: {total_media / 1e6:.1f} MB raw, ~{total_media * 4 / 3 / 1e6:.1f} MB inlined (limit 16 MB)",
-        f"- Excluded body-weight entries: {len(excluded)} by the filters, {len(excluded_manual)} after review",
+        f"- Excluded no-equipment entries: {len(excluded)} by the filters, {len(excluded_manual)} after review",
         f"- French names missing: {sum(1 for it, _ in kept if not it['nameFr'])}", "",
         "## Needs a human look", "", *[f"- {x}" for x in review], "",
         "## Excluded after review (data/catalog-overrides.json)", "", *[f"- {x}" for x in excluded_manual], "",
-        "## Excluded body-weight entries", "", *[f"- {x}" for x in excluded], "",
+        "## Excluded no-equipment entries", "", *[f"- {x}" for x in excluded], "",
     ]
     OUT_REPORT.write_text("\n".join(lines), encoding="utf-8")
     print("\n".join(lines[:8]))

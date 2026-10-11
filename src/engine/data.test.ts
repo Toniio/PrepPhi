@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest'
 import catalog from '../data/catalog.json'
 import hdExercises from '../../data/hd-exercises.json'
 import rulesJson from '../../data/rules.json'
+import { accessoryPool } from '@/catalog'
 import { getStep, LADDERS } from './data'
 import { RULES } from './rules'
 
@@ -39,6 +40,13 @@ describe('data/ladders.json', () => {
       for (const condition of ladder.entry ?? []) {
         expect(() => getStep(condition.ladder, condition.level)).not.toThrow()
       }
+    }
+  })
+
+  it('names in its notes only accessories of the catalog', () => {
+    const ds = new Set(catalog.exercises.map((e) => e.id))
+    for (const ladder of LADDERS) {
+      for (const id of ladder.notes?.match(/ds:\d{4}/g) ?? []) expect(ds.has(id), `${ladder.id} ${id}`).toBe(true)
     }
   })
 
@@ -96,5 +104,14 @@ describe('data/rules.json thresholds', () => {
   it('coach tiers', () => {
     expect(rulesJson.coach.modelTier.weeklyPlan).toBe('complex')
     expect(rulesJson.coach.modelTier.conversation).toBe('default')
+  })
+})
+
+describe('catalog', () => {
+  it('offers the coach only accessories with no equipment at all', () => {
+    const none = new Set(catalog.exercises.filter((e) => e.datasetEquipment === 'none').map((e) => e.id))
+    const pool = Object.values(accessoryPool()).flat()
+    expect(pool.length).toBeGreaterThan(0)
+    for (const accessory of pool) expect(none.has(accessory.id), accessory.id).toBe(true)
   })
 })

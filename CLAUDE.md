@@ -13,8 +13,8 @@ Ce fichier résume un cadrage complet mené le 4 octobre 2026. Les décisions ci
 | `data/rules.json` | Règles d'adaptation, semaine allégée, douleur, séances ratées, déplacements, elliptique, config du coach |
 | `data/hd-exercises.json` | Les 18 étapes absentes du dataset : fiche FR, lien vidéo |
 | `data/catalog-overrides.json` | Corrections après revue des GIF : exclusions, matériel, consignes FR réécrites |
-| `scripts/build-catalog.py` | Génère `src/data/catalog.json` et `src/assets/exercises/*.webp` depuis exercises-dataset |
-| `data/names-fr.json` | Noms français des 280 exercices du catalogue |
+| `scripts/build-catalog.py` | Génère `src/data/catalog.json` et `src/assets/exercises/*.webp` depuis exercises-dataset (copie 2026, `../exercises-dataset-main`) |
+| `data/names-fr.json` | Noms français des exercices du catalogue |
 | `docs/publication.md` | Publication depuis claude.ai : connecteur Google Agenda, build, capacités, vérifications |
 | `docs/decisions.md` | Choix faits en autonomie pendant la construction, dont deux à valider (plan type, zone d'elliptique) |
 | `docs/redaction-fr.md` | Guide de rédaction : voix, ton, lexique, verbes, libellés FR des composants du DS |
@@ -42,7 +42,7 @@ Toute modification d'une échelle ou d'un seuil passe par l'accord d'Anthony.
 - Niveau de modèle : `complex` pour le plan hebdo, `default` pour la conversation.
 
 **Données**
-- Catalogue fermé : 280 exercices (poids du corps, mur, table, serviette, chaise, elliptique ; ceux à la barre seulement au parc), médias en WebP animé qualité 40 (~7,5 Mo une fois intégrés). Les 18 étapes hors dataset viennent de `data/hd-exercises.json`. Pas de marche ni d'escalier à domicile.
+- Catalogue fermé : 203 exercices depuis le 12 octobre 2026. Ce sont les 190 du dataset classés « none » (aucun matériel ; un mur libre suffit pour certains), plus les 12 paliers d'échelles qui demandent un support (table, chaise, barre de parc) et l'elliptique. La réserve d'accessoires du coach ne prend que des « none ». Médias en WebP animé qualité 40 (~5,6 Mo une fois intégrés). Les 18 étapes hors dataset viennent de `data/hd-exercises.json`. Pas de marche ni d'escalier à domicile.
 - Import hebdomadaire du CSV « Activités » de Garmin Connect (elliptique, callisthénie, HIIT), plus saisie manuelle de la résistance et de l'effort perçu.
 - Export et import JSON complets, avec `schemaVersion`, pour une migration future.
 - Démo : `src/demo/` génère trois semaines fictives avec le vrai moteur de règles ; le profil porte `demo: true`, et le planificateur ne choisit alors que des exercices animés. Switch dans Données : l'activer met les vraies données de côté (clés `stash.`), le désactiver les restaure ; bouton aussi sur l'onboarding vide. « Refaire l'onboarding » (Données) garde l'historique et ne replace que les échelles retestées.
@@ -121,7 +121,7 @@ Une ligne par activité, colonnes `Activity Type`, `Date`, `Time`, `Avg HR`, `Ma
 - Maintien de l'écran allumé (Wake Lock) : à tester dans la page publiée.
 - Liaisons du connecteur Google Agenda (`src/runtime/claude/calendar.ts`, `GOOGLE_CALENDAR`) : noms d'outils, arguments et forme des résultats à relever sur un vrai appel depuis claude.ai. Tant qu'elles sont vides, l'agenda est indisponible dans la page publiée (il marche en développement avec l'agenda fictif).
 - Médias © Gym visual : garder la mention en pied de fiche.
-- Doc validé à mettre à jour avec les changements d'échelles du 4 et du 11 octobre (connecteur Claude Docs, depuis claude.ai) : voir `docs/publication.md`.
+- Doc validé à mettre à jour avec les changements d'échelles du 4, du 11 et du 12 octobre (connecteur Claude Docs, depuis claude.ai) : voir `docs/publication.md`.
 - À valider par Anthony : le plan type (séances A et B, 3 + 2 par semaine) et la zone basse de l'elliptique (60 à 70 % de la FC de réserve), dans `docs/decisions.md`.
-- À valider par Anthony : les fourchettes des deux nouveaux paliers de « Relevés de jambes » (sans barre), dans `docs/decisions.md`.
+- À valider par Anthony : les fourchettes des paliers 2 et 3 de « Relevés de jambes » (relevé de bassin genoux fléchis 8–15, relevé en canif 6–12), dans `docs/decisions.md`.
 - À valider par Anthony : le plafond de 3 séances de callisthénie par semaine (jamais deux jours de suite), alors que les questions proposent 0 à 7, dans `docs/decisions.md`.

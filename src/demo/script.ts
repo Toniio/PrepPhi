@@ -105,7 +105,7 @@ export const ACCESSORIES: Record<'A' | 'B', { exercise: string; sets: number; ta
     { exercise: 'ds:3021', sets: 2, target: 10 }, // pompe scapulaire
     { exercise: 'ds:1373', sets: 2, target: 15 }, // extension des mollets debout
   ],
-  B: [{ exercise: 'ds:0489', sets: 2, target: 12 }], // extension lombaire au sol
+  B: [{ exercise: 'ds:1352', sets: 2, target: 12 }], // extension du dos allongé
 }
 
 // -- The conversations of the reviews --------------------------------------------------

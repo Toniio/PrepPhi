@@ -157,9 +157,11 @@ function replanFromToday(data: AppData, today: IsoDate): AppData {
 
 /**
  * Stored or imported data brought in line with the current ladders and
- * catalog (the bar left home on 2026-10-11): ladder states fit their ladder,
- * and when a session still planned this week asks for an exercise that cannot
- * be done in its context any more, the rest of the week is planned again.
+ * catalog (the bar left home on 2026-10-11, the catalog keeps no-equipment
+ * exercises since 2026-10-12): ladder states fit their ladder, accessories
+ * gone from the catalog leave the sessions still planned, and when such a
+ * session asks for an exercise that cannot be done in its context any more,
+ * the rest of the week is planned again.
  * Returns `data` itself when nothing is out of date.
  */
 export function upgradeData(data: AppData, today: IsoDate): AppData {
@@ -170,9 +172,20 @@ export function upgradeData(data: AppData, today: IsoDate): AppData {
     ladderState[id] = fitToLadder(state)
     if (ladderState[id] !== state) changed = true
   }
-  const next = changed ? { ...data, ladderState } : data
+  let next = changed ? { ...data, ladderState } : data
 
+  // Accessories the catalog no longer holds leave the sessions still planned.
   const available = availabilityOf(next)
+  const week = next.weeks[weekOf(today)]
+  const gone = (s: PlannedSession) =>
+    s.status === 'planned' && (s.accessories ?? []).some((a) => !available(a.exercise, s.context))
+  if (week?.plan.sessions.some(gone)) {
+    const sessions = week.plan.sessions.map((s) =>
+      gone(s) ? { ...s, accessories: s.accessories!.filter((a) => available(a.exercise, s.context)) } : s,
+    )
+    next = withWeek(next, { ...week, plan: { ...week.plan, sessions } })
+  }
+
   const stale = next.weeks[weekOf(today)]?.plan.sessions.some(
     (s) =>
       s.status === 'planned' &&

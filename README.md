@@ -10,7 +10,8 @@ Coach sportif personnel : callisthénie et elliptique, check-in après chaque s�
 
 ```bash
 pip install pillow
-python scripts/build-catalog.py   # clone exercises-dataset dans .cache/ si besoin
+python scripts/build-catalog.py --dataset ../exercises-dataset-main
+# sans --dataset, le script clone exercises-dataset dans .cache/ ; une copie d'avant 2026 (sans catégorie « none ») est refusée
 ```
 
 Données d'exercices : [exercises-dataset](https://github.com/hasaneyldrm/exercises-dataset) (MIT). Animations © Gym visual — https://gymvisual.com/

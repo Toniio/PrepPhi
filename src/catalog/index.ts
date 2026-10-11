@@ -35,6 +35,9 @@ function mediaFor(path: string): string | null {
 
 const BY_ID = new Map<string, ExerciseInfo>()
 
+/** Dataset exercises filed under equipment "none". */
+const NO_EQUIPMENT = new Set(catalog.exercises.filter((e) => e.datasetEquipment === 'none').map((e) => e.id))
+
 for (const e of catalog.exercises) {
   const extra = e as typeof e & { cueFr?: string; mistakeFr?: string; noteFr?: string }
   BY_ID.set(e.id, {
@@ -92,14 +95,15 @@ export function isAvailableWithAnimation(exerciseId: string, context: Context): 
 }
 
 /**
- * Accessories the coach may add, grouped by muscle group (target), home
- * exercises only. The coach gets this pool and the ladders, never the whole
- * catalog (CLAUDE.md).
+ * Accessories the coach may add, grouped by muscle group (target): home
+ * exercises with no equipment at all (dataset "none"), not the ladder steps
+ * that need a support. The coach gets this pool and the ladders, never the
+ * whole catalog (CLAUDE.md).
  */
 export function accessoryPool(perGroup = 6): Record<string, { id: string; nameFr: string }[]> {
   const pool: Record<string, { id: string; nameFr: string }[]> = {}
   for (const info of BY_ID.values()) {
-    if (!info.id.startsWith('ds:') || !info.target || !info.contexts.includes('home')) continue
+    if (!NO_EQUIPMENT.has(info.id) || !info.target || !info.contexts.includes('home')) continue
     if (info.target === 'cardiovascular system') continue
     const group = (pool[info.target] ??= [])
     if (group.length < perGroup) group.push({ id: info.id, nameFr: info.nameFr })

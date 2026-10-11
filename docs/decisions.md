@@ -77,3 +77,14 @@ Anthony n'a plus sa barre de porte. Il a choisi les trois options proposées : t
 - **Démo.** Le personnage fictif n'a pas de séance au parc : son récit reste celui d'avant, la séance trop facile passe sur les rangées inversées.
 - **Doc validé** à mettre à jour (connecteur Claude Docs, depuis claude.ai), comme les changements du 4 octobre.
 
+## Catalogue sans matériel (12 octobre 2026)
+
+Anthony a fourni une copie 2026 d'exercises-dataset (`../exercises-dataset-main`) et demandé de ne garder, dans un premier temps, que les exercices sans aucun matériel. Cette version scinde l'ancienne catégorie `body weight` en `none` (191 exercices, aucun matériel) et `body weight` (134, avec un support : banc, barre, table…). GIF et consignes françaises sont identiques à l'ancienne copie. Il a choisi de limiter le changement au catalogue : les échelles gardent leurs paliers.
+
+- **Catalogue : 203 exercices** au lieu de 280. Il garde les 190 « none » (le 191e, `0672` reverse dip, reste exclu), plus 12 paliers d'échelles qui demandent un support et l'elliptique. Ces 12 paliers sont les rangées inversées sous la table, la pompe inclinée, la pompe déclinée, le squat bulgare, le leg curl inversé, les tractions du parc et le muscle-up. Chaque exercice porte `datasetEquipment`. Le build passe de 8,8 à 7 Mo.
+- **Accessoires du coach** : la réserve ne prend que des exercices « none ».
+- **Relevés de jambes, paliers 2 et 3.** Le dataset classe les deux exercices choisis la veille comme exercices sur banc (« lying leg raise flat bench », « incline leg hip raise »). Ils sont remplacés, avec l'accord d'Anthony, par le relevé de bassin genoux fléchis (`ds:0484`) et le relevé en canif (`ds:0507`). **Fourchettes à valider** : 8–15 et 6–12. Échelles v1.3.0.
+- **Accessoires des notes d'échelles** : `ds:1399` (dips mains derrière, sur banc) devient `ds:0815` (dips au sol). `ds:0489` (hyperextension) devient `ds:1352` (extension du dos allongé). `ds:3544` (gainage latéral incliné, chaise) devient `ds:0705` (gainage latéral bras tendu). Les tractions en supination et prise neutre du parc ne sont plus citées par identifiant. La démo prend `ds:1352` à la place de `ds:0489`.
+- **Données existantes** : `upgradeData` retire des séances encore prévues les accessoires sortis du catalogue. Une séance qui demande un exercice sorti est replanifiée, comme le 11 octobre.
+- **Script** : il refuse une copie du dataset sans catégorie « none ». C'est le cas de l'ancien clone de `.cache/`, qui ne garderait que les paliers forcés.
+

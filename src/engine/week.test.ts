@@ -16,7 +16,6 @@ const profile: Profile = {
   calisthenicsPerWeek: 3,
   ellipticalPerWeek: 2,
   parkSessions: true,
-  barLengthCm: 90,
   restingHr: 60,
   maxHr: 185,
   age: 38,
@@ -202,13 +201,15 @@ describe('planner', () => {
     const elliptical = plan.sessions.filter((s) => s.kind === 'elliptical')
     expect(elliptical).toHaveLength(2)
     expect(elliptical.every((s) => !strength.some((c) => c.date === s.date))).toBe(true)
-    expect(plan.sessions.some((s) => s.kind === 'park')).toBe(false) // muscle-up still locked
+    // No bar at home: the vertical pull goes to the park, the muscle-up is still locked.
+    const park = plan.sessions.find((s) => s.kind === 'park')!
+    expect(park.exercises.map((e) => e.ladderId)).toEqual(['pull-vertical'])
   })
 
   it('keeps locked skills out and the A/B ladders in', () => {
     const a = planWeek(input()).sessions.find((s) => s.title === 'Séance A')!
-    expect(a.exercises.map((e) => e.ladderId)).toEqual(['pull-vertical', 'push', 'legs-front', 'core-hanging'])
-    expect(a.exercises[0]).toMatchObject({ sets: 3, targets: [20, 20, 20], unit: 's', restSec: 60 })
+    expect(a.exercises.map((e) => e.ladderId)).toEqual(['pull-horizontal', 'push', 'legs-front', 'core-hanging'])
+    expect(a.exercises[0]).toMatchObject({ sets: 3, targets: [8, 8, 8], unit: 'reps', restSec: 90 })
   })
 
   it('turns travel days into nomad sessions without pulling', () => {
@@ -242,11 +243,11 @@ describe('planner', () => {
     expect(plan.sessions.filter((s) => s.kind === 'elliptical').every((s) => s.sequences.length === 0)).toBe(true)
   })
 
-  it('adds the optional park session on a free weekend day once the muscle-up is open', () => {
+  it('adds the muscle-up to the park session once it is open', () => {
     const open = { ...states, 'muscle-up': placeAtLevel('muscle-up', 1, true) }
     const park = planWeek(input({ states: open })).sessions.find((s) => s.kind === 'park')!
     expect(park.date).toBe('2026-10-10')
-    expect(park.exercises[0].ladderId).toBe('muscle-up')
+    expect(park.exercises.map((e) => e.ladderId)).toEqual(['pull-vertical', 'muscle-up'])
   })
 
   it('opens every session with the handstand practice once unlocked', () => {
@@ -259,9 +260,10 @@ describe('planner', () => {
 })
 
 describe('missed sessions and regularity', () => {
+  // Without the park session, which would take Saturday.
   const plan = planWeek({
     weekId: W41,
-    profile,
+    profile: { ...profile, parkSessions: false },
     states: placeLadders({}),
     trips: [],
     deload: false,

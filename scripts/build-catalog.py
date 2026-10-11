@@ -45,10 +45,12 @@ OUT_MEDIA = ROOT / "src" / "assets" / "exercises"
 OUT_REPORT = ROOT / "scripts" / "catalog-report.md"
 NAMES_FR = ROOT / "data" / "names-fr.json"  # {"0652": "Traction pronation", ...}, written by Claude Code
 
-# Equipment Anthony has. "bar" is a DOORWAY pull-up bar: no muscle-up at home.
-HOME_EQUIPMENT = {"none", "bar", "wall", "table", "towel", "chair"}
+# Equipment Anthony has. No pull-up bar at home since 2026-10-11: every "bar"
+# exercise moves to the park, along with the muscle-up ("park-bar", "low-bar").
+HOME_EQUIPMENT = {"none", "wall", "table", "towel", "chair"}
 TRAVEL_EQUIPMENT = {"none", "wall"}  # hotel room: a free wall at best
-PARK_EQUIPMENT = HOME_EQUIPMENT | {"park-bar", "low-bar"}
+PARK_BARS = {"bar", "park-bar", "low-bar"}
+PARK_EQUIPMENT = HOME_EQUIPMENT | PARK_BARS
 
 # Dataset "equipment" values we keep. Everything else needs gear he does not own.
 KEPT_EQUIPMENT = {"body weight", "elliptical machine"}
@@ -73,12 +75,12 @@ TAG_RULES: list[tuple[str, re.Pattern[str]]] = [
 
 # Exercises referenced by data/ladders.json: always kept, whatever the filters say.
 LADDER_IDS = {
-    "0688", "0652", "1429", "3293", "1326", "0651",  # pull vertical
+    "0688", "0652", "1429", "3293", "1326", "0651",  # pull vertical (park)
     "2300", "0499",  # pull horizontal
     "0659", "0493", "3211", "0662", "0283", "0279", "3294", "1399",  # push
     "3470", "2368", "1476", "1759",  # legs, front chain
     "3013", "3645", "0696", "1373", "1387", "0489",  # legs, posterior chain
-    "0872", "0472", "0475", "3419", "3544",  # core
+    "0872", "0620", "0491", "3419", "3544",  # core
     "3302", "0471",  # handstand
     "0558", "0631",  # muscle-up (park)
     "1160", "0630", "0514",  # travel cardio circuit
@@ -124,7 +126,7 @@ def contexts_for(tags: list[str]) -> list[str]:
         ctx.append("home")
     if s <= TRAVEL_EQUIPMENT:
         ctx.append("travel")
-    if s <= PARK_EQUIPMENT and s & {"park-bar", "low-bar"}:
+    if s <= PARK_EQUIPMENT and s & PARK_BARS:
         ctx.append("park")
     return ctx
 

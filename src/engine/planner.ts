@@ -22,14 +22,15 @@ import type {
 //
 // Template (not fixed by rules.json, chosen when the engine was written):
 // full-body sessions A and B alternate, never on consecutive days, the
-// handstand practice opens every session once unlocked, the muscle-up runs
-// only in the optional park session.
+// handstand practice opens every session once unlocked. No pull-up bar at
+// home since 2026-10-11: both home sessions pull under the table, and the
+// vertical pull and the muscle-up run only in the optional park session.
 
-export const SESSION_A = ['pull-vertical', 'push', 'legs-front', 'core-hanging']
+export const SESSION_A = ['pull-horizontal', 'push', 'legs-front', 'core-hanging']
 export const SESSION_B = ['pull-horizontal', 'legs-posterior', 'core-isometric', 'handstand-strength']
 export const EVERY_SESSION = ['handstand-balance']
 export const NOMAD = ['push', 'legs-front', 'core-isometric']
-export const PARK = ['muscle-up']
+export const PARK = ['pull-vertical', 'muscle-up']
 
 export const REST_SEC = { reps: 90, s: 60, skill: 120 }
 
@@ -201,8 +202,8 @@ export function planWeek(input: PlanInput): WeekPlan {
     )
   }
 
-  // Optional park session: muscle-up, on a free weekend day.
-  if (profile.parkSessions && input.states['muscle-up']?.unlocked) {
+  // Optional park session: vertical pull, then muscle-up once unlocked, on a free weekend day.
+  if (profile.parkSessions) {
     const weekend = open.filter((d) => weekday(d) >= 6 && !travel(d) && !calisthenicsDays.includes(d))
     if (weekend.length) {
       const exercises = exercisesFor(PARK, 'park', input)

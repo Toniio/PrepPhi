@@ -42,7 +42,7 @@ export function buildContext(data: AppData, weekId: WeekId) {
       parkSessions: data.profile.parkSessions,
     },
     priorities:
-      'régularité > force et skills > endurance > recomposition. Skill 1 : handstand. Skill 2 : muscle-up, au parc seulement.',
+      'régularité > force et skills > endurance > recomposition. Skill 1 : handstand. Skill 2 : muscle-up, au parc seulement. Pas de barre à la maison : le tirage vertical se fait au parc.',
     ladders: Object.values(data.ladderState).map((s) => {
       const ladder = getLadder(s.ladderId)
       const step = getStep(s.ladderId, s.level)

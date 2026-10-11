@@ -1,13 +1,13 @@
 # Étapes hors dataset
 
-19 étapes de tes échelles n'existent pas dans exercises-dataset. Elles n'ont pas d'animation : l'app affiche cette fiche et un lien vidéo.
+18 étapes de tes échelles n'existent pas dans exercises-dataset. Elles n'ont pas d'animation : l'app affiche cette fiche et un lien vidéo.
 La source de vérité est `data/hd-exercises.json` ; ce fichier en est la version lisible.
 
 **À faire** : remplacer chaque lien de recherche par un tutoriel choisi (`videoUrl`). Je n'ai pas pu vérifier des vidéos précises une à une, d'où ce lien provisoire.
 
 ## Suspension passive
 
-Échelle : `pull-vertical` · matériel : bar · contextes : home
+Échelle : `pull-vertical` · matériel : bar · contextes : park
 
 1. Saisis la barre en pronation, mains un peu plus larges que les épaules, pouces autour de la barre.
 2. Décolle les pieds sans à-coup et laisse les bras tendus.
@@ -20,7 +20,7 @@ La source de vérité est `data/hd-exercises.json` ; ce fichier en est la versio
 
 ## Traction négative
 
-Échelle : `pull-vertical` · matériel : bar, chair · contextes : home
+Échelle : `pull-vertical` · matériel : bar, chair · contextes : park
 
 1. Monte le menton au-dessus de la barre en t'aidant d'un saut ou d'une chaise.
 2. Descends lentement, en 5 secondes, jusqu'aux bras tendus.
@@ -95,19 +95,6 @@ La source de vérité est `data/hd-exercises.json` ; ce fichier en est la versio
 - **Point clé** : Le bassin ne bascule pas du côté de la jambe levée.
 - **Erreur fréquente** : Raccourcir l'amplitude pour compenser : mieux vaut moins de répétitions complètes.
 - **Vidéo** : [rechercher un tutoriel](https://www.youtube.com/results?search_query=single+leg+sliding+leg+curl)
-
-## Relevé de genoux suspendu
-
-Échelle : `core-hanging` · matériel : bar · contextes : home
-
-1. Suspends-toi bras tendus, épaules engagées.
-2. Monte les genoux vers la poitrine en enroulant le bassin.
-3. Marque un temps en haut.
-4. Redescends lentement, sans balancer.
-
-- **Point clé** : L'enroulement du bassin, pas seulement la flexion des hanches.
-- **Erreur fréquente** : Prendre de l'élan. Sur ta barre de porte, garde les genoux devant toi pour éviter l'encadrement.
-- **Vidéo** : [rechercher un tutoriel](https://www.youtube.com/results?search_query=hanging+knee+raise+tutorial)
 
 ## Gainage ventral (planche)
 

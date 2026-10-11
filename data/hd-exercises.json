@@ -1,6 +1,6 @@
 {
   "$comment": "Exercises referenced by data/ladders.json that exercises-dataset lacks. No animated media: French sheet + video. videoSearchUrl is a stopgap (YouTube search); fill videoUrl with a chosen tutorial. Pictograms are planned for later (candidate for the DS Illustration component).",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "exercises": [
     {
       "id": "hd:dead-hang",
@@ -10,7 +10,7 @@
         "bar"
       ],
       "contexts": [
-        "home"
+        "park"
       ],
       "stepsFr": [
         "Saisis la barre en pronation, mains un peu plus larges que les épaules, pouces autour de la barre.",
@@ -32,7 +32,7 @@
         "chair"
       ],
       "contexts": [
-        "home"
+        "park"
       ],
       "stepsFr": [
         "Monte le menton au-dessus de la barre en t'aidant d'un saut ou d'une chaise.",
@@ -151,27 +151,6 @@
       "cueFr": "Le bassin ne bascule pas du côté de la jambe levée.",
       "mistakeFr": "Raccourcir l'amplitude pour compenser : mieux vaut moins de répétitions complètes.",
       "videoSearchUrl": "https://www.youtube.com/results?search_query=single+leg+sliding+leg+curl",
-      "videoUrl": null
-    },
-    {
-      "id": "hd:hanging-knee-raise",
-      "nameFr": "Relevé de genoux suspendu",
-      "ladder": "core-hanging",
-      "equipment": [
-        "bar"
-      ],
-      "contexts": [
-        "home"
-      ],
-      "stepsFr": [
-        "Suspends-toi bras tendus, épaules engagées.",
-        "Monte les genoux vers la poitrine en enroulant le bassin.",
-        "Marque un temps en haut.",
-        "Redescends lentement, sans balancer."
-      ],
-      "cueFr": "L'enroulement du bassin, pas seulement la flexion des hanches.",
-      "mistakeFr": "Prendre de l'élan. Sur ta barre de porte, garde les genoux devant toi pour éviter l'encadrement.",
-      "videoSearchUrl": "https://www.youtube.com/results?search_query=hanging+knee+raise+tutorial",
       "videoUrl": null
     },
     {

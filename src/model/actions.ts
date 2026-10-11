@@ -4,6 +4,8 @@ import {
   applyResult,
   declineStepUp,
   familyOf,
+  fitToLadder,
+  getLadder,
   initialElliptical,
   isElliptical,
   lowZone,
@@ -133,21 +135,50 @@ export function redoOnboarding(
   const current = data.elliptical ?? initialElliptical(profile)
   const { min, max } = profile.ellipticalResistance
   const elliptical = { ...current, resistance: Math.min(max, Math.max(min, current.resistance)) }
-  const next: AppData = { ...data, profile, ladderState, elliptical }
+  return replanFromToday({ ...data, profile, ladderState, elliptical }, input.today)
+}
 
-  const weekId = weekOf(input.today)
-  const week = next.weeks[weekId]
+/** Plans the rest of the current week again from today; what is done stays. */
+function replanFromToday(data: AppData, today: IsoDate): AppData {
+  const weekId = weekOf(today)
+  const week = data.weeks[weekId]
   const trips = week?.plan.trips.filter((t) => t.confirmed) ?? []
-  const replanned = planWeek(planInput(next, weekId, trips, week?.plan.deload ?? false))
-  const kept = week ? week.plan.sessions.filter((s) => s.date < input.today || s.status !== 'planned') : []
+  const replanned = planWeek(planInput(data, weekId, trips, week?.plan.deload ?? false))
+  const kept = week ? week.plan.sessions.filter((s) => s.date < today || s.status !== 'planned') : []
   const fresh = replanned.sessions.filter(
-    (s) => s.date >= input.today && !kept.some((k) => k.date === s.date && k.kind === s.kind),
+    (s) => s.date >= today && !kept.some((k) => k.date === s.date && k.kind === s.kind),
   )
   const plan: WeekPlan = {
     ...(week?.plan ?? replanned),
     sessions: [...kept, ...fresh].sort((a, b) => a.date.localeCompare(b.date) || a.kind.localeCompare(b.kind)),
   }
-  return withWeek(next, { plan, logs: week?.logs ?? [], events: week?.events ?? [] })
+  return withWeek(data, { plan, logs: week?.logs ?? [], events: week?.events ?? [] })
+}
+
+/**
+ * Stored or imported data brought in line with the current ladders and
+ * catalog (the bar left home on 2026-10-11): ladder states fit their ladder,
+ * and when a session still planned this week asks for an exercise that cannot
+ * be done in its context any more, the rest of the week is planned again.
+ * Returns `data` itself when nothing is out of date.
+ */
+export function upgradeData(data: AppData, today: IsoDate): AppData {
+  if (!data.profile) return data
+  let changed = false
+  const ladderState: Record<string, LadderState> = {}
+  for (const [id, state] of Object.entries(data.ladderState)) {
+    ladderState[id] = fitToLadder(state)
+    if (ladderState[id] !== state) changed = true
+  }
+  const next = changed ? { ...data, ladderState } : data
+
+  const available = availabilityOf(next)
+  const stale = next.weeks[weekOf(today)]?.plan.sessions.some(
+    (s) =>
+      s.status === 'planned' &&
+      s.exercises.some((e) => !getLadder(e.ladderId).contexts.includes(s.context) || !available(e.exercise, s.context)),
+  )
+  return stale ? replanFromToday(next, today) : next
 }
 
 /** The current week always has a plan: the rule-based one when no review planned it. */

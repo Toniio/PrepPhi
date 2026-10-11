@@ -11,7 +11,7 @@ Ce fichier résume un cadrage complet mené le 4 octobre 2026. Les décisions ci
 | [Doc validé](https://claude.ai/code/artifact/40d11110-3e5e-4dfb-853f-543baee839c6) | Échelles et règles, version lisible, validée le 2026-10-04 |
 | `data/ladders.json` | Les 10 échelles de progression (double progression) |
 | `data/rules.json` | Règles d'adaptation, semaine allégée, douleur, séances ratées, déplacements, elliptique, config du coach |
-| `data/hd-exercises.json` | Les 19 étapes absentes du dataset : fiche FR, lien vidéo |
+| `data/hd-exercises.json` | Les 18 étapes absentes du dataset : fiche FR, lien vidéo |
 | `data/catalog-overrides.json` | Corrections après revue des GIF : exclusions, matériel, consignes FR réécrites |
 | `scripts/build-catalog.py` | Génère `src/data/catalog.json` et `src/assets/exercises/*.webp` depuis exercises-dataset |
 | `data/names-fr.json` | Noms français des 280 exercices du catalogue |
@@ -26,12 +26,12 @@ Toute modification d'une échelle ou d'un seuil passe par l'accord d'Anthony.
 **Produit**
 - Outil personnel, sport seul (pas d'alimentation ni de sommeil en v1), pas de mesure corporelle.
 - Priorités : régularité > force/skills > endurance > recomposition.
-- Skill P1 : handstand / handstand push-up. Skill P2 : muscle-up, sur barre de parc uniquement, car sa barre est une barre d'encadrement de porte.
-- Matériel à domicile : barre de porte, mur libre, elliptique, table solide, serviette sur sol lisse, chaise. Déplacements à Paris environ toutes les 3 semaines (variable), sans matériel.
+- Skill P1 : handstand / handstand push-up. Skill P2 : muscle-up, sur barre de parc uniquement.
+- Matériel à domicile : mur libre, elliptique, table solide, serviette sur sol lisse, chaise. Plus de barre de traction depuis le 11 octobre 2026 : le tirage vertical et le muscle-up se font à la séance au parc, les deux séances à la maison tirent sous la table, le gainage suspendu est devenu « Relevés de jambes » au sol (voir `docs/decisions.md`). Déplacements à Paris environ toutes les 3 semaines (variable), sans matériel.
 
 **Rythme et usage**
 - Semaine du lundi au dimanche, revue le dimanche soir.
-- Onboarding : questionnaire (`Questionnaire` du DS), puis séance test qui place chaque échelle. Il demande aussi la longueur de la barre, la FC de repos et max, et la plage de résistance de l'elliptique.
+- Onboarding : questionnaire (`Questionnaire` du DS), puis séance test qui place chaque échelle. Il demande aussi la FC de repos et max, et la plage de résistance de l'elliptique.
 - Check-in sans IA : répétitions pré-remplies, ressenti en 3 états (`ToggleGroup`), signalement de douleur optionnel. Saisie selon le format : séries, répétitions dans un temps, isométrie.
 - Minuteur de repos entre les séries, et séquenceur de blocs travail/repos sur plusieurs tours (circuits, fractionné elliptique), avec bip (pas de synthèse vocale) et maintien de l'écran allumé si la page l'autorise.
 - Rappels : bouton « Ajouter à mon agenda » qui crée les séances dans Google Agenda, sur validation explicite.
@@ -42,7 +42,7 @@ Toute modification d'une échelle ou d'un seuil passe par l'accord d'Anthony.
 - Niveau de modèle : `complex` pour le plan hebdo, `default` pour la conversation.
 
 **Données**
-- Catalogue fermé : 280 exercices (poids du corps, barre, mur, table, serviette, chaise, elliptique), médias en WebP animé qualité 40 (~7,5 Mo une fois intégrés). Les 19 étapes hors dataset viennent de `data/hd-exercises.json`. Pas de marche ni d'escalier à domicile.
+- Catalogue fermé : 280 exercices (poids du corps, mur, table, serviette, chaise, elliptique ; ceux à la barre seulement au parc), médias en WebP animé qualité 40 (~7,5 Mo une fois intégrés). Les 18 étapes hors dataset viennent de `data/hd-exercises.json`. Pas de marche ni d'escalier à domicile.
 - Import hebdomadaire du CSV « Activités » de Garmin Connect (elliptique, callisthénie, HIIT), plus saisie manuelle de la résistance et de l'effort perçu.
 - Export et import JSON complets, avec `schemaVersion`, pour une migration future.
 - Démo : `src/demo/` génère trois semaines fictives avec le vrai moteur de règles ; le profil porte `demo: true`, et le planificateur ne choisit alors que des exercices animés. Switch dans Données : l'activer met les vraies données de côté (clés `stash.`), le désactiver les restaure ; bouton aussi sur l'onboarding vide. « Refaire l'onboarding » (Données) garde l'historique et ne replace que les échelles retestées.
@@ -116,11 +116,12 @@ Une ligne par activité, colonnes `Activity Type`, `Date`, `Time`, `Avg HR`, `Ma
 
 ## Points ouverts
 
-- `videoUrl` des 19 fiches hors dataset : à choisir (liens de recherche YouTube provisoires).
-- Pictogrammes animés pour ces 19 étapes : plus tard, candidats pour le composant `Illustration`.
+- `videoUrl` des 18 fiches hors dataset : à choisir (liens de recherche YouTube provisoires).
+- Pictogrammes animés pour ces 18 étapes : plus tard, candidats pour le composant `Illustration`.
 - Maintien de l'écran allumé (Wake Lock) : à tester dans la page publiée.
 - Liaisons du connecteur Google Agenda (`src/runtime/claude/calendar.ts`, `GOOGLE_CALENDAR`) : noms d'outils, arguments et forme des résultats à relever sur un vrai appel depuis claude.ai. Tant qu'elles sont vides, l'agenda est indisponible dans la page publiée (il marche en développement avec l'agenda fictif).
 - Médias © Gym visual : garder la mention en pied de fiche.
-- Doc validé à mettre à jour avec les changements d'échelles du 4 octobre (connecteur Claude Docs, depuis claude.ai) : voir `docs/publication.md`.
+- Doc validé à mettre à jour avec les changements d'échelles du 4 et du 11 octobre (connecteur Claude Docs, depuis claude.ai) : voir `docs/publication.md`.
 - À valider par Anthony : le plan type (séances A et B, 3 + 2 par semaine) et la zone basse de l'elliptique (60 à 70 % de la FC de réserve), dans `docs/decisions.md`.
+- À valider par Anthony : les fourchettes des deux nouveaux paliers de « Relevés de jambes » (sans barre), dans `docs/decisions.md`.
 - À valider par Anthony : le plafond de 3 séances de callisthénie par semaine (jamais deux jours de suite), alors que les questions proposent 0 à 7, dans `docs/decisions.md`.

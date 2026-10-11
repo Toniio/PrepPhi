@@ -10,7 +10,7 @@ import {
   type PlannedSession,
   type Profile,
 } from '@/engine'
-import { checkIn, completeOnboarding, setTravelToday } from './actions'
+import { checkIn, completeOnboarding, setTravelToday, upgradeData } from './actions'
 import { emptyData, type AppData } from './schema'
 
 const profile: Profile = {
@@ -19,7 +19,6 @@ const profile: Profile = {
   calisthenicsPerWeek: 3,
   ellipticalPerWeek: 2,
   parkSessions: false,
-  barLengthCm: 90,
   restingHr: 58,
   maxHr: null,
   age: 38,
@@ -177,5 +176,51 @@ describe('checkIn: the sessions still planned follow the ladders', () => {
     const refreshed = sessionOn(after, WEDNESDAY)
     expect(exerciseOf(refreshed, 'legs-front')).toEqual(legs)
     expect(exerciseOf(refreshed, 'core-isometric').targets).toEqual([30, 30, 35])
+  })
+})
+
+describe('upgradeData: data stored before the bar left home', () => {
+  /** Wednesday's session A as planned with the doorway bar, and a ladder beyond its new last step. */
+  function withBar(): AppData {
+    const data = onboarded()
+    const a = sessionOn(data, WEDNESDAY)
+    const deadHang: PlannedExercise = {
+      ...exerciseOf(a, 'pull-horizontal'),
+      ladderId: 'pull-vertical',
+      exercise: 'hd:dead-hang',
+    }
+    const sessions = data.weeks[WEEK].plan.sessions.map((s) =>
+      s.id === a.id
+        ? { ...s, exercises: [deadHang, ...s.exercises.filter((e) => e.ladderId !== 'pull-horizontal')] }
+        : s,
+    )
+    const ladderState = {
+      ...data.ladderState,
+      'core-hanging': { ...data.ladderState['core-hanging'], level: 5, targets: [12, 12, 12] },
+    }
+    return {
+      ...data,
+      ladderState,
+      weeks: { ...data.weeks, [WEEK]: { ...data.weeks[WEEK], plan: { ...data.weeks[WEEK].plan, sessions } } },
+    }
+  }
+
+  it('brings a ladder beyond its last step back to it, at the bottom of the range', () => {
+    const next = upgradeData(withBar(), MONDAY)
+    expect(next.ladderState['core-hanging']).toMatchObject({ level: 4, targets: [10, 10, 10] })
+  })
+
+  it('plans again the sessions that still ask for the bar at home', () => {
+    const next = upgradeData(withBar(), MONDAY)
+    const a = sessionOn(next, WEDNESDAY)
+    expect(a.exercises.map((e) => e.ladderId)).toContain('pull-horizontal')
+    expect(a.exercises.every((e) => isAvailable(e.exercise, 'home'))).toBe(true)
+  })
+
+  it('leaves up-to-date data as it is', () => {
+    const data = onboarded()
+    expect(upgradeData(data, MONDAY)).toBe(data)
+    const next = upgradeData(withBar(), MONDAY)
+    expect(upgradeData(next, MONDAY)).toBe(next)
   })
 })

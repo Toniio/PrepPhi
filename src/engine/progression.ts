@@ -47,6 +47,21 @@ export function placeAtLevel(ladderId: string, level = 1, unlocked?: boolean): L
   }
 }
 
+/**
+ * A stored state brought in line with the current ladder after a change of
+ * data/ladders.json: a level beyond the last step drops to it, targets outside
+ * the step's range move back into it. Returns `state` itself when it fits.
+ */
+export function fitToLadder(state: LadderState): LadderState {
+  const last = maxLevel(state.ladderId)
+  if (state.level > last) return atLevel(state, last, bottomTargets(getStep(state.ladderId, last)))
+  const step = getStep(state.ladderId, state.level)
+  const [low, high] = step.range
+  const fits = state.targets.length === setsOf(step) && state.targets.every((t) => t >= low && t <= high)
+  if (fits) return state
+  return { ...state, targets: bottomTargets(step).map((b, i) => Math.min(high, Math.max(b, state.targets[i] ?? b))) }
+}
+
 function atLevel(state: LadderState, level: number, targets: number[]): LadderState {
   return {
     ...state,

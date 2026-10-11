@@ -25,7 +25,6 @@ const profile: Profile = {
   calisthenicsPerWeek: 3,
   ellipticalPerWeek: 2,
   parkSessions: false,
-  barLengthCm: 90,
   restingHr: 58,
   maxHr: null,
   age: 38,

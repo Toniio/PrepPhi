@@ -20,7 +20,6 @@ type Draft = {
   parkSessions: boolean
   freeWallAtHome: boolean
   preferredTime: string
-  barLengthCm: string
   restingHr: string
   maxHr: string
   age: string
@@ -37,7 +36,6 @@ function toDraft(p: Profile): Draft {
     parkSessions: p.parkSessions,
     freeWallAtHome: p.freeWallAtHome,
     preferredTime: p.preferredTime,
-    barLengthCm: text(p.barLengthCm),
     restingHr: text(p.restingHr),
     maxHr: text(p.maxHr),
     age: text(p.age),
@@ -72,7 +70,6 @@ export function ProfileForm() {
         parkSessions: draft.parkSessions,
         freeWallAtHome: draft.freeWallAtHome,
         preferredTime: draft.preferredTime || '18:30',
-        barLengthCm: num(draft.barLengthCm),
         restingHr: resting,
         maxHr: num(draft.maxHr),
         age: num(draft.age),
@@ -138,7 +135,7 @@ export function ProfileForm() {
         <Switch id="profile-park" checked={draft.parkSessions} onCheckedChange={(parkSessions) => set({ parkSessions })} />
         <FieldContent>
           <FieldLabel htmlFor="profile-park">Séance au parc le week-end</FieldLabel>
-          <FieldDescription>Facultative, pour le muscle-up.</FieldDescription>
+          <FieldDescription>Facultative, pour les tractions et le muscle-up.</FieldDescription>
         </FieldContent>
       </Field>
       <Field orientation="horizontal">
@@ -177,15 +174,6 @@ export function ProfileForm() {
       <Field>
         <FieldLabel htmlFor="profile-age">Âge (facultatif)</FieldLabel>
         <Input id="profile-age" inputMode="numeric" value={draft.age} onChange={(e) => set({ age: e.target.value })} />
-      </Field>
-      <Field>
-        <FieldLabel htmlFor="profile-bar">Longueur de la barre de porte, en cm (facultatif)</FieldLabel>
-        <Input
-          id="profile-bar"
-          inputMode="numeric"
-          value={draft.barLengthCm}
-          onChange={(e) => set({ barLengthCm: e.target.value })}
-        />
       </Field>
       <Button onClick={save} className="self-start">
         <FloppyDiskIcon />

@@ -28,7 +28,7 @@ type Rhythm = Pick<
   Profile,
   'availableDays' | 'calisthenicsPerWeek' | 'ellipticalPerWeek' | 'parkSessions' | 'preferredTime' | 'freeWallAtHome'
 >
-type Body = Pick<Profile, 'barLengthCm' | 'restingHr' | 'maxHr' | 'age' | 'ellipticalResistance'>
+type Body = Pick<Profile, 'restingHr' | 'maxHr' | 'age' | 'ellipticalResistance'>
 
 /** The answers and placement already given, when the onboarding is done again. */
 export type PreviousAnswers = { profile: Profile; ladderState: Record<string, LadderState> }
@@ -71,7 +71,6 @@ function rhythmReference(p: Profile): string[] {
 
 function bodyReference(p: Profile): string[] {
   return [
-    `Barre de porte : ${p.barLengthCm === null ? 'longueur non renseignée' : `${p.barLengthCm} cm`}.`,
     `FC de repos : ${orMissing(p.restingHr, 'bpm')}. FC maximale : ${p.maxHr === null ? 'estimée à partir de l’âge' : `${p.maxHr} bpm`}. Âge : ${p.age === null ? 'non renseigné' : `${p.age} ans`}.`,
     `Résistance de l’elliptique : de ${p.ellipticalResistance.min} à ${p.ellipticalResistance.max}.`,
   ]
@@ -151,9 +150,10 @@ function RhythmStep({
           <QuestionnaireError>{REQUIRED_ERROR}</QuestionnaireError>
         </QuestionnaireItem>
         <QuestionnaireItem name="park" required>
-          <QuestionnaireTitle>Une séance au parc le week-end, pour le muscle-up ?</QuestionnaireTitle>
+          <QuestionnaireTitle>Une séance au parc le week-end, pour les tractions et le muscle-up ?</QuestionnaireTitle>
           <QuestionnaireDescription>
-            Elle reste facultative : la manquer ne compte pas comme une séance ratée.
+            Sans barre à la maison, c’est là que se font les tractions. Elle reste facultative : la manquer ne compte
+            pas comme une séance ratée.
           </QuestionnaireDescription>
           <QuestionnaireChoices>
             <QuestionnaireChoice value="yes" defaultChecked={initial?.parkSessions ?? true}>
@@ -210,7 +210,6 @@ function BodyStep({
           const min = number(form.get('rmin')) ?? 1
           const max = number(form.get('rmax')) ?? 16
           onDone({
-            barLengthCm: number(form.get('bar')),
             restingHr: number(form.get('restingHr')),
             maxHr: number(form.get('maxHr')),
             age: number(form.get('age')),
@@ -218,21 +217,6 @@ function BodyStep({
           })
         }}
       >
-        <QuestionnaireItem name="bar">
-          <QuestionnaireTitle>Quelle est la longueur de ta barre de porte, en cm ?</QuestionnaireTitle>
-          <QuestionnaireDescription>
-            Les tractions prise large et archer demandent de la place entre les mains.
-          </QuestionnaireDescription>
-          <QuestionnaireInput
-            type="number"
-            inputMode="numeric"
-            min={40}
-            max={150}
-            defaultValue={initial?.barLengthCm ?? undefined}
-            aria-label="Longueur de la barre en cm"
-          />
-          <QuestionnaireError>{OPTIONAL_ERROR}</QuestionnaireError>
-        </QuestionnaireItem>
         <QuestionnaireItem name="restingHr" required>
           <QuestionnaireTitle>Quelle est ta fréquence cardiaque de repos, en bpm ?</QuestionnaireTitle>
           <QuestionnaireDescription>Ta montre l’affiche, en général entre 45 et 75.</QuestionnaireDescription>
@@ -355,6 +339,7 @@ function PlacementStep({
                 {before
                   ? `Actuellement : palier ${before.level} sur ${ladder.steps.length}, ${getStep(ladder.id, before.level).nameFr}, cibles ${formatTargets(before.targets, getStep(ladder.id, before.level).unit, getStep(ladder.id, before.level).perSide)}.`
                   : `${ladder.steps.length} paliers`}
+                {!ladder.contexts.includes('home') && ' Se fait au parc : teste-la là-bas, ou laisse vide.'}
               </CardDescription>
             </CardHeader>
             <CardContent>

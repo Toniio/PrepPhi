@@ -187,8 +187,6 @@ export type Profile = {
   calisthenicsPerWeek: number
   ellipticalPerWeek: number
   parkSessions: boolean
-  /** Doorway bar length in cm: steps 5-6 of the vertical pull need room. */
-  barLengthCm: number | null
   restingHr: number | null
   maxHr: number | null
   age: number | null

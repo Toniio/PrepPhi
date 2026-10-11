@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState, type ReactNode } from 'react'
 import { today as localToday } from '@/engine'
 import { useRuntime } from '@/runtime/context'
-import { ensureWeek } from './actions'
+import { ensureWeek, upgradeData } from './actions'
 import { AppDataContext } from './context'
 import { clearData, loadData, saveChanges } from './repository'
 import { emptyData, type AppData } from './schema'
@@ -24,7 +24,7 @@ export function AppDataProvider({ children, loading, failed }: Props) {
     let alive = true
     loadData(store)
       .then(async (loaded) => {
-        const ready = ensureWeek(loaded, today)
+        const ready = ensureWeek(upgradeData(loaded, today), today)
         if (ready !== loaded) await saveChanges(store, loaded, ready)
         if (!alive) return
         current.current = ready
@@ -54,7 +54,7 @@ export function AppDataProvider({ children, loading, failed }: Props) {
   const replaceAll = useCallback(
     async (next: AppData) => {
       await clearData(store)
-      const ready = ensureWeek(next, today)
+      const ready = ensureWeek(upgradeData(next, today), today)
       await saveChanges(store, emptyData(), ready)
       current.current = ready
       setData(ready)

@@ -167,7 +167,7 @@
         "bar"
       ],
       "contexts": [
-        "home"
+        "park"
       ],
       "media": "exercises/3293.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
@@ -225,7 +225,7 @@
         "bar"
       ],
       "contexts": [
-        "home"
+        "park"
       ],
       "media": "exercises/2355.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
@@ -253,7 +253,7 @@
         "bar"
       ],
       "contexts": [
-        "home"
+        "park"
       ],
       "media": "exercises/2333.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
@@ -404,7 +404,7 @@
         "bar"
       ],
       "contexts": [
-        "home"
+        "park"
       ],
       "media": "exercises/3297.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
@@ -635,7 +635,7 @@
         "chair"
       ],
       "contexts": [
-        "home"
+        "park"
       ],
       "media": "exercises/3019.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
@@ -748,7 +748,7 @@
         "bar"
       ],
       "contexts": [
-        "home"
+        "park"
       ],
       "media": "exercises/0140.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
@@ -1477,7 +1477,7 @@
         "bar"
       ],
       "contexts": [
-        "home"
+        "park"
       ],
       "media": "exercises/1326.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
@@ -1505,7 +1505,7 @@
         "bar"
       ],
       "contexts": [
-        "home"
+        "park"
       ],
       "media": "exercises/0253.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
@@ -1622,7 +1622,7 @@
         "bar"
       ],
       "contexts": [
-        "home"
+        "park"
       ],
       "media": "exercises/1327.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
@@ -2323,7 +2323,7 @@
         "bar"
       ],
       "contexts": [
-        "home"
+        "park"
       ],
       "media": "exercises/3296.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
@@ -2352,7 +2352,7 @@
         "bar"
       ],
       "contexts": [
-        "home"
+        "park"
       ],
       "media": "exercises/3295.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
@@ -2504,7 +2504,7 @@
         "bar"
       ],
       "contexts": [
-        "home"
+        "park"
       ],
       "media": "exercises/0466.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
@@ -2593,7 +2593,7 @@
         "bar"
       ],
       "contexts": [
-        "home"
+        "park"
       ],
       "media": "exercises/0467.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
@@ -2853,7 +2853,7 @@
         "bar"
       ],
       "contexts": [
-        "home"
+        "park"
       ],
       "media": "exercises/1764.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
@@ -2879,11 +2879,11 @@
         "bar"
       ],
       "contexts": [
-        "home"
+        "park"
       ],
       "media": "exercises/0472.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": true
+      "inLadder": false
     },
     {
       "id": "ds:1761",
@@ -2906,7 +2906,7 @@
         "bar"
       ],
       "contexts": [
-        "home"
+        "park"
       ],
       "media": "exercises/1761.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
@@ -2934,7 +2934,7 @@
         "bar"
       ],
       "contexts": [
-        "home"
+        "park"
       ],
       "media": "exercises/0473.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
@@ -2960,7 +2960,7 @@
         "bar"
       ],
       "contexts": [
-        "home"
+        "park"
       ],
       "media": "exercises/0474.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
@@ -2987,11 +2987,11 @@
         "bar"
       ],
       "contexts": [
-        "home"
+        "park"
       ],
       "media": "exercises/0475.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": true
+      "inLadder": false
     },
     {
       "id": "ds:0476",
@@ -3016,7 +3016,7 @@
         "bar"
       ],
       "contexts": [
-        "home"
+        "park"
       ],
       "media": "exercises/0476.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
@@ -3253,7 +3253,7 @@
       ],
       "media": "exercises/0491.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false,
+      "inLadder": true,
       "noteFr": "L'animation montre un banc incliné : fais-le allongé au sol."
     },
     {
@@ -3899,7 +3899,7 @@
         "bar"
       ],
       "contexts": [
-        "home"
+        "park"
       ],
       "media": "exercises/3418.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
@@ -4257,7 +4257,7 @@
       ],
       "media": "exercises/0620.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
-      "inLadder": false,
+      "inLadder": true,
       "cueFr": "Bas du dos plaqué au sol.",
       "mistakeFr": "Cambrer le dos en fin de descente.",
       "noteFr": "L'animation montre l'exercice sur un banc : fais-le allongé au sol."
@@ -4344,7 +4344,7 @@
         "bar"
       ],
       "contexts": [
-        "home"
+        "park"
       ],
       "media": "exercises/0627.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
@@ -4637,7 +4637,7 @@
         "bar"
       ],
       "contexts": [
-        "home"
+        "park"
       ],
       "media": "exercises/0638.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
@@ -5147,7 +5147,7 @@
         "bar"
       ],
       "contexts": [
-        "home"
+        "park"
       ],
       "media": "exercises/0651.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
@@ -5175,7 +5175,7 @@
         "bar"
       ],
       "contexts": [
-        "home"
+        "park"
       ],
       "media": "exercises/0652.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
@@ -5645,7 +5645,7 @@
         "bar"
       ],
       "contexts": [
-        "home"
+        "park"
       ],
       "media": "exercises/0670.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
@@ -5702,7 +5702,7 @@
         "bar"
       ],
       "contexts": [
-        "home"
+        "park"
       ],
       "media": "exercises/0674.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
@@ -5823,7 +5823,7 @@
         "bar"
       ],
       "contexts": [
-        "home"
+        "park"
       ],
       "media": "exercises/0678.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
@@ -5996,7 +5996,7 @@
         "bar"
       ],
       "contexts": [
-        "home"
+        "park"
       ],
       "media": "exercises/0688.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
@@ -6340,7 +6340,7 @@
         "bar"
       ],
       "contexts": [
-        "home"
+        "park"
       ],
       "media": "exercises/1763.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
@@ -6693,7 +6693,7 @@
         "bar"
       ],
       "contexts": [
-        "home"
+        "park"
       ],
       "media": "exercises/0720.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
@@ -8043,7 +8043,7 @@
         "bar"
       ],
       "contexts": [
-        "home"
+        "park"
       ],
       "media": "exercises/1429.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
@@ -8072,7 +8072,7 @@
         "bar"
       ],
       "contexts": [
-        "home"
+        "park"
       ],
       "media": "exercises/1367.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",
@@ -8129,7 +8129,7 @@
         "bar"
       ],
       "contexts": [
-        "home"
+        "park"
       ],
       "media": "exercises/0858.webp",
       "attribution": "© Gym visual — https://gymvisual.com/",

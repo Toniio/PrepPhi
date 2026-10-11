@@ -1,7 +1,7 @@
 # Catalog report
 
 - Exercises kept: 280
-- Available at home: 277 · travel: 204 · park: 3
+- Available at home: 243 · travel: 204 · park: 37
 - Media total: 5.6 MB raw, ~7.5 MB inlined (limit 16 MB)
 - Excluded body-weight entries: 14 by the filters, 32 after review
 - French names missing: 0

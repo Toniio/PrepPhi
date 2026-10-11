@@ -93,7 +93,7 @@
   },
 
   "parkSession": {
-    "purpose": "muscle-up ladder (priority 2)",
+    "purpose": "vertical pull and muscle-up ladders (no pull-up bar at home since 2026-10-11)",
     "optional": true,
     "countsForRegularity": "only if done",
     "missed": "never counted as a missed session"

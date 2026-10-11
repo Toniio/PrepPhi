@@ -25,8 +25,8 @@ export function demoProfile(createdAt: IsoDate): Profile {
     availableDays: [1, 2, 3, 4, 5, 6, 7],
     calisthenicsPerWeek: 3,
     ellipticalPerWeek: 2,
-    parkSessions: true,
-    barLengthCm: 80,
+    // No park session: the story keeps to home and travel, and every pulling session is under the table.
+    parkSessions: false,
     restingHr: 58,
     maxHr: 188,
     age: 34,
@@ -64,8 +64,8 @@ export function performanceOf(input: {
   nthInWeek: number
 }): Performance {
   const { ladderId, level, week, nth, nthInWeek } = input
-  // First pull-up session: far too easy, the targets jump to the top of the range.
-  if (ladderId === 'pull-vertical' && level === 4 && nth === 0) return { mode: 'meet', feeling: 'too-easy' }
+  // First inverted-row session: far too easy, the targets jump to the top of the range.
+  if (ladderId === 'pull-horizontal' && level === 2 && nth === 0) return { mode: 'meet', feeling: 'too-easy' }
   // Travel week: one hard set of lunges, the only one of the week.
   if (ladderId === 'legs-front' && week === 1 && nthInWeek === 0) return { mode: 'short', feeling: 'too-hard' }
   if (week === 2 && TOP_IN_LAST_WEEK.has(ladderId)) return { mode: 'top', feeling: 'right' }
@@ -133,5 +133,5 @@ export const REVIEW_CHATS: Chat[] = [
 /** Proposals of the coach: the first one was accepted, the second waits. */
 export const PROPOSALS = [
   'Ajouter un palier entre la traction pronation et la traction prise large : la marche est haute.',
-  'Passer la fourchette du relevé de jambes suspendu de 6–12 à 8–15 répétitions.',
+  'Passer la fourchette du relevé de jambes allongé de 10–15 à 12–20 répétitions.',
 ]

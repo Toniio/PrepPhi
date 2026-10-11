@@ -59,3 +59,10 @@ Le [doc validé](https://claude.ai/code/artifact/40d11110-3e5e-4dfb-853f-543baee
 - Jambes, chaîne avant : le palier 4 devient `ds:1476` (squat bulgare, avec animation) et le palier 5 devient `hd:assisted-pistol-squat` (pistol squat assisté, une main au chambranle).
 - Muscle-up : le palier 3 devient `hd:straight-bar-dip` (dips à la barre droite).
 - Les fiches hors dataset passent de 18 à 19, et le catalogue compte 280 exercices.
+
+Puis ceux du 11 octobre 2026 (plus de barre de traction à la maison, échelles v1.2.0, détail dans `docs/decisions.md`) :
+
+- Tirage vertical : mêmes paliers, mais à la séance au parc uniquement.
+- Gainage suspendu : devient « Relevés de jambes », au sol, en 4 paliers : relevé de bassin au sol, relevé de jambes allongé (`ds:0620`, 10–15), relevé de jambes et de bassin au sol (`ds:0491`, 8–12), L-sit au sol.
+- Séance A : le tirage horizontal remplace le tirage vertical.
+- Les fiches hors dataset repassent à 18 (« Relevé de genoux suspendu » retiré).

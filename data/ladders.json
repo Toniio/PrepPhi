@@ -1,15 +1,16 @@
 {
   "$comment": "Source of truth: the doc 'PrepPhi — Échelles de progression et règles d'adaptation', validated by Anthony on 2026-10-04. Any change is proposed by the coach and applied only after his approval. 'ds:NNNN' = exercises-dataset id (has media); 'hd:slug' = hors dataset (French sheet + video link, see docs/hors-dataset.md). range = [low, high] of the double progression; unit 'reps' or 's'.",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "validatedOn": "2026-10-04",
+  "changes": "1.2.0 (2026-10-11, approved by Anthony): no more pull-up bar at home. pull-vertical moves to the park; core-hanging keeps its id but becomes a floor ladder (4 steps).",
   "ladders": [
     {
       "id": "pull-vertical",
       "family": "pull",
       "nameFr": "Tirage vertical",
-      "contexts": ["home"],
+      "contexts": ["park"],
       "entry": null,
-      "notes": "Steps 5-6 depend on the doorway bar's length (asked at onboarding). From step 4, ds:1326 (supination) and ds:0651 (neutral grip) can rotate in as accessories.",
+      "notes": "No bar at home since 2026-10-11: the ladder runs in the optional park session. From step 4, ds:1326 (supination) and ds:0651 (neutral grip) can rotate in as accessories.",
       "steps": [
         { "level": 1, "exercise": "hd:dead-hang", "nameFr": "Suspension passive", "sets": 3, "range": [20, 45], "unit": "s" },
         { "level": 2, "exercise": "ds:0688", "nameFr": "Tirage scapulaire", "sets": 3, "range": [6, 12], "unit": "reps" },
@@ -83,15 +84,15 @@
     {
       "id": "core-hanging",
       "family": "core",
-      "nameFr": "Gainage suspendu",
-      "contexts": ["home"],
+      "nameFr": "Relevés de jambes",
+      "contexts": ["home", "travel"],
       "entry": null,
+      "notes": "Hanging ladder until 2026-10-11, now on the floor (no bar at home); the id stays for the stored data.",
       "steps": [
         { "level": 1, "exercise": "ds:0872", "nameFr": "Relevé de bassin au sol", "sets": 3, "range": [8, 15], "unit": "reps" },
-        { "level": 2, "exercise": "hd:hanging-knee-raise", "nameFr": "Relevé de genoux suspendu", "sets": 3, "range": [8, 12], "unit": "reps" },
-        { "level": 3, "exercise": "ds:0472", "nameFr": "Relevé de jambes suspendu", "sets": 3, "range": [6, 12], "unit": "reps" },
-        { "level": 4, "exercise": "ds:0475", "nameFr": "Relevé de jambes tendues", "sets": 3, "range": [5, 10], "unit": "reps" },
-        { "level": 5, "exercise": "ds:3419", "nameFr": "L-sit au sol", "sets": 3, "range": [10, 20], "unit": "s" }
+        { "level": 2, "exercise": "ds:0620", "nameFr": "Relevé de jambes allongé", "sets": 3, "range": [10, 15], "unit": "reps" },
+        { "level": 3, "exercise": "ds:0491", "nameFr": "Relevé de jambes et de bassin au sol", "sets": 3, "range": [8, 12], "unit": "reps" },
+        { "level": 4, "exercise": "ds:3419", "nameFr": "L-sit au sol", "sets": 3, "range": [10, 20], "unit": "s" }
       ]
     },
     {
@@ -154,7 +155,7 @@
         { "ladder": "pull-vertical", "level": 4, "atTopOfRange": true },
         { "ladder": "core-isometric", "level": 3, "atTopOfRange": true }
       ],
-      "notes": "Doorway bar at home: the whole ladder runs on a park bar. Steps 3-4 need a hip-height bar or a step to get above the bar. Park sessions are optional (see rules.json).",
+      "notes": "The whole ladder runs on a park bar. Steps 3-4 need a hip-height bar or a step to get above the bar. Park sessions are optional (see rules.json).",
       "steps": [
         { "level": 1, "exercise": "hd:chest-to-bar-pull-up", "nameFr": "Traction poitrine à la barre", "sets": 3, "range": [3, 6], "unit": "reps" },
         { "level": 2, "exercise": "hd:explosive-pull-up", "nameFr": "Traction explosive, hanches vers la barre", "sets": 3, "range": [3, 5], "unit": "reps" },

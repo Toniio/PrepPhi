@@ -37,6 +37,8 @@ function Ladders() {
               : `${setsOf(s)} × ${formatRange(s.range, s.unit, s.perSide)}`,
         }))
         const locked = !state.unlocked
+        // Park-only ladders are never planned while the park session is off.
+        const parkOff = !data.profile?.parkSessions && ladder.contexts.every((c) => c === 'park')
         return (
           <Card key={ladder.id} size="sm">
             <CardHeader>
@@ -48,6 +50,11 @@ function Ladders() {
               </CardDescription>
             </CardHeader>
             <CardContent>
+              {parkOff && (
+                <p className="pb-3 text-xs text-muted-foreground">
+                  Au parc, séance désactivée : coche « Séance au parc le week-end » dans Données pour la planifier.
+                </p>
+              )}
               <LadderProgress
                 ladderName={ladder.nameFr}
                 steps={steps}

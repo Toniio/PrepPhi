@@ -2,7 +2,6 @@ import { ArrowLeftIcon, CheckIcon, PlayIcon, XIcon } from '@phosphor-icons/react
 import { useState } from 'react'
 import { toast } from 'sonner'
 import { Button } from '@/components/ui/button'
-import { buildDemoData } from '@/demo'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Field, FieldDescription, FieldGroup, FieldLabel } from '@/components/ui/field'
 import { Input } from '@/components/ui/input'
@@ -20,6 +19,7 @@ import { getStep, LADDERS, type LadderState, type Profile } from '@/engine'
 import { formatRange, formatTargets, WEEKDAYS } from '@/i18n/fr'
 import { completeOnboarding, redoOnboarding } from '@/model/actions'
 import { useAppData } from '@/model/context'
+import { useDemoMode } from '@/model/useDemoMode'
 import { Page } from '@/shell/Page'
 import { QuestionnaireFr } from './onboarding/QuestionnaireFr'
 import { CALISTHENICS_HINT, SESSION_COUNTS } from './onboarding/sessionCounts'
@@ -408,7 +408,8 @@ type Props = {
 }
 
 export function OnboardingScreen({ previous, onExit }: Props) {
-  const { update, replaceAll, today } = useAppData()
+  const { update, today } = useAppData()
+  const demo = useDemoMode()
   const [step, setStep] = useState(0)
   const [rhythm, setRhythm] = useState<Rhythm | null>(null)
   const [body, setBody] = useState<Body | null>(null)
@@ -441,7 +442,7 @@ export function OnboardingScreen({ previous, onExit }: Props) {
               Annuler
             </Button>
           ) : (
-            <Button variant="outline" onClick={() => replaceAll(buildDemoData(today))}>
+            <Button variant="outline" onClick={demo.enter}>
               <PlayIcon />
               Essayer avec des données de démo
             </Button>

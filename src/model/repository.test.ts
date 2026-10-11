@@ -2,7 +2,8 @@ import { describe, expect, it } from 'vitest'
 import { placeLadders, type Profile } from '@/engine'
 import { createDevStore } from '@/runtime/dev/store'
 import { checkIn, completeOnboarding, logElliptical, redoOnboarding } from './actions'
-import { exportJson, ImportError, loadData, parseImport, saveChanges } from './repository'
+import { buildDemoData } from '@/demo'
+import { clearData, exportJson, ImportError, loadData, parseImport, popStash, saveChanges, stashData } from './repository'
 import { emptyData, SCHEMA_VERSION } from './schema'
 
 function memoryStorage() {
@@ -60,6 +61,29 @@ describe('store round trip', () => {
     expect(loaded.profile).toEqual(profile)
     expect(loaded.cardioLog).toHaveLength(1)
     expect(loaded.weeks['2026-W41'].plan.sessions.find((s) => s.id === session.id)?.status).toBe('done')
+  })
+})
+
+describe('demo stash', () => {
+  it('keeps the real data aside while the demo replaces it, then gives it back', async () => {
+    const store = createDevStore(memoryStorage())
+    const real = onboarded()
+    await saveChanges(store, emptyData(), real)
+
+    await stashData(store, real)
+    await clearData(store)
+    await saveChanges(store, emptyData(), buildDemoData('2026-10-05'))
+    expect((await loadData(store)).profile?.demo).toBe(true)
+
+    const back = await popStash(store)
+    expect(back.profile).toEqual(profile)
+    expect(Object.keys(back.weeks)).toEqual(['2026-W41'])
+    expect(await store.keys('stash.')).toEqual([])
+  })
+
+  it('gives back empty data when nothing was stashed', async () => {
+    const back = await popStash(createDevStore(memoryStorage()))
+    expect(back.profile).toBeNull()
   })
 })
 

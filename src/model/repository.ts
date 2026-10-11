@@ -86,6 +86,40 @@ export async function clearData(store: Store): Promise<void> {
   for (const key of ours) await store.delete(key)
 }
 
+// -- Demo stash --------------------------------------------------------------
+
+const STASH = 'stash.'
+
+/**
+ * The same store seen under the `stash.` prefix: the real data waits there,
+ * in the same partitioned documents, while the demo is on. `clearData` and
+ * `loadData` never see these keys.
+ */
+function stashStore(store: Store): Store {
+  return {
+    available: store.available,
+    get: (key) => store.get(STASH + key),
+    set: (key, value) => store.set(STASH + key, value),
+    delete: (key) => store.delete(STASH + key),
+    keys: async (prefix = '') => (await store.keys(STASH + prefix)).map((k) => k.slice(STASH.length)),
+  }
+}
+
+/** Puts `data` aside, replacing whatever was stashed before. */
+export async function stashData(store: Store, data: AppData): Promise<void> {
+  const stash = stashStore(store)
+  await clearData(stash)
+  await saveChanges(stash, emptyData(), data)
+}
+
+/** Takes the stashed data back, and empties the stash. Empty data when nothing was stashed. */
+export async function popStash(store: Store): Promise<AppData> {
+  const stash = stashStore(store)
+  const data = await loadData(stash)
+  await clearData(stash)
+  return data
+}
+
 // -- Export / import ---------------------------------------------------------
 
 export type ExportFile = AppData & { app: 'prepphi'; exportedAt: string }

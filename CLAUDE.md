@@ -45,7 +45,7 @@ Toute modification d'une échelle ou d'un seuil passe par l'accord d'Anthony.
 - Catalogue fermé : 280 exercices (poids du corps, barre, mur, table, serviette, chaise, elliptique), médias en WebP animé qualité 40 (~7,5 Mo une fois intégrés). Les 19 étapes hors dataset viennent de `data/hd-exercises.json`. Pas de marche ni d'escalier à domicile.
 - Import hebdomadaire du CSV « Activités » de Garmin Connect (elliptique, callisthénie, HIIT), plus saisie manuelle de la résistance et de l'effort perçu.
 - Export et import JSON complets, avec `schemaVersion`, pour une migration future.
-- Démo : `src/demo/` génère trois semaines fictives avec le vrai moteur de règles ; le profil porte `demo: true`, et le planificateur ne choisit alors que des exercices animés. Bouton dans Données (et sur l'onboarding vide). « Refaire l'onboarding » (Données) garde l'historique et ne replace que les échelles retestées.
+- Démo : `src/demo/` génère trois semaines fictives avec le vrai moteur de règles ; le profil porte `demo: true`, et le planificateur ne choisit alors que des exercices animés. Switch dans Données : l'activer met les vraies données de côté (clés `stash.`), le désactiver les restaure ; bouton aussi sur l'onboarding vide. « Refaire l'onboarding » (Données) garde l'historique et ne replace que les échelles retestées.
 
 ## Stack et build
 
